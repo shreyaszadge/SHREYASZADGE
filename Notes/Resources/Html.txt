@@ -1,0 +1,736 @@
+HTML 
+-----
+-> Hyper Text MarkUp Language 
+-> It is not a pogramming language 
+-> tag/element basis language 
+
+extension
+-> .html or .htm 
+
+to create structure of a HTML -> ! + enter 
+
+<!DOCTYPE html>
+<!-- it tells you the version of html is being used and 
+also the document type is html  -->
+<html lang="en">
+    <!-- it tells you the language of the document is english  -->
+<head>
+    <!-- in head tag we write the meta data about the document 
+    like title, description , keywords , author of the document 
+    etc .   -->
+    <meta charset="UTF-8">
+    <!-- for character encoding of the document  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for responsive design it tells the browser how 
+    to control the page's dimension and scaling -->
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- here we write the content of the document 
+    which will be visible to ther user 
+    when they open the web page  -->
+</body>
+</html>
+--------------------------------------------
+What is a HTML Tag ?
+-> A HTML tag is a keyword enclosed inside 
+   angle brackets (< >) that tells 
+   the browser how to display the content 
+   eg: 
+      <h1> Hello Gyuzz </h1>
+
+In HTML their are two types of tags:
+1. Paired Tag - in this tag they have both opening and 
+                closing tags
+2. Unpaired Tag - In this we have only and only single tag 
+
+<h1> -> opening tag 
+Hello Guyzz -> content 
+</h2> -> closing tag 
+
+What is an element? 
+-> opening tag + content + closing tag = element 
+
+---------------------------------
+Empty Tag 
+-------------
+Some tags doesnot contain content and doesnot need a 
+closing tag are known as empty tag 
+eg:
+<br>
+<hr>
+etc..
+
+------------------------------------------------
+Imp
+---
+What's the difference b/w html4 and html5?
+->   - symantic elements are introcuded 
+       symantic - those elements which we doesnot need to define 
+       are known as symantic elements
+       eg: head , body , video , audio etc..
+      - new tags , attributes and inputs type 
+        attributes -> it tells you about the basic 
+        details about the tag 
+
+     API introduces : 
+             - geolocation 
+             - drag and drop 
+             web storages : 
+                   local storage : it stores the user data permanently
+                   session storage :  it stores the user data temporily 
+
+-------------------------------------------------------------------------
+Heading Tags 
+-------------
+Their are 6  types of heading tags 
+they 6 level of heading 
+
+eg:
+ <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>heading 5</h5>
+    <h6>Heading 6</h6>
+-------------------------------------
+Paragraph Tag <p> 
+------------------
+used to write Paragraph 
+
+eg:
+<h1>Learn JavaScript</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestiae dolorum commodi? Ipsam provident in impedit officiis quaerat ratione repellendus iste non perferendis voluptatum porro, commodi nisi fugit ipsum cum officia blanditiis et? Ducimus qui eos ad totam adipisci distinctio expedita odio, sint voluptatum dicta cumque atque error illo facilis pariatur, maxime corrupti reiciendis molestiae eum maiores nostrum. Dolor necessitatibus dolores ipsam quae unde, obcaecati illo ipsum cumque animi debitis quibusdam laboriosam eum similique tenetur, commodi impedit molestias inventore sed, aspernatur autem sint mollitia vel. Voluptates perferendis provident dicta fuga velit, eaque necessitatibus a, optio assumenda corporis reprehenderit alias? Quod.
+
+    </p>
+
+--------------------------------------
+Line Break tag <br> -> unpaired tag, empty tag 
+--------------------
+Moves content in the next line 
+
+
+Inline element and Block element
+---------------------------------
+Inline element - Those element which take the required width of the 
+                 content 
+                 eg: bold , itallic , underline etc...
+
+Block element - which takes the 100% of the width of the required screen 
+                eg:
+                Paragraph tag , heading tag etc..
+
+Bold , Itallic and Underline tags 
+---------------------------------
+<b> -> makes your content bold
+<i> -> it writes in the itallic format 
+<u> -> it will create a underline in the content 
+eg:
+ <b>Shreyansh Dubey</b>
+    <br>
+    <i>Software Developer</i>
+    <br>
+    <u>Experience - 2 years</u>
+---------------------------------------------
+SuperScript 
+-----------
+It is used to write the content just above the other content 
+eg:
+ <u>Experience - 2 <sup>years</sup></u>
+--------------------------------------------
+SubScript Tag 
+--------------
+display text slightly below normal text/content 
+
+eg:
+ <b>H<sub>2</sub>o</b>
+--------------------------------------------
+Horizontal Line 
+----------------
+<hr> -> used for horizontal line 
+
+HW 
+---
+Make your profile which 
+includes heading as MYProfile 
+and add horizontal line 
+and after that 
+add your 
+- name 
+- address 
+- course 
+- phone Number 
+- skills 
+- declation in intallic 
+
+---------------------------
+Hw 
+---
+Website title 
+main heading 
+about yourself 
+make small heading which includes the place 
+where you want to visit 
+- below it write the description of each places 
+and add the footer section which includes 
+your contact details
+---------------------------------------
+HTML Lists 
+----------
+List are to display items in an organized way 
+
+their are 3 main types of lists: 
+- Unordered list 
+- Ordered List 
+- description list 
+-------------------------------------------
+Unordered List 
+---------------
+in this items displays in bullet points 
+tag -> <ul> = unordered list 
+       <li> = list 
+
+eg:
+ <ul type="square">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+--------------------------------------------
+Ordered List 
+-------------
+in this items are display in ordered numbers/alphabhates 
+
+eg:
+tag -> <ol> = ordered List 
+
+by default its order start from 1 
+eg:
+<ol type="i">
+        <li>Mobile </li>
+        <li>Tablet</li>
+        <li>Television</li>
+        <li>Laptop</li>
+    </ol>
+
+---------------------------------------------------
+Nested List 
+-------------
+A list inside another list is called nested list 
+eg:
+  <ul>
+        <li><u><b>HTML</b></u></li>
+        <ol>
+            <li>Basic Tags</li>
+            <li>Difference b/w html4 and html5</li>
+            <li>Symentic Elements</li>
+            <li>Table</li>
+        </ol>
+        <li><u><b>JAVA</b></u></li>
+        <ol>
+            <li>JVM/JDK/JRE</li>
+            <li>DataTypes</li>
+            <li>Operators</li>
+            <li>Loops</li>
+            <li>Arrays</li>
+        </ol>
+    </ul>
+
+-------------------------------------------
+description list 
+-----------------
+used to define terms and description 
+
+tags - <dl> = description list 
+      <dt> = define term 
+      <dd> = define description
+
+eg:
+
+<dl>
+        <dt>Pune</dt>
+        <dd>It a Beautiful place surrounded with hills</dd>
+        <dt>Jammu And Kashmir</dt>
+        <dd>Heaven on Earth</dd>
+        <dt>Bhopal</dt>
+        <dd>City of lakes</dd>
+    </dl>
+-------------------
+HW 
+- Create an unordered list of 5 animals 
+- create an ordered list showing your daily routines 
+- create an ordered lsit with roman letters 
+- create a nested list of state and their cities 
+- create a restaurant menu
+   = starters 
+     - soup 
+        - toamto 
+           made with chilly and toamto grilled complety 
+           to taste better
+        - manchow 
+           
+        - sweet corn 
+   = veg 
+   = non-veg 
+   = Soft drinks 
+   = Deserts  
+-----------------------------------------------
+Links and Navigations 
+---------------------
+- Open another page 
+- Open Another website 
+- send mail 
+- make a phone call 
+- navigate inside your website 
+
+Anchor tag (<a>)
+it is used to create hyperlinks 
+
+syntax: 
+<a href="link/#">Link Text</a>
+
+href -> it is an attribute which means hypertext reference 
+
+target="_blank" = it is also an attribute 
+                  used to open the page 
+                  on the new tab 
+eg:
+ <a href="https://www.google.com" target="_blank">Google</a>
+    <br>
+    <a href="https://facebook.com">FaceBook</a>
+
+--------------------------------------
+Navigate within your webSite 
+-----------------------------
+eg: 
+  <h4>Links</h4>
+    <ol>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ol>
+
+----------------------------------------------
+HW 
+Make website and show the list's 
+of project 
+and as i click on the project it should 
+navigate me from home page to project 
+in that you have to descibe the project 
+and the name at the top and describe 
+and lsit all the features which are necesarry 
+for the project and also add the 
+list of technical stacks used to make the project 
+list atleast 5 project and make page's for 
+5 project each 
+------------------------------------------------
+
+Basic Tag in html 
+------------------
+Emphasis Tag 
+------------
+<em> -> it will emphasized your tag 
+
+eg:
+ <p>My name is <em>Shreyansh Dubey</em></p>
+    <em>The text is emphasised</em>
+
+----------------------------------
+small 
+<small> -> It will make your text small 
+eg:
+    <p>Address : <small>123 Main Street, City, State, ZIP Code</small></p>
+
+------------------------------------
+Strong tag 
+-----------
+<strong> -> It will show you the importance of the text 
+
+eg:
+    <marquee behavior="scroll" direction="left"><strong>Important</strong> Placement Eligibility July 2026</marquee>
+
+what's the difference b/w bold and strong ?
+-> bold tag makes your text bold where as the strong 
+   shows the importance of the text 
+
+----------------------------------------
+Delete tag 
+----------
+<del> -> it will show you as the removed text 
+
+eg:
+    <p> <del>Date: 26/06/2026</del> </p>
+
+-------------------------------------------
+Mark Tag 
+---------
+<mark> -> it highlights your content 
+
+eg:
+<p>I know <mark>Java</mark> , <mark>C</mark> , <mark>C++</mark> , <mark>Node.js</mark> , <mark>C#</mark> , <mark>Python</mark> 
+    i have an exp of 2.5 years , and worked in  <mark>6 live projects</mark></p>
+
+-------------------------------------------
+Image Tag 
+----------
+<img> -> It is used to inser image both from usrl and downloaded 
+
+eg: 
+  <h1>Mountains</h1>
+    <img src="./dawn-landscape-mountains-247478.jpg" alt="mountainImage"
+    height="300"
+    width="500">
+
+    <img src="https://wallpaperaccess.com/full/1124088.jpg" alt="image"
+    height="300"
+    width="500">
+------------------------------------------------
+Video Tag 
+-----------
+<video> -> it is used to add video on your website 
+           and you can only use the downloaded video 
+
+eg:
+<video src="./Prmovies-Harry_Potter_and_Goblet_of_Fire_Hindi.mp4" controls
+    height="300"
+    width="500"></video>
+
+----------------------------------------------
+iFRAME 
+<iframe> -> it creates the small window on your webpage 
+            in which you can add youtube videos , google maps 
+            and another website 
+
+            eg:
+             <video src="./Prmovies-Harry_Potter_and_Goblet_of_Fire_Hindi.mp4" controls
+    height="300"
+    width="500"></video>
+
+    <h1>Youtube Video</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/24FWAhCi_tQ?si=vpS75UirCCNyLvBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h1>Google Map</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406763.5588323004!2d72.6228173378495!3d33.503522515920174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1092499ffa89d%3A0x6567a6d4697e7f1!2sJammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1782914545668!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+    <h1>Portfolio</h1>
+    <iframe src="https://shreyansh-dubey.netlify.app/" frameborder="2" 
+    height="750" width="750"></iframe>
+
+How to make an image clickable 
+--------------------------------
+    <a href="home.html"> <img src="./OIP.webp" alt="home" height="100" width="100"></a>
+
+
+--------------------------------------------
+Table 
+------
+<table> 
+<thead> -> table heading 
+<tr> -> table row 
+<tbody> -> table body 
+<th> -> table heading for content 
+<td> -> table data 
+
+eg:
+ <table border="1">
+        <thead>
+        <tr>
+            <th>Sno</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Shreyansh</td>
+                <td>shrey@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ishan</td>
+                <td>ishan@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+attributes in table 
+cellpadding="10" 
+cellspacing="0"
+colspan 
+
+eg:
+ <table border="1" cellpadding="10" cellspacing="0">
+          <tr>
+            <th colspan="2">Student Info</th>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>Shreyansh</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>20</td>
+          </tr>
+    </table>
+
+--------------------------------------------------
+FORM 
+----
+It is used to take the user data 
+<form> 
+-> it behaves like a container 
+   all the inputs are work's 
+   inside the container 
+
+<input> 
+-> it is used to take the input 
+from the user and it contains attributes like 
+- type 
+- placeholder 
+
+type 
+----
+- text 
+- email 
+- password 
+- number 
+- data 
+- file 
+- radio 
+- checkbox 
+- submit 
+  it will submit all of your form data 
+
+<label> 
+- it is used for the name of an input tag 
+
+<textarea> 
+- used for larger text/Paragraph
+
+<select> 
+- it is used for dropdown list 
+
+<button> 
+- to create the button and to submit the form 
+
+eg:
+ <form>
+            <label for="fullName">Full Name: </label>
+            <input type="text" placeholder="Enter your name">
+            <br>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" placeholder="Enter your email">
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" placeholder="Enter your password" required>
+            <br><br>
+            <label for="number">Phone Number: </label>
+            <input type="number" placeholder="Enter your phone number">
+            <br><br>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" placeholder="Enter your date of birth">
+            <br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="skills">Skills:</label>
+            <input type="checkbox" value="java">
+            <label for="java">Java</label>
+
+            <input type="checkbox"  value="react">
+            <label for="react">React</label>
+
+            <input type="checkbox"  value="csharp">
+            <label for="csharp">C#</label>
+
+            <input type="checkbox" value="c++">
+            <label for="c++">C++</label>
+           
+              <input type="checkbox">
+            <label for="python">Python</label>
+            <br><br>      
+      
+            <label for="address">Address :</label>
+            <textarea cols="40" rows="10"></textarea>
+             <br><br>
+            <label for="exp">Experince:  </label>
+            <input type="number" placeholder="Enter your experience">
+
+            <br><br>
+            <label for="qualification">Qualifications: </label>
+            <br>
+            <select name="education">
+                <option value="bca">BCA</option>
+                <option value="mca">MCA</option>
+                <option value="btech">B.Tech</option>
+                <option value="beng">B.E</option>
+                <option value="mtech">M.tech</option>
+                <option value="others">Others</option>
+            </select>
+            <br><br>
+            <label for="CV">CV Uploads: </label>
+            <input type="file">
+
+            <br><br>
+            <label for="url">Linkedin Profile: </label>
+            <input type="url">
+
+            <br><br>
+            <input type="checkbox">
+            <label for="agree">
+                I confirm that all information provided are correct
+            </label>
+
+            <input type="submit" value="Registration">
+            <input type="reset" value="Clear All ">
+        </form>
+    </div>
+---------------------------------------------------------------------
+Semantic HTML 
+-------------
+The Tag which tells the meaning of content is known as Semantic tags 
+
+div -> it is a container 
+header -> it is used as a head part of the web page 
+nav -> it tell you for navigation 
+footer -> it tells you that it's the end section of 
+          your web page 
+
+why semantic tag's are important? 
+-> it improves SEO(Search engine optimization)
+-> improves accessibility 
+
+header
+-------
+- logo 
+- title 
+- search bar 
+- Navigations tabs 
+
+nav 
+----
+Used for navigation links 
+eg: 
+home /contact/about 
+
+main 
+-----
+it is the main content of your website 
+like hero section , forms , cards , etc.. 
+
+section 
+-------
+Related content in a group 
+eg: 
+ <main>
+        <h1>Semantic Elements</h1>
+        <hr>
+
+        <section>
+            <h2><u>Section 1</u></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ipsa quisquam eos aut porro, iure ducimus distinctio? Quam, temporibus repellendus! Amet reiciendis optio quisquam deleniti nulla aliquid doloremque autem adipisci sunt recusandae earum, vero deserunt tempore modi. Quos pariatur, numquam quidem quia recusandae repudiandae nulla aliquid eligendi atque similique molestias!
+            </p>
+
+        </section>
+
+        <section>
+            <h2><u>Section 2</u></h2>
+            <img src="./dawn-landscape-mountains-247478.jpg" alt="image" 
+            height="100"
+            width="500">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, deserunt?
+            </p>
+        </section>
+    </main>
+----------------------------------------------
+article 
+--------
+a content wihich have the meaningful content and shows it independently 
+eg:
+ <section>
+            <h2><u>Section 2</u></h2>
+            <article>
+                <ul>
+                <li>item 1 </li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+            </article>
+            
+            <article>
+                <img src="./autumn-beautiful-city-210243 (1).jpg" alt="image2" 
+                height="100">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, deserunt!
+                    
+                </p>
+            </article>
+        </section>
+    
+Differnce b/w article and section?
+-> Section = Group of related content 
+             works like a container
+-> article - independent content 
+           - work as a standalone cotent
+        
+footer 
+------
+Bottom section of the webPage 
+- copyrights 
+- contact 
+- links 
+ <footer>
+        <p>&copy; 2026 My Portal. All rights are Reserved</p>
+    </footer>
+
+HW 
+--
+Make a Naukrii website 
+make header section 
+with logo and the name 
+and add nav links -> home , contact m about , job search , make input and a button 
+
+add a main section 
+include 
+section 1 -> Featured Jobs 
+section 2 -> latest jobs 
+section 3 -> Hiring Trends with image and paragraph 
+aside -> top companies 
+footer -> contact , links , about , copyright 
+
+--------------------------------------------------
+div 
+--- 
+It is a block element
+basically known for division/container 
+used for 
+- grouping elements 
+- layouts 
+- creacting sections 
+- and to apply css 
+
+eg:
+     
+span 
+----
+It is an inline element 
+and it is like one like container
+used for 
+- smal text styling 
+- specific word highlight 
+- inline design 
+
+difference b/w div and span ?
+div - block element 
+    - starts from new line 
+    - used for large section 
+    - used to make layouts 
+span - inline element 
+     - starts on the same line 
+     - used for smal text 
+     - used for text style 

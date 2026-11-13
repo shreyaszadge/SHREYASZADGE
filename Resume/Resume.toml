@@ -1,0 +1,644 @@
+
+
+
+[resume]
+document_title = "Resume"
+resume_version = "1.0"
+last_updated = "12-11-2027"
+preferred_resume_length = "1 page"
+
+[personal]
+firstname="Shreyas"
+middlename="Rajendra"
+lastname="Zadge"
+full_name = "Shreyas Rajendra Zadge"
+professional_title = "Full-Stack Developer"
+headline = "Full Stack Developer | Java | Spring Boot | React | REST API"
+date_of_birth = "06-04-2002"
+gender = "Male"
+nationality = "India"
+native_language = "Marathi"
+other_languages = ["English","Hindi","Marathi"]
+current_city = "Pune"
+current_state = "Maharashtra"
+current_country = "India"
+willing_to_relocate = "Within India"
+
+
+[contact]
+phone = "9834605723"
+alternate_phone = "9420441435"
+email = "zadgeshreyas@gmail.com"
+professional_email = "zadgeshreyas@gmail.com"
+address_line = "Zadge Wada Raviwar Peth 855/56"
+area_or_locality = "Raviwar Peth"
+city = "Pune"
+state = "Maharashtra"
+postal_code = "411002"
+country = "India"
+linkedin_tag="linkedin/shreyas-zadge"
+linkedin_url = "https://www.linkedin.com/in/shreyas-zadge-344a1921b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+github_tag="github/shreyaszadge"
+github_url = "https://github.com/shreyaszadge"
+portfolio_tag=""
+portfolio_url = ""
+
+
+[career]
+target_job_titles = ["Java Developer","Junior Java Developer","Java Backend Developer","Spring Boot Developer","Full Stack Java Developer","Junior Full Stack Developer","Graduate Software Engineer"]
+career_level = "Entry-level"
+preferred_industry = ["IT Services","Software Development","Product-Based Companies"]
+preferred_job_type = "Full-time"
+preferred_work_mode = "On-site"
+preferred_locations = "Pune, Maharashtra"
+notice_period = "Immediate"
+availability_to_join = "Immediately"
+expected_salary = "Negotiable (As per company standards)"
+current_salary = ""
+years_of_experience = "6 months"
+relevant_experience = "6 months internship experience, with knowledge of Core Java, Advanced Java, Spring Boot, Spring Data JPA, Hibernate, MySQL, REST APIs, React.js and HTML/CSS. Hands-on development experience through internship and personal projects."
+
+
+[professional_summary]
+summary = "Java Full Stack Developer with 6 months of internship experience and knowledge of Core Java, Advanced Java, Spring Boot, Spring MVC, Hibernate, Spring Data JPA, MySQL, RESTful APIs, React.js, JavaScript, HTML and CSS. Familiar with object-oriented programming, database management, API development and building web applications. Eager to contribute to software development projects and grow as a developer."
+
+career_objective = "To secure a Java Full Stack Developer or Java Backend Developer position where I can apply my Java, Spring Boot, React.js and database skills to develop reliable applications while continuously improving my technical abilities."
+
+key_strengths = [
+    "Object-Oriented Programming (OOP)","Java Backend Development","RESTful API Development", "Database Design and Management","Problem Solving","Quick Learning","Adaptability","Team Collaboration"]
+
+[skills]
+programming_languages = [ "Java","JavaScript","SQL"]
+
+backend_technologies = ["Core Java","Advanced Java","Spring Boot","Spring MVC","Spring Data JPA","Hibernate ORM","RESTful APIs"]
+
+frontend_technologies = ["HTML5","CSS","JavaScript","React.js","Bootstrap","Tailwind"]
+
+frameworks_and_libraries = ["Spring Framework","Spring Boot","Hibernate","React.js"]
+
+databases = ["Firebase","MySQL"]
+
+tools_and_platforms = ["Git","GitHub","Maven","Postman","VS Code","IntelliJ IDEA","Claude Code","ChatGPT"]
+testing_tools = ["Postman"]
+other_technical_skills = ["Object-Oriented Programming","Data Structures and Algorithms","JSON","HTTP","CRUD Operations","Database Connectivity","AI-Assisted Development","AI Coding Tools"]
+soft_skills = ["Problem Solving","Teamwork","Time Management", "Adaptability","Continuous Learning"]
+
+
+[education]
+highest_qualification = "Bachelor of Engineering (B.E.)"
+overall_education_summary = "B.E. in Computer Engineering, completed in 2023, with approximately 75% marks."
+
+
+[[education.records]]
+qualification = "B.E. Computer Engineering"
+specialization_or_branch = "Computer Engineering"
+college_or_institution = "Marathwada Mitra Mandal Institute of Technology Pune"
+university_or_board = "Savitribai Phule Pune University"
+city = "Pune"
+state = "Maharashtra"
+country = "India"
+start_month = "04"
+start_year = "2019"
+completion_month = "03"
+completion_year = "2023"
+passout_year = "2023"
+marks_type = "CGPA"
+marks_obtained = ""
+maximum_marks_or_cgpa = "8.26"
+percentage_equivalent = "75"
+result = "Passed"
+mode_of_study = "Full-Time"
+additional_details = ""
+
+[[education.records]]
+qualification = "HSC"
+specialization_or_stream = "Science "
+college_or_institution = "Marathwada Mitra Mandal's College of Science"
+university_or_board = "Maharashtra Higher Secondary School"
+city = "Pune"
+state = "Maharashtra"
+country = "India"
+start_year = "2017"
+completion_year = "2019"
+passout_year = "2019"
+marks_type = "Percentage"
+marks_obtained = "650"
+maximum_marks_or_cgpa = "368"
+percentage_equivalent = "56.62"
+result = "Passed"
+additional_details = ""
+
+[[education.records]]
+qualification = "SSC" # e.g. "SSC / 10th"
+school_or_institution = "Sheth Hiralal Saraf Prashala"
+board = "Maharashtra Secondary School Certificate"
+city = "Pune"
+state = "Maharashtra"
+country = "India"
+completion_year = "2017"
+passout_year = "2017"
+marks_type = "Percentage"
+marks_obtained = "500"
+maximum_marks_or_cgpa = "339"
+percentage_equivalent = "67.80"
+result = "Passed"
+additional_details = ""
+
+
+# =====================================================
+# PROFESSIONAL EXPERIENCE
+# =====================================================
+
+[experience]
+total_experience = "1 year 4 months in Digital Marketing, as listed on LinkedIn. Software development internships are separate."
+relevant_experience = "2 months Django Developer internship and 1 month Machine Learning internship. Currently developing Java and Spring Boot skills."
+employment_gap_explanation = ""
+
+[[experience.jobs]]
+job_title = "Digital Marketing Executive"
+company_name = "Xpert Media Solutions"
+employment_type = ""
+work_location = "Pune District, Maharashtra, India"
+work_mode = ""
+joining_date = "February 2025"
+leaving_date = "May 2026"
+currently_working = "No"
+notice_period = ""
+salary_or_compensation = ""
+manager_or_team = ""
+responsibilities = [
+    "Worked on digital marketing activities and campaigns.",
+    "Created social media campaign designs and marketing creatives.",
+    "Worked on Meta and Facebook advertising campaigns.",
+    "Supported digital marketing and online promotional activities."
+]
+achievements = []
+tools_and_technologies = [
+    "Meta Ads",
+    "Facebook Ads",
+    "WordPress",
+    "SEO",
+    "Figma"
+]
+reason_for_leaving = ""
+additional_details = "Professional experience in digital marketing and creative campaign execution."
+
+[[experience.jobs]]
+job_title = "Campus Ambassador"
+company_name = "MyCaptain"
+employment_type = ""
+work_location = "Bengaluru, Karnataka, India"
+work_mode = ""
+joining_date = "July 2021"
+leaving_date = "December 2021"
+currently_working = "No"
+notice_period = ""
+salary_or_compensation = ""
+manager_or_team = ""
+responsibilities = [
+    "Promoted educational programs and initiatives among students.",
+    "Built connections through communication and networking.",
+    "Organized events and workshops.",
+    "Represented the organization on campus."
+]
+achievements = [
+    "Completed six months as a Campus Ambassador."
+]
+tools_and_technologies = []
+reason_for_leaving = ""
+additional_details = "Additional leadership and coordination experience."
+
+# =====================================================
+# INTERNSHIP EXPERIENCE
+# =====================================================
+
+[internship]
+has_internship_experience = "Yes"
+overall_internship_summary = "Completed internships in Django Web Development and Machine Learning in 2022, gaining exposure to backend development, database models, web applications, data preprocessing and machine learning workflows."
+
+[[internship.records]]
+internship_title = "Django Developer Intern"
+role_or_domain = "Python Backend Development / Web Development"
+company_or_organization = "Suven Consultants and Technology Pvt. Ltd."
+location = ""
+work_mode = ""
+joining_date = "March 2022"
+end_date = "April 2022"
+currently_working = "No"
+internship_status = "Completed"
+duration = "2 months"
+paid_or_unpaid = ""
+stipend = ""
+mentor_or_supervisor = ""
+technologies_used = [
+    "Python",
+    "Django",
+    "Git",
+    "Database Management",
+    "HTML",
+    "CSS"
+]
+responsibilities = [
+    "Developed web applications using Django.",
+    "Designed database models and backend functionalities.",
+    "Integrated frontend components using Django templates.",
+    "Performed application testing and debugging.",
+    "Used Git for version control.",
+    "Worked with Agile development methodologies."
+]
+projects_or_tasks = [
+    "Django web application development.",
+    "Database model design.",
+    "Backend and frontend integration."
+]
+achievements = [
+    "Successfully completed Django Developer internship."
+]
+certificate_received = ""
+certificate_title = ""
+certificate_url = ""
+additional_details = "Gained practical exposure to backend application development."
+
+[[internship.records]]
+internship_title = "Machine Learning Intern"
+role_or_domain = "Machine Learning / Data Analytics"
+company_or_organization = "CollegeRanker"
+location = ""
+work_mode = ""
+joining_date = "March 2022"
+end_date = "March 2022"
+currently_working = "No"
+internship_status = "Completed"
+duration = "1 month"
+paid_or_unpaid = ""
+stipend = ""
+mentor_or_supervisor = ""
+technologies_used = [
+    "Python",
+    "Machine Learning",
+    "Data Analytics"
+]
+responsibilities = [
+    "Assisted in developing and evaluating machine learning models.",
+    "Performed data preprocessing and feature engineering.",
+    "Assisted with model evaluation.",
+    "Worked on data collection and processing pipelines."
+]
+projects_or_tasks = [
+    "Machine learning model development.",
+    "Data preprocessing.",
+    "Feature engineering and model evaluation."
+]
+achievements = [
+    "Successfully completed Machine Learning internship."
+]
+certificate_received = ""
+certificate_title = ""
+certificate_url = ""
+additional_details = "Collaborated on data analytics and machine learning activities."
+
+# =====================================================
+# CURRENT TECHNICAL TRAINING
+# =====================================================
+
+[training]
+training_status = "Ongoing"
+institute = "TechnoLearn Trainings"
+program_name = "Java Development Training"
+training_start_date = "May 2026"
+training_end_date = ""
+currently_enrolled = "Yes"
+training_location = "Pune, Maharashtra"
+training_mode = ""
+description = "Currently attending Java development classes to strengthen programming and software development skills."
+
+topics = [
+    "Core Java",
+    "Advanced Java",
+    "Object-Oriented Programming",
+    "Java Collections",
+    "JDBC",
+    "Spring Boot",
+    "Spring MVC",
+    "Hibernate",
+    "Spring Data JPA",
+    "MySQL",
+    "RESTful API Development"
+]
+
+
+[[projects.records]]
+project_name = "Inventory & Order Management System"
+project_type = "Personal"
+role = "Full Stack Java Developer"
+short_description = "Developed a web-based inventory and order management system to manage products, suppliers, warehouse stock, purchase orders, and customer orders."
+problem_solved = "Addresses manual inventory tracking, stock inconsistencies, inefficient order processing, and lack of centralized warehouse management."
+start_date = ""
+end_date = ""
+currently_working = "No"
+project_url = ""
+github_url = ""
+demo_url = ""
+technologies = ["Java", "Spring Boot", "Spring Data JPA", "Hibernate", "Spring Security", "MySQL", "React.js", "Bootstrap", "Maven", "Postman", "Git"]
+programming_languages = ["Java", "JavaScript", "SQL"]
+frameworks = ["Spring Boot", "Spring MVC", "Spring Data JPA", "Hibernate", "React.js", "Bootstrap"]
+database = "MySQL"
+key_features = [
+    "Role-based authentication and authorization for administrators, warehouse staff, and sales staff.",
+    "Product, category, supplier, and warehouse management.",
+    "Real-time inventory tracking across multiple warehouses.",
+    "Purchase order creation and stock receiving management.",
+    "Customer order processing with automatic stock deduction.",
+    "Low-stock alerts and inventory monitoring.",
+    "Pagination, sorting, filtering, and inventory reports."
+]
+your_contribution = [
+    "Designed relational database entities and relationships using JPA and Hibernate.",
+    "Developed RESTful APIs using Spring Boot and Spring MVC.",
+    "Implemented JWT-based authentication and role-based authorization.",
+    "Implemented inventory and order processing business logic.",
+    "Used database transactions to maintain stock consistency during order processing.",
+    "Implemented validation and centralized exception handling.",
+    "Integrated React frontend with backend APIs using Axios.",
+    "Tested APIs using Postman and maintained source code using Git."
+]
+team_size = "1"
+project_status = "Not started"
+outcome_or_result = "Planned to provide centralized inventory management, improve stock visibility, and streamline order processing."
+additional_details = "Planned architecture includes layered design, DTOs, REST APIs, Spring Security, database transaction management, and API documentation using Swagger/OpenAPI."
+
+
+[[projects.records]]
+project_name = "Job Portal & Recruitment Management System"
+project_type = "Personal"
+role = "Full Stack Java Developer"
+short_description = "Developed a recruitment platform connecting job seekers, recruiters, and administrators through job postings, applications, and recruitment tracking."
+problem_solved = "Addresses fragmented recruitment processes by providing a centralized platform for job posting, candidate applications, resume management, and application tracking."
+start_date = ""
+end_date = ""
+currently_working = "No"
+project_url = ""
+github_url = ""
+demo_url = ""
+technologies = ["Java", "Spring Boot", "Spring Data JPA", "Hibernate", "Spring Security", "JWT", "MySQL", "React.js", "Bootstrap", "Maven", "Postman", "Git"]
+programming_languages = ["Java", "JavaScript", "SQL"]
+frameworks = ["Spring Boot", "Spring MVC", "Spring Data JPA", "Hibernate", "React.js", "Bootstrap"]
+database = "MySQL"
+key_features = [
+    "Separate registration and login for candidates and recruiters.",
+    "Role-based access control for candidates, recruiters, and administrators.",
+    "Recruiters can create, update, and manage job postings.",
+    "Candidates can search, filter, and apply for jobs.",
+    "Resume upload and candidate profile management.",
+    "Application status tracking throughout the recruitment process.",
+    "Interview scheduling and recruiter dashboard.",
+    "Pagination and filtering for job listings and applications."
+]
+your_contribution = [
+    "Designed the application architecture and relational database schema.",
+    "Created RESTful APIs using Spring Boot.",
+    "Implemented JWT authentication and role-based authorization.",
+    "Developed candidate, recruiter, and job management modules.",
+    "Implemented job application and application status workflows.",
+    "Integrated resume upload functionality.",
+    "Implemented DTOs, validation, and global exception handling.",
+    "Integrated React frontend with backend APIs using Axios.",
+    "Tested API endpoints using Postman."
+]
+team_size = "1"
+project_status = "Not started"
+outcome_or_result = "Planned to simplify recruitment workflows and provide centralized job application and candidate management."
+additional_details = "Planned architecture includes layered backend design, relational database mapping, secure file uploads, REST API documentation, and role-based access control."
+
+
+[[projects.records]]
+project_name = "E-Commerce Backend & Admin Management System"
+project_type = "Personal"
+role = "Full Stack Java Developer"
+short_description = "Developed an e-commerce application with product management, shopping cart, order processing, customer accounts, and administrative functionality."
+problem_solved = "Addresses the need for a centralized online shopping platform with structured product management, order processing, and customer transaction workflows."
+start_date = ""
+end_date = ""
+currently_working = "No"
+project_url = ""
+github_url = ""
+demo_url = ""
+technologies = ["Java", "Spring Boot", "Spring Data JPA", "Hibernate", "Spring Security", "JWT", "MySQL", "React.js", "Bootstrap", "Maven", "Postman", "Git"]
+programming_languages = ["Java", "JavaScript", "SQL"]
+frameworks = ["Spring Boot", "Spring MVC", "Spring Data JPA", "Hibernate", "React.js", "Bootstrap"]
+database = "MySQL"
+key_features = [
+    "User registration, login, and role-based authentication.",
+    "Product, category, and inventory management.",
+    "Shopping cart and wishlist functionality.",
+    "Order placement and order history.",
+    "Coupon and discount management.",
+    "Payment gateway sandbox integration.",
+    "Order status tracking and management.",
+    "Admin dashboard for managing products, customers, and orders.",
+    "Product search, filtering, sorting, and pagination."
+]
+your_contribution = [
+    "Designed database entities and relationships for users, products, carts, and orders.",
+    "Developed REST APIs using Spring Boot and Spring MVC.",
+    "Implemented JWT authentication and authorization.",
+    "Developed product catalog and shopping cart modules.",
+    "Implemented order placement and order management workflows.",
+    "Used transactional operations to maintain order and inventory consistency.",
+    "Integrated payment gateway sandbox for testing payment workflows.",
+    "Implemented validation and centralized exception handling.",
+    "Integrated React frontend with backend APIs using Axios.",
+    "Tested APIs using Postman."
+]
+team_size = "1"
+project_status = "Not started"
+outcome_or_result = "Planned to deliver an integrated online shopping experience with structured product, cart, payment, and order management."
+additional_details = "Planned architecture includes layered application design, RESTful APIs, secure authentication, payment sandbox integration, database transaction management, and Swagger/OpenAPI documentation."
+
+
+
+
+[certifications]
+certification_summary = "Five certifications in digital marketing (Google Ads, Reliance Foundation Skilling Academy, PIIDM) and AI (AI For India 2.0 by GUVI / Skill India / NSDC), earned between 2023 and 2026."
+
+[[certifications.records]]
+certificate_name = "Google Ads Search Certification"
+issuing_organization = "Google"
+issue_date = "2026-02-17"
+expiry_date = "2027-02-17"
+credential_id = "174700847"
+credential_url = ""
+skills_covered = ["Google Ads", "Search Advertising", "Digital Marketing"]
+certificate_status = "Completed"
+additional_details = "Valid for one year from the issue date."
+
+[[certifications.records]]
+certificate_name = "Google Ads Program"
+issuing_organization = "PIIDM (Pashium International Institute of Digital Marketing)"
+issue_date = "2026-02-17"
+expiry_date = ""
+credential_id = "P55261"
+credential_url = ""
+skills_covered = ["Google Ads", "Digital Marketing"]
+certificate_status = "Completed"
+additional_details = "ISO 9001:2008 certified institute."
+
+[[certifications.records]]
+certificate_name = "Certificate Course in Digital Marketing"
+issuing_organization = "Reliance Foundation Skilling Academy (via Skill India Digital Hub, NSDC)"
+issue_date = "2026-01-15"
+expiry_date = ""
+credential_id = ""
+credential_url = ""
+skills_covered = ["Digital Marketing"]
+certificate_status = "Completed"
+additional_details = "140 hours. Certified on 15/01/2026. Validity authorized by Skill India Digital Hub (QR code on the certificate)."
+
+[[certifications.records]]
+certificate_name = "Certificate Course in Digital Marketing"
+issuing_organization = "Reliance Foundation Skilling Academy"
+issue_date = "2026-03-14"
+expiry_date = ""
+credential_id = "RFSA000362337"
+credential_url = ""
+skills_covered = ["Digital Marketing"]
+certificate_status = "Completed"
+additional_details = "Online course by Reliance Foundation Skilling Academy."
+
+[[certifications.records]]
+certificate_name = "AI For India 2.0"
+issuing_organization = "GUVI, through Skill India Digital (NSDC)"
+issue_date = "2023-08-16"
+expiry_date = ""
+credential_id = ""
+credential_url = ""
+skills_covered = ["Artificial Intelligence", "AI Fundamentals"]
+certificate_status = "Completed"
+additional_details = "Online skilling course. Validity authorized by Skill India Digital."
+
+# [training]
+training_summary = "Seven training programs: two virtual internships (Machine Learning, Django), a Python workshop, and online courses in coding interviews, UI/UX design, programming fundamentals and digital marketing."
+
+[[training.records]]
+course_or_training_name = "Machine Learning Intern (1 Month Virtual Internship)"
+training_provider = "CollegeRanker India"
+start_date = ""
+end_date = "2022-03-14"
+completion_status = "Completed"
+topics_covered = ["Machine Learning"]
+certificate_received = "Yes"
+additional_details = "Certificate of Internship, reference CRIN942, dated 14-03-2022. Signed by Onkar Mathapati (Founder & CEO) and Sarthak Kalpande (Co-Founder & CTO). The certificate names Shreyas Rajendra Zadge."
+
+[[training.records]]
+course_or_training_name = "Django Coding Internship (4 weeks / 140 hours)"
+training_provider = "Suven Consultants & Technology Pvt. Ltd."
+start_date = ""
+end_date = "2022-03-03"
+completion_status = "Completed"
+topics_covered = ["Django", "Blog application", "Online shop", "Social application", "E-Learning platform with RESTful API"]
+certificate_received = "Yes"
+additional_details = "Online internship. Certificate issued 03-03-2022. Performance rated 'Enviable'. Projects assessed by an AI engine trained by mentors."
+
+[[training.records]]
+course_or_training_name = "Three Days Workshop on Python Programming"
+training_provider = "Dept. of Computer Engineering, Marathwada Mitra Mandal Institute of Technology (MMIT), Lohgaon, Pune"
+start_date = ""
+end_date = "2021-03-22"
+completion_status = "Completed"
+topics_covered = ["Python Programming"]
+certificate_received = "Yes (Certificate of Participation)"
+additional_details = "Certificate ID CXVAA4-CE000060, dated 22-3-2021. Signed by Mrs. S. T. Shinde (Asst. Prof. & Coordinator) and Mr. S. G. Rathod (HOD, COMP)."
+
+[[training.records]]
+course_or_training_name = "Programming Foundations: Beyond the Fundamentals"
+training_provider = "LinkedIn Learning"
+start_date = ""
+end_date = "2022-12-08"
+completion_status = "Completed"
+topics_covered = ["Programming Fundamentals"]
+certificate_received = "Yes"
+additional_details = "Duration 2 hours 4 min. Certificate ID AeJ9384k1U8G-4gx3YPuZ5-IuSXk. Please check this ID against the original certificate."
+
+[[training.records]]
+course_or_training_name = "Master the Coding Interview: Data Structures + Algorithms"
+training_provider = "Udemy (Instructor: Andrei Neagoie)"
+start_date = ""
+end_date = "2026-11-12"
+completion_status = "Completed"
+topics_covered = ["Data Structures", "Algorithms", "Coding Interview Preparation"]
+certificate_received = "Yes"
+additional_details = "20 total hours. Certificate no. UC-158e6659-682d-41ce-8e35-0dc6183dd1d6, URL ude.my/UC-158e6659-682d-41ce-8e35-0dc6183dd1d6."
+
+[[training.records]]
+course_or_training_name = "Complete Web & Mobile Designer: UI/UX, Figma, +more"
+training_provider = "Udemy (Instructors: Andrei Neagoie, Daniel Schifano)"
+start_date = ""
+end_date = "2024-12-27"
+completion_status = "Completed"
+topics_covered = ["UI/UX Design", "Figma", "Web Design", "Mobile Design"]
+certificate_received = "Yes"
+additional_details = "26 total hours. Certificate no. UC-0996c868-8d2c-42bb-b176-9a2bf981663a, URL ude.my/UC-0996c868-8d2c-42bb-b176-9a2bf981663a."
+
+[[training.records]]
+course_or_training_name = "Tutedude Digital Marketing Course"
+training_provider = "Tutedude"
+start_date = ""
+end_date = "2026-03-19"
+completion_status = "Completed"
+topics_covered = ["Digital Marketing"]
+certificate_received = "Yes"
+additional_details = "Certificate ID TD-SHRE-DM-2313. Signed by Shivam Goyal and Abhishek Gangwar (Co-Founders)."
+
+[achievements]
+competitions = ["Bharatiya Antariksh Hackathon 2026 (ISRO, powered by Hack2skill): Certificate of Participation for a successful idea submission. Certificate ID 2026H2S06BAH-P01776."]
+
+
+[language_proficiency]
+
+[[language_proficiency.languages]]
+language = "Marathi"
+proficiency = "Native"
+can_speak = "Yes"
+can_read = "Yes"
+can_write = "Yes"
+
+[[language_proficiency.languages]]
+language = "Hindi"
+proficiency = "Native"
+can_speak = "Yes"
+can_read = "Yes"
+can_write = "Yes"
+
+[[language_proficiency.languages]]
+language = "English"
+proficiency = "Professional"
+can_speak = "Yes"
+can_read = "Yes"
+can_write = "Yes"
+
+[additional_information]
+interests = [
+    "Java Development",
+    "Backend Development",
+    "Full Stack Development",
+    "Learning New Technologies",
+    "Software Development"
+]
+
+
+willing_to_travel = "Yes"
+driving_license = ""
+open_to_shift_work = "Yes"
+
+other_relevant_information = [
+    "Currently attending Java Development training at TechnoLearn Trainings.",
+    "Interested in Java Developer and Software Developer opportunities.",
+    "Familiar with AI-assisted development tools including Claude Code and ChatGPT.",
+    "Open to learning new technologies and working on challenging software development projects."
+]
+
+[declaration]
+include_declaration = "Yes"
+declaration_text = "I hereby declare that the information provided above is true and correct to the best of my knowledge and belief."
+place = "Pune, Maharashtra"
+date = ""

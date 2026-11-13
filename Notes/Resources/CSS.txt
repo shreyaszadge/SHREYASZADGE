@@ -1,0 +1,2909 @@
+CSS 
+---
+Cascading Style Sheet 
+- It is used to design your web application
+- with the use of css we can apply color , size , 
+  borders , background-colors etc ....
+
+Their are three ways to apply css on your website 
+-------------------------------------------------
+1. InLine css 
+   - in this we will use the style attribute and apply the css 
+   eg:
+       <h1 style="color: brown;">Learn CSS</h1>
+
+2. Internal CSS / Embedded CSS 
+   In this we have to use the style tag 
+   inside the head and with the help of selectors 
+   we will apply the css properties 
+
+   eg:
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+    <h1>Learn CSS</h1>
+
+3.External CSS 
+  In this we we create an External file of a CSS 
+  with an extension of ".css" and with the help of 
+  selectors we apply css and with the help of link 
+  tag we import our css file in our project 
+
+  eg:
+  style.css -> file created 
+  h1 {
+    color: blue;
+} 
+
+    <link rel="stylesheet" href="style.css">
+     <h1>Learn CSS</h1>
+-----------------------------------------
+Benefits of CSS 
+----------------
+- Improved control over formatting 
+- Improved site maintainbility 
+- improved accessibility 
+- Improved page download speed 
+- improved o/p flexibility 
+
+----------------------------------------------
+Properties 
+----------
+font -> font , font-family , font-sizer 
+        font-style , font-weight 
+text -> letter-spacing , text-decoration , line-height 
+        text-align , text-shadow 
+
+background and colors -> background-image , background-color 
+                         background-repeat , color etc .. 
+borders -> border-color , border-width , border-style ,
+            border-top/bottom/left/right 
+        etc... 
+
+spacing -> padding , padding-top/bottom/left/right 
+           margin , margin-top/bottom/left/right 
+
+sizing - height , max/min-height , width , max/min-width
+
+layout -> position , position-top/bottom/left/right,
+          display , float , overflow , visibility 
+          , z-index 
+
+list -> list-style , list-style-image etc... 
+-----------------------------------------------------------
+Colors : 
+     Name: 17 stds pf colors are their in old css 
+           but in css3 we have 140 colors std name 
+           eg: 
+           color: red 
+           color: hotPink 
+        
+     RGB: RED GREEN BLUE 
+          range(0-255)
+          eg: rgb(120,170,155)
+
+    RGBa: a = alpha (opacity)
+        opacity -> it is used for blur effect 
+        and its range lies from 0.0 to 1.0 
+        eg: rgba(120, 170, 155, 0.56)
+
+    HSL -> it allows you to specify a color 
+           in hue saturation and light values 
+           and this is available in css3 only 
+
+           eg: hsl(194, 32%, 43%)
+
+    HSLa -> a = alpha
+          eg; hsla(194,30%,45%,.5)
+
+    Hexa -> # value(a-f) and (0-9)
+           eg: #3AFGE3 
+
+------------------------------------------
+Units of Measurements 
+---------------------
+px , em , % , ex 
+ch , rem , vw , vh 
+in , cm , mm , pt , pc 
+--------------------------------------------
+Selectors 
+---------
+1. Universal Selector 
+2. Element selector 
+3. Class selector 
+4. Id Selector 
+5. Group Id selector
+6. Group Class selector
+7. Group Element Selector 
+8. Attrivute Selector
+9. Combinator Selector
+    - Decendent Selector
+    - Child selector
+    - Adjacent Selector
+    - General Sibling selector
+10. Pseudo Selector
+    - Pseudo Class 
+    - Pseudo Element
+
+---------------------------------------------
+1. Universal Selector (*)
+-------------------------
+Universal is a kind of selector
+in which the css is being applied to all the HTML Elements 
+eg: 
+ <style>
+        /* body{
+            border: 2px solid black; // apply only to the webpage 
+        } */
+        *{ // applied to all the Elements inside the webpage
+            color: red;
+            border: 1px solid black;
+        }
+    </style>
+   
+    <h1>JavaScript</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, veniam dolores voluptatum obcaecati perferendis fugiat repellat magni consequuntur culpa accusantium fugit nemo, maiores omnis beatae quo nihil tenetur voluptates eaque nulla! Natus quod impedit quisquam mollitia sapiente molestiae officiis facere, esse recusandae ratione ullam fugit non unde nam cupiditate a dolorem dolorum labore consequuntur maxime ipsam molestias voluptates repellendus autem. Illum unde porro totam accusantium nam ratione mollitia, odio maiores ducimus. Eos dolore nemo velit blanditiis illo quas porro consectetur voluptatibus molestiae id excepturi unde neque numquam praesentium maxime a corrupti nihil recusandae quae consequuntur tenetur, error, soluta in beatae.
+
+    </p>
+    <ul>
+        <li>DOM</li>
+        <li>Events</li>
+        <li>functions</li>
+        <li>JSON</li>
+    </ul>
+-------------------------------------------------
+2. Element Selector 
+-------------------
+The Element selector selects all the Elements 
+of a specific HTML TAG 
+
+eg: 
+
+    <style>
+        h1{
+            color: aqua;
+            background-color: cadetblue;
+            border: 5px solid lightblue;
+        }
+        p{
+            color: brown;
+        }
+    </style>
+    
+    <h1>Java</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, nisi.
+    </p>
+    <hr>
+    <h1>Python</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad eligendi obcaecati temporibus accusantium suscipit consequatur nesciunt, corrupti qui soluta aspernatur.
+
+    </p>
+    <hr>
+    <h1>JavaScript</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, in et fugit necessitatibus ex quis?
+
+    </p>
+    <hr>
+-------------------------------------------
+ID Selector(#)
+-----------
+An ID Selector is used to target one specific Element 
+on a web page 
+
+eg:
+<style>
+        #title{
+           color:brown;
+        }
+        #titleTwo{
+            color: blueviolet;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 id="title">JavaScript</h1>
+    <h1 id="titleTwo">React</h1>
+
+Can we use the same ID Multiple time ?
+-> yes , we can the browser will still 
+   renders thye page even if multiple Elements
+   have the same id. 
+
+why shouldn't we use the same ID multiple times?
+-> Becoz the id is for unique within a document 
+   using duplicate id's can create several problem 
+
+   - JavaScript issue 
+   - Invalid HTMLS Standards 
+   - Accessibility Problem 
+   - CSS Maintainace becomes difficult 
+-----------------------------------------------------
+Class Selector (.)
+--------------
+A Class selector is used to apply the same style to 
+multiple elements .
+
+eg: 
+ <style>
+        .title{
+            color: brown;
+        }
+    </style>
+
+    <h1 class="title">JavaScript</h1>
+    <h1 class="title">Java</h1>
+    <h1 class="title">Python</h1>
+    <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem nulla iure aspernatur reiciendis, laboriosam architecto eaque beatae aperiam quas doloribus in molestias voluptatem dignissimos nam sapiente vel illum at dolores ad repudiandae corrupti dolor. Deleniti harum rem nihil eaque incidunt et magni explicabo ea dolorum non omnis praesentium, unde enim ullam adipisci distinctio porro tempora alias mollitia. Veritatis, dolor inventore. Voluptatibus dolor, eos enim illo repudiandae consectetur ut odit laborum hic veritatis unde perspiciatis eaque eligendi voluptatum atque tempore ea, earum doloremque, aliquam aliquid quam! Asperiores placeat, culpa accusamus magni non reiciendis consequatur. Ipsum, commodi cumque? Quae, voluptatem enim!
+        
+    </p>
+
+-------------------------------------------------------
+Attribute Selector 
+-----------------
+attribute -> which tells you the basic information about the 
+             tag and it comes with key-value pair and 
+             always written at the starting tag 
+
+syntax: 
+[attribute]{
+    // apply properties 
+}
+eg:
+ <style>
+        [type]{
+            border: 2px solid red;
+        }
+    </style>
+<body>
+    <label>Name: </label>
+    <br>
+    <input type="text" placeholder="enter your name ">
+    <br>
+    <label for="pass">Password:</label>
+    <br>
+    <input type="password" placeholder="Enter your password">
+</body>
+--------------------------------------------
+attribute selector with exact value 
+-----------------------------------
+syntax: 
+[attribute="value]{
+    property: value
+}
+
+eg:
+<style>
+        [type="text"]{
+            border: 5px solid red;
+        }
+        [type="password"]{
+            border: 5px solid green;
+        }
+    </style>
+<body>
+    <input type="text" placeholder="enter your name ">
+    <br>
+    <br>
+    <input type="password" placeholder="Enter your password">
+    <br><br>
+    <button>Submit</button>
+</body>
+</html>
+---------------------------------------
+starts with selector (^=)
+selects elements whose attribute 
+value starts with the specific text 
+
+syntax: 
+[attribute^= "value"]{
+    properties: value
+}
+
+eg:
+  <style>
+        [href^="https"]{
+            color: brown;
+        }
+    </style>
+    
+   <nav>
+       <a href="https://www.google.com">Google</a>
+       <a href="element.html">Element</a>
+   </nav>
+--------------------------------------------------
+End's with selector($=)
+------------------------
+Selects elements whose attribute ends with 
+specific text 
+
+syntax: 
+[attribute$="value"]{
+    properties: value;
+}
+
+eg:
+ [href$=".html"]{
+            color: cadetblue;
+        }
+---------------------------
+Contains selector(*=)
+Selects elements whose attribute value 
+contains a specific word/text 
+
+syntax:
+[attribute*="value"]{
+    property: value;
+}
+
+eg;
+ [href*="facebook"]{
+            color: chocolate;
+        }
+---------------------------------------
+Space-seperated word selector(~=) 
+Selects ELEMENTS where the attribute contains 
+a specific word in a space-separated list 
+
+syntax
+[attribute~="value"]{
+    property: value;
+}
+
+eg:
+
+        [class~="active"]{
+            border: 2px solid gray;
+        }
+    </style>
+       <p class="student active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque esse expedita fuga accusantium voluptas amet error, aut commodi, dicta vel nobis distinctio cumque, perferendis minus! Dolorem, consequuntur ullam? Saepe corrupti neque, blanditiis quam magnam ut molestias eveniet dolore aperiam recusandae? Minus libero eos omnis assumenda sed ducimus ea tenetur nemo.
+
+       </p>
+-------------------------------------
+Group Element Selector 
+----------------------
+A group element selector is used when you want 
+to apply the same css style to multiple HTML 
+elements w/o writing seprate css rules for each element 
+
+syntax: 
+element1 , element2 , element3 {
+    property: value;
+}
+eg:
+<style>
+        h2,p,button{
+            color: chocolate;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+
+    <h1>Main Heading</h1>
+    <h2>Sub Heading</h2>
+    <hr>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel natus deserunt libero, iste possimus fugiat ab beatae voluptates deleniti, perferendis assumenda placeat officia autem fuga ut aliquam? Facilis, eum. Aliquam optio ex corrupti temporibus! Similique accusantium fuga quae necessitatibus fugiat cum deserunt, aliquam vel tempore consequatur odit quis sit facere consequuntur saepe eaque rerum, laboriosam excepturi qui nostrum. Accusamus modi perspiciatis quibusdam numquam repudiandae earum suscipit quidem atque, ducimus quos ad corporis rerum dicta aspernatur! Alias distinctio placeat qui, amet excepturi inventore cumque, et officiis laudantium exercitationem culpa architecto quaerat nisi eaque quia dolorum accusantium, mollitia eveniet modi veritatis illum!
+
+    </p>
+    <button>Click</button>
+
+---------------------------------------------------
+Group Class Selector 
+--------------------
+A group class selector is used when you want to apply 
+same css style to mutiple classes 
+
+syntax:
+.class1 , .class2 , .class3 {
+    property: value;
+}
+
+eg;
+    <style>
+        .mainheading,.subheading,.content{
+            color: chocolate;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+
+<body>
+    <h1 class="mainheading">Main Heading</h1>
+    <h2 class="subheading">Sub Heading</h2>
+    <hr>
+    <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel natus deserunt libero, iste possimus fugiat ab beatae voluptates deleniti, perferendis assumenda placeat officia autem fuga ut aliquam? Facilis, eum. Aliquam optio ex corrupti temporibus! Similique accusantium fuga quae necessitatibus fugiat cum deserunt, aliquam vel tempore consequatur odit quis sit facere consequuntur saepe eaque rerum, laboriosam excepturi qui nostrum. Accusamus modi perspiciatis quibusdam numquam repudiandae earum suscipit quidem atque, ducimus quos ad corporis rerum dicta aspernatur! Alias distinctio placeat qui, amet excepturi inventore cumque, et officiis laudantium exercitationem culpa architecto quaerat nisi eaque quia dolorum accusantium, mollitia eveniet modi veritatis illum!
+
+    </p>
+    <button>Click</button>
+----------------------------------------------
+Group Id Seelctor 
+-----------------
+A group id selector is used when you want to apply 
+the same css style to multiple id's 
+syntax: 
+#id1 , #id2 ,#id3 {
+    property: value ;
+}
+
+eg:
+  <style>
+        #mainheading,#subheading,#content{
+            color: chocolate;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+----------------------------------------
+Make a student progile page 
+-> Main Heading 
+-> Student Name 
+-> Student photo with border 
+-> about section 
+   - list / table / paragraph 
+-> skills 
+   list 
+-> conctact form (footer)
+
+use css selectors 
+-> element 
+-> class 
+-> id 
+-> attribute 
+-> universal 
+------------------------------------
+Advanced css selector 
+-----------------------
+1. Combinator Selector
+----------------------
+   - Descendent Selector
+   - Child Selector
+   - Adjacent Sibling selector
+   - General Sibling selector
+
+Descendent Selector
+------------------
+Selects all elements that are inside another element(at any level)
+syntax:
+parent child{
+    property: value ;
+}
+
+eg:
+<style>
+        div p{
+            color: brown;
+        }
+    </style>
+    
+    <div>
+        <p>Para 1</p>
+        <section>
+            <p>Para 2</p>
+        </section>
+    </div>
+--------------------------------
+Child selector 
+---------------
+Selects only direct child of an element
+syntax:
+parent > child {
+    property: value;
+}
+
+eg:
+<style>
+        div > p{
+            color: brown;
+        }
+
+        section > p{
+            color: green;
+        }
+    </style>
+
+    <div>
+        <p>Para 1</p>
+        <section>
+            <p>Para 2</p>
+        </section>
+    </div>
+-----------------------------------------
+Adjacent Sibling Selector 
+-------------------------
+Selects the imediate next sibling below the 
+element
+syntax: 
+element1 + element2 {
+    property: value;
+}
+
+eg:
+  <style>
+        h1 + h2{
+            color: blueviolet;
+        }
+        h2 + p{
+            color: blue;
+        }
+   
+<body>
+    <h1>Frontend Development</h1>
+    <h2>Learn JavaScript</h2>
+    <p>with Shreyansh</p>
+    <p>@learnJavaScript</p> 
+-------------------------------------
+General Sibling Selector 
+------------------------
+Selects all sibling after a specific element
+syntax:
+element1 ~ element2{
+    property: value;
+}
+
+eg:
+<style>
+        h1 ~ h2,p{
+            border: 2px solid blueviolet;
+        }
+        h2 ~ p{
+            color: blue;
+        }
+    </style>
+
+    <h1>Frontend Development</h1>
+    <h2>Learn JavaScript</h2>
+    <p>with Shreyansh</p>
+    <p>@learnJavaScript</p> 
+</body>
+---------------------------------------------
+Pseudo-Selector 
+---------------
+It is a special type of css selector
+that is used to style an element based on its 
+state , position or a specific part of the element 
+
+- Pseudo-class 
+- Pseudo-element 
+-------------------------------------
+Pseudo-class(:)
+---------------
+:hover
+-------
+The :hover is a css selector of Pseudo-class
+which applies when we hover on an element
+
+eg:
+    <style>
+        button {
+            color: white;
+            background-color: blue;
+        }
+        button:hover{
+            background-color: lightblue;
+            color: black;
+        }
+        h1:hover{
+            background-color: beige;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+    
+    <h1>JavaScript</h1>
+    <button>Click Me</button>
+----------------------------------------------------------
+:focus 
+------
+Applies CSS when an input field receives focus(clicked 
+or selected)
+
+eg:
+ <style>
+        input:focus{
+            background-color: beige;
+            border: 2px solid blue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Ent3er your name ">
+
+--------------------------------------------------------
+:first-child/ :last-child / :nth-child 
+-----------------------------------------
+The first and the last child will selects the 
+first and last same element but if we want to 
+select the nth child we can us nth-child 
+of Pseudo class selector
+
+eg:
+  <style>
+        li:first-child{
+            color: green;
+            background-color: magenta;
+        }
+        li:last-child{
+            color: red;
+            background-color: yellow;
+        }
+        li:nth-child(2){
+            color: blue;
+            background-color: beige;
+        }
+    </style>
+    <ol>
+        <li>Shreyansh - 95%</li>
+        <li>Ishan     - 90%</li>
+        <li>Paras     - 85%</li>
+    </ol>
+--------------------------------------------------------------
+:link/ :visited / :active 
+--------------------------
+:visited is a Pseudo-class-selector that selects links that has already clicked 
+or visited before 
+
+eg:
+ <style>
+        a:link{
+            color: brown;
+        }
+
+        a:visited{
+            color: blueviolet;
+        }
+    </style>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="https://www.instagram.com">Instagram</a>
+-----------------------------------------------------------------
+Pseudo-Element-Selector(::)
+---------------------------
+It is used to style a specific part 
+of an element of a HTML instead 
+of apllying css to all the element .
+
+It targets a portion of the element such as 
+it first letter , first line or content 
+before/after the element
+
+::first-letter 
+--------------
+it is used to style only the first letter of an 
+element 
+
+eg:
+ <style>
+        h1::first-letter{
+            font-size: 100px;
+            color: red;
+            font-weight: bold;
+        }
+     </style>
+    <h1>CSS Cascading Style Sheet</h1>
+
+----------------------------------------------
+::first-line 
+---------------
+it styles only the first-line of a paragraph/content 
+
+eg:
+  p::first-line{
+            color: cadetblue;
+            background-color: black;
+        }
+     </style>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus nam in ex temporibus consequuntur perspiciatis, hic eveniet, amet repudiandae voluptatibus impedit ducimus non? Sequi tempore, fugit dolorem odit asperiores quis ab distinctio nisi maiores beatae, molestiae ratione at iure aliquid animi cupiditate quae minus? Earum quaerat quas accusantium totam molestias quae error qui. Dolores error aspernatur, illum architecto nostrum earum animi. Nam ad expedita eius deserunt sit unde porro ipsam velit, odio neque sunt molestiae! Vero optio nobis ea maiores illum molestiae esse hic officiis incidunt nulla possimus exercitationem ducimus repudiandae error autem debitis, fuga consequuntur saepe veritatis eum.
+
+    </p>
+
+::before and ::after 
+--------------------
+it inserts content before and after an element
+and also it requires content property 
+
+eg:
+        h1::before{
+            content: "\2605";
+        }
+        p::after{
+            content: "\2600";
+        }
+     </style>
+    
+    <h1>CSS Cascading Style Sheet</h1>
+    <hr>
+    <marquee behavior="scroll" direction="left">Learn css with SHREYANSH</marquee>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus nam in ex temporibus consequuntur perspiciatis, hic eveniet, amet repudiandae voluptatibus impedit ducimus non? Sequi tempore, fugit dolorem odit asperiores quis ab distinctio nisi maiores beatae, molestiae ratione at iure aliquid animi cupiditate quae minus? Earum quaerat quas accusantium totam molestias quae error qui. Dolores error aspernatur, illum architecto nostrum earum animi. Nam ad expedita eius deserunt sit unde porro ipsam velit, odio neque sunt molestiae! Vero optio nobis ea maiores illum molestiae esse hic officiis incidunt nulla possimus exercitationem ducimus repudiandae error autem debitis, fuga consequuntur saepe veritatis eum.
+
+    </p>
+-------------------------------------
+::selection 
+------------------------
+It styles the text selected by the user 
+eg:
+  p::selection{
+            color: brown;
+            background-color: yellow;
+        }
+     </style>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus nam in ex temporibus consequuntur perspiciatis, hic eveniet, amet repudiandae voluptatibus impedit ducimus non? Sequi tempore, fugit dolorem odit asperiores quis ab distinctio nisi maiores beatae, molestiae ratione at iure aliquid animi cupiditate quae minus? Earum quaerat quas accusantium totam molestias quae error qui. Dolores error aspernatur, illum architecto nostrum earum animi. Nam ad expedita eius deserunt sit unde porro ipsam velit, odio neque sunt molestiae! Vero optio nobis ea maiores illum molestiae esse hic officiis incidunt nulla possimus exercitationem ducimus repudiandae error autem debitis, fuga consequuntur saepe veritatis eum.
+
+    </p>
+
+--------------------------------------------------------
+::placeholder
+-------------
+it styles the placeholder text inside an 
+input field 
+
+eg: 
+ input::placeholder{
+            color: red;
+            background-color: azure;
+            font-style: italic;
+        }
+     </style>
+    
+    <input type="text" placeholder="search"> 
+    <span><button>search</button>
+----------------------------------------------
+BOX-MODEL CSS 
+--------------
+What is box-model?
+-> The CSS Box-model is a fundamental concept that describes how 
+   every element on a webpage is structured as a regular box. 
+   every HTML element is essentially a box with content , padding 
+   border and margin 
+
+   eg:
+   photo-frame 
+   content - the image itself 
+   padding - the mat border areound the photo 
+   border - image-frame 
+   margin - the space b/w the frames on the wall 
+
+   ------------------------
+             margin 
+    -----------------------
+             border 
+    -----------------------
+             padding 
+    -----------------------
+            content 
+    -----------------------
+             padding
+    -----------------------
+             border
+    -----------------------
+              margin 
+    -------------------------
+
+1. Content Area 
+----------------
+The innermost part where your text, image or other elements live 
+
+properties: 
+width/height - sets content dimensions 
+min-width/ max-width - responsive constraints
+overflow - handle content that doesnot fit 
+
+eg:
+
+    <style>
+        .fixed-content{
+            width: 300px;
+            height: 100px;
+            background-color: blanchedalmond;
+            padding: 20px;
+            border: 2px solid black;
+            margin-bottom: 50px;
+        }
+        .flexible-content{
+            width: 50%;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin-top: 50px;
+        }
+        .min-max-content{
+            min-width: 250px;
+            max-width: 400px;
+            height: 100px;
+            padding: 20px;
+            background-color: yellow;
+            border: 2px solid black;
+
+        }
+        .overflow-content{
+            width: 200px;
+            height: 80px;
+            border: 2px solid black;
+            background-color: antiquewhite;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+    <div class="fixed-content">Javascript</div>
+    <div class="flexible-content">Java</div>
+    <div class="min-max-content">SpringBoot</div>
+    <p class="overflow-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio id, quod suscipit dolorem ea et beatae explicabo vel consectetur expedita tempora minus incidunt consequatur cum voluptas debitis animi similique aliquid modi sapiente facere minima eveniet, in voluptatum. Quis perspiciatis, harum cum commodi laborum blanditiis excepturi suscipit sit tenetur. Ab eos vero odit, saepe, eum consequatur pariatur quas repellendus sint magni porro. Officiis at quaerat voluptates, ipsa non ipsam. Saepe cumque consequuntur corrupti quas ratione magni placeat iusto quidem molestiae repellat nostrum, excepturi aspernatur ipsa repudiandae ex numquam doloribus! Quibusdam reprehenderit perspiciatis excepturi eveniet unde explicabo. Error quidem voluptates similique nostrum exercitationem! Repudiandae quidem odit quasi error eligendi consequuntur, aliquam odio velit deserunt repellendus voluptate. Cumque dolorem distinctio, ipsa omnis ducimus explicabo saepe quia illum enim amet dignissimos est totam vero asperiores ab officiis sit aperiam aspernatur placeat exercitationem atque, excepturi deserunt provident officia! Sint asperiores ex, nam dolorem eveniet mollitia ipsa ratione architecto ad atque, eos culpa quasi voluptatibus natus nulla obcaecati nisi. Mollitia dicta assumenda dignissimos minus voluptatum aperiam quam rerum, animi aspernatur eius laboriosam molestias, minima id? Adipisci modi, optio iste similique necessitatibus voluptas expedita nulla saepe! Eius maiores mollitia ratione aliquid dolor nisi cumque et ex. Impedit?
+
+    </p>
+---------------------------------------------
+CSS Border Properties 
+--------------------
+border - 2px solid black 
+2px - thickness 
+solid - style 
+black - color 
+
+eg:
+ <style>
+        h1{
+            border: 2px solid black;
+            width: 200px;
+        }
+        h3{
+            width: 300px;
+            border-color: blue;
+            border-width: 10px 20px 5px 20px;
+            border-style: solid;
+        }
+    </style>
+
+-----------------------------
+border-style 
+------------
+solid 
+dotted 
+dashed 
+double 
+none/hidden 
+groove
+
+eg:
+h3{
+            width: 300px;
+            border-color: blue;
+            border-width: 10px 20px 5px 20px;
+            /* border-style: solid; */
+            /* border-style: dashed; */
+            /* border-style: dotted; */
+------------------------------
+border-radius 
+--------------
+eg:
+        h3{
+            width: 300px;
+            border-color: blue;
+            border-width: 10px 20px 5px 20px;
+            border-style: solid;
+            border-radius: 10px;
+            /* border-style: dashed; */
+            /* border-style: dotted; */
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            border-radius: 50%;
+            border: 2px solid red;
+        }
+        .circle:hover{
+            background-color: black;
+        }
+    </style>
+    
+    <h1>JavaScript</h1>
+    <h3>Intoduction to javaScript </h3>
+    <div class="circle"></div>
+-----------------------------------------------------------
+Display 
+-------
+The display property is CSS controls how an element is 
+shown on the webpage 
+it determines 
+-> whether an element takes the full width or 
+   only the as much as the content size 
+-> whether other element can sit next to it or not 
+-> whether the element is visible or not 
+
+------------------------
+Display: Block 
+-------------
+Block elements starts on a new line and takes up 
+the full width available i.e 100% of their container width 
+they push other elements above or below them 
+
+characteristics 
+- always starts on new line 
+- take full width by default 
+- you can set width and height 
+- you can add margin and padding on all sides 
+
+common block elements 
+-> div , p , h1-h6 , ul , li , section 
+   footer etc.. 
+
+eg: 
+<style>
+        .block-box{
+            display: block;
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+    
+    <span class="block-box">Box 1</span>
+    <span class="block-box">Box 2</span>
+    <span class="block-box">Box 3</span>
+-------------------------------------------
+Display: Inline 
+---------------
+Inline Element donot starts on the new line and 
+takes only the requires width as the content size 
+
+characteristics
+- doesnot starts on the new line 
+- takes only the requires width as the content
+- cannot set the width and height 
+- padding works but may overlap other elements 
+
+common inline elements 
+-> span , a , stong , em , u , b ,i imag 
+
+eg:
+    <style>
+        .block-box{
+            display: inline;
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            /* height and width are not applicable */
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+    
+    <div class="block-box">Box 1</div>
+    <div class="block-box">Box 2</div>
+    <div class="block-box">Box 3</d>
+------------------------------------------------------------
+Display: inline-block 
+----------------------
+Bost of both elements , element sits next to eachother like 
+inline element
+element you can set width, height like block element 
+
+properties
+- doesnot starts on the new line 
+- takes only the requires width as content 
+- you can set width and height 
+- great for creating navigationmenus , buttons 
+  or cards in a row 
+
+eg:
+<style>
+        .block-box{
+            display: inline-block;
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+    <div class="block-box">Box 1</div>
+    <div class="block-box">Box 2</div>
+    <div class="block-box">Box 3</div>
+
+----------------------------------------------
+display: none 
+---------------
+The element is completly removed from webpage.
+it takes no spaces and is not visible 
+it's like the element that doesnot exists at all .
+
+properties
+- element is hidden 
+- takes no spaces in the layout 
+- other element move into its place 
+- the element is still in the HTML but invisible 
+
+eg:
+    <style>
+        .box1{
+           background-color: aqua;
+           height: 100px;
+           width: 200px;
+
+        }
+        .box2{
+            background-color: aquamarine;
+            height: 100px;
+           width: 200px;
+           /* display: none; */
+           visibility: hidden;
+        }
+        .box3{
+            background-color: bisque;
+            height: 100px;
+           width: 200px;
+        }
+    </style>
+    
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3"">Box 3</div>
+
+WHat is the difference b/w display none and visibility hidden?
+-> display none = takes no spoace 
+   visibility hidden = takes space 
+------------------------------------------------
+Display: flex (flexbox)
+-----------------------
+Display flex is a one-dimensional layout model that 
+arranges items in either row or columns 
+it is designed to distribute space effeciently and 
+align items easily, even when thier sizes are unknown 
+or dynamic 
+
+key concepts: 
+- flex container : the parent element with display flex 
+- flex items : the direct children of the container 
+- main axis : the primary direction(row or columns)
+- cross axis : the particular direction 
+
+properties on parent 
+--------------------
+display: flex 
+flex-direction: row(default) | columns | row-reverse | columns-reverse 
+flex-wrap: wrap | no-wrap | wrap-reverse 
+justify-content: flex-start | center | flex-end | space-between 
+                 space-around | space-evenly 
+align-items: stretch| flex-start | center | flex-end | baseLine 
+align-content: stretch | flex-start | center | flex-end | 
+               space-between 
+gap: px 
+
+properties on child 
+-------------------
+flew-grow: 0/1/2
+flex-shrink: 0/1/2 
+flex-basis: intial size 
+flex: 1 (shorthand way for flex-grow/shrink/basis)
+align-self: auo | flex-start | center | flex-end | stretch 
+order: change visual order 
+
+eg:
+<style>
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: aqua;
+            min-height: 200px;
+            padding: 20px;
+            width: 500px;
+        }
+
+        .flex-item{
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            border: 2px solid black;
+            min-width: 100px;
+            text-align: center;
+        }
+    </style>
+    
+<body>
+    <h1>Flex BOX </h1>
+    <div class="flex-container">
+        <div class="flex-item">item 1</div>
+         <div class="flex-item">item 2</div>
+          <div class="flex-item">item 3</div>
+           <div class="flex-item">item 4</div>
+            <div class="flex-item">item 5</div>
+    </div>
+
+-------------------------------------------------------
+Display: Grid
+--------------
+CSS Grid is a two dimensional layout system that handles 
+both rows and columns simultaneously 
+
+key concepts: 
+Grid Container: parent with display:grid 
+grid item : direct children 
+grid lines: the dividing lines b/w rows and columns 
+grid cells: individual intersection of rows and columns 
+grid area: Named rectangular and spanning multiple cells 
+
+eg;
+ <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 80px 250px 80px;
+            gap: 8px;
+            background-color: bisque;
+            padding: 15px;
+            border: 2px solid black;
+        }
+        .grid-item{
+            background-color: aqua;
+            color: blue;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-header{
+            grid-column: 1/4;
+             /* 1/4 -> start/end 
+            their are total 3 col and 4 line 
+            and as we divide the 1/4 
+            it means staring from 1 and ends in 4 */
+            background-color: brown;
+        }
+        .item-sidebar{
+            grid-row: 2/4;
+            background-color: teal;
+        }
+        .item-footer{
+            grid-column: 1/4;
+            background-color: coral;
+        }
+    </style>
+    
+<body>
+    <h1>Grid Example</h1>
+    <div class="grid-container">
+        <div class="grid-item item-header">Header</div>
+        <div class="grid-item item-sidebar">SideBar</div>
+        <div class="grid-item">Main</div>
+        <div class="grid-item">Extra</div>
+        <div class="grid-item item-footer">Footer</div>
+    </div>
+----------------------------------------------------------
+display: table/ table-cell / table-row 
+-> THese values makes elements behave like HTML tables 
+w/o using <table> 
+-> Usefule for legacy browser support or specific vertical alignments 
+  needs 
+
+eg:
+    <style>
+        .table-container{
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-row{
+            display: table-row;
+            
+        }
+        .table-cell{
+            display: table-cell;
+            border: 1px solid black;
+            width: 100%;
+            padding: 10px;
+            vertical-align: middle;
+            background-color: antiquewhite;
+        }
+        .table-row:first-child{
+            font-weight: bold;
+        }
+    </style>
+    
+    <div class="table-container">
+        <div class="table-cell">Name</div>
+        <div class="table-cell">Age</div>
+        <div class="table-cell">Major</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell">Shreyansh</div>
+        <div class="table-cell">28</div>
+        <div class="table-cell">Mechanical</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell">Ishan</div>
+        <div class="table-cell">25</div>
+        <div class="table-cell">Civil</div>
+    </div>
+---------------------------------------------------------
+Position Properties 
+---------------------
+What is css Positioning? 
+-> css positioning determines how an element is placed in the 
+   document flow. it controls wheather an element stays in its 
+   normal position or moves relative to its normal position or 
+   is removed from the flow entirely and positioned based on its 
+   parent or viewport 
+
+types 
+- static 
+- relative
+- absolute 
+- fixed 
+- sticky 
+
+1. Position Static 
+-------------------
+Static is the default position for all elements 
+Elements stay in the normal document flow and appears 
+where they naturally belongs in the HTML order. 
+
+- characteristics 
+  - follows normal HTML flow 
+  - ignores top, left , right bottom and z-index 
+  - every element is static by default(you don't need to set it)
+
+eg:
+  <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .static-box{
+            position: static;
+        }
+
+        .static-box{
+            top: 50px;
+            
+            left: 50px;
+        }
+    </style>
+    
+    <div class="box">Box 1</div>
+    <div class="box static-box">Box 2</div>
+    <div class="box">Box 3</div>
+-------------------------------------------------
+Position relative 
+-----------------
+Relative position of an element relates to its normal position 
+in the document flow . it moves the element using top ,
+left , bottom,  and right from where it would have been normally 
+
+characteristics
+- stays in the normal flow(other elements doesnot moves)
+- original space is preserved 
+- moves based on its original position 
+- can use z-index 
+
+eg:
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .relative-box{
+            position: relative;
+        }
+
+        .relative-box{
+            top: 50px;
+            left: 200px;
+        }
+        .negative-relative-box{
+            position: relative;
+            top: -50px;
+            right: -300px;
+            background-color: blanchedalmond;
+        }
+    </style>
+
+<body>
+    <div class="box">Box 1</div>
+    <div class="box relative-box">Box 2</div>
+    <div class="box">Box 3</div>
+
+      <div class="box">Box 1</div>
+    <div class="box negative-relative-box">Box 2</div>
+    <div class="box">Box 3</div>
+----------------------------------------------------------
+Position Absolute 
+-----------------
+Absolute removes the element from the normal document 
+flow and positions it's relative to its neareast ancestor 
+If no positioned ancestor exists , then its position
+relation to the html document 
+
+characteristics
+- removed from document flow 
+- other elements move up to fill the gap 
+- positions relative to neareast positioned ancestor
+- can overlap other elements 
+- uses z-index for stack order 
+
+eg;
+ <style>
+        .relative-container{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            margin: 20px;
+            top: 20px;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            margin: 10px;
+
+        }
+        .absolute-box{
+            position: absolute;
+            top: 70px;
+            left: 100px; 
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="relative-container">
+        <div class="box absolute-box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+-----------------------------------------------------------------
+Position Fixed 
+----------------
+Position fixed removes the element from the document flow and 
+position it relative to the viewport. 
+the element stays in the same place even when you scroll 
+
+characteristics
+- removed from document flow 
+- position relative to the viewport
+- never moves when scrolling 
+- uses - top/left/bottom/right 
+- common for navigation bars, headers, sticky buttons 
+
+eg;
+    <style>
+        a{
+            margin-left: 10px;
+            color: antiquewhite;
+        }
+        body{
+            height: 100vh;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .fixed-nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(157, 64, 64, 0.794);
+            color: antiquewhite;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+<body>
+    <nav class="fixed-nav">
+        <a href="#">Home</a>
+        <a href="#">ContactUs</a>
+        <a href="#">About</a>
+
+    </nav>
+
+    <div class="container">
+        <h1>JavaScript</h1>
+        <hr>
+        <marquee behavior="scroll" direction="left">Learn JavaScript</marquee>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nesciunt assumenda veritatis ex alias sequi reprehenderit iure praesentium fugit minus! Dolorum totam quae quibusdam distinctio molestias excepturi nihil ad, praesentium at perspiciatis deserunt sint laudantium? Sequi officiis unde quas nobis nostrum distinctio tenetur mollitia voluptatem sint ut fugiat odio itaque quod dolorum, incidunt voluptates laudantium molestiae corporis ratione repellat ducimus sit ullam. Ad non, enim voluptas doloribus illo culpa totam similique eius facere quidem labore amet perferendis suscipit asperiores dolor saepe ducimus fugiat cum officiis rem soluta eveniet impedit error. Molestiae rem maxime perferendis quibusdam nostrum, repudiandae officia pariatur deleniti suscipit quasi, nulla saepe, error neque dolorum iure! Voluptatum porro nam corporis obcaecati, consequuntur sed aspernatur fugit veniam sint minus perferendis aliquam soluta consectetur nesciunt voluptates officia a quos eaque, praesentium iusto nulla! Excepturi, repellendus! Animi voluptas aspernatur, id ut similique nobis repudiandae sit exercitationem perferendis laboriosam reiciendis fugiat aliquam velit nulla commodi harum nihil perspiciatis expedita deserunt! Alias eaque reprehenderit dolorum, mollitia hic, corporis necessitatibus ullam tempora aliquid ducimus ex deleniti eum, nobis officiis laborum eligendi quisquam? Aspernatur sed accusamus corporis cupiditate quibusdam. Possimus nisi asperiores officia, molestiae, tenetur tempore labore minus ea molestias beatae voluptate incidunt dolore quis officiis id consequatur. Molestias minima, reiciendis ea deserunt officiis error. Qui, facere! Possimus iste esse minus suscipit nesciunt. Similique placeat, possimus saepe debitis deleniti perspiciatis expedita. Impedit nisi tenetur consectetur, consequuntur obcaecati eaque distinctio officiis quisquam accusamus? Totam, beatae. Nam dolor perspiciatis laborum alias! Atque, eius nesciunt temporibus unde accusamus voluptatum quisquam dolores assumenda beatae vitae molestias reprehenderit libero iure eligendi alias consequatur commodi asperiores aperiam quasi earum placeat officia sed. Placeat officia dicta accusamus doloremque beatae. Quos cumque assumenda soluta ducimus neque ratione, quia deleniti culpa nobis non earum velit sit laudantium reiciendis perspiciatis dolores iusto! Id enim incidunt vel a animi saepe non quas voluptate quasi alias, inventore quia doloremque nobis, sed nulla nam dolore exercitationem aperiam ut eligendi atque temporibus quo maiores. Exercitationem in id esse error. Eaque hic voluptatibus inventore blanditiis saepe, esse veritatis nulla eligendi dignissimos nesciunt incidunt illo numquam dolorum similique fuga placeat minima fugiat, explicabo ex. Incidunt esse fuga quas accusamus amet, soluta ad, atque provident sint nihil officia odio, repudiandae dolores odit laudantium! At ad explicabo earum enim, aperiam quidem eos mollitia possimus, harum modi nam, tempore ea doloremque dignissimos ex magni vero ullam a quia? Tempore, accusamus! Ipsam excepturi ad itaque quasi numquam deserunt! Maiores libero quia laborum, iure natus laudantium, quisquam, voluptatibus a alias similique quod cupiditate animi eius porro repellendus corporis eligendi fuga suscipit? In, minus doloribus possimus beatae ratione mollitia vel tempora veritatis provident, recusandae ipsum modi, non nobis nemo doloremque. Vel inventore quaerat harum sequi voluptatum dignissimos sed minus nam! Sint aperiam, doloremque nobis quas sed deserunt vel perferendis illo iure autem deleniti quos. Laborum ex rerum, assumenda commodi nam consequuntur amet officia dolor modi aliquid eos aspernatur similique harum necessitatibus odit perferendis tempora maiores inventore temporibus repellendus corrupti voluptates error deserunt perspiciatis? Placeat, officia! Asperiores, molestiae.
+            
+        </p>
+    </div>
+-----------------------------------------
+Position: sticky
+-----------------
+Sticky is a hybrid of relative and fixed 
+the element behaves like relative (stays in the flow )
+until you scroll past it , then it sticks(becomes fixed)
+to a specific position 
+
+characteristics
+- stays in normal flow intially 
+- becomes fixed when you scroll past a thresshold 
+- uses top/left/right/botom to define where to stick 
+- works within its container 
+- great for section headers and table headers 
+
+eg:
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: darkblue;
+            color: white;
+            padding: 8px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            /* padding: 5px 5px; */
+
+        }
+        .nav a:hover{
+            background-color: chartreuse;
+            color: black;
+        }
+        .hero-section{
+            margin-top: 70px;
+            position: relative;
+            height: 100vh;
+
+        }
+        .hero-image{
+            position: sticky;
+            top: 70px;
+            width: 100%;
+            z-index: 1;
+            display: block;
+        }
+        .hero-content{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 255, 255, 0.71);
+            z-index: 2;
+        }
+
+    </style>
+    
+    <nav class="nav">
+        <h1>Anime CLub</h1>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">ContactUs</a>
+    </nav>
+
+    <section class="hero-section">
+        <img src="./demon-slayer-2560x1440-9326.jpg" alt="animeImage"
+        width="100%"
+        height="50%"
+        class="hero-image">
+
+         <div class="hero-content">
+            <h1>Anime Club</h1>
+            <p>Welcome to Anime CLub....!</p>
+            <div class="scroll-indicator">|</div>
+         </div>
+
+    </section>
+
+    <section class="content-below">
+        <h2>Content</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex hic magni, tempore, repellat, praesentium aliquam vero fuga error modi sapiente architecto numquam nemo sequi aut corrupti. Praesentium expedita culpa asperiores neque animi at omnis impedit recusandae temporibus ab autem ut deleniti nam, sapiente dolorum fugiat ea dicta consectetur optio voluptas corrupti eos maiores? Unde, itaque eos! Ab, fuga repudiandae inventore ratione eveniet molestias eum natus sit deserunt doloremque magnam. Impedit natus dolorem possimus, vel deleniti optio nostrum excepturi odit accusantium culpa praesentium sint voluptatem, harum rem. Amet quam, quis laudantium vero natus hic officia placeat, animi autem minima odio eum nemo, cum quisquam nisi illo? Sit nihil, quidem vel expedita officiis quasi aspernatur recusandae quo unde dolores perferendis alias accusantium nobis molestias possimus delectus laudantium aliquid amet eum? Recusandae eum quia quisquam in odio nulla error aliquam nemo accusantium vero non, rem tempore repellendus voluptates aliquid. Eos tempora iste voluptates sapiente totam quisquam accusantium delectus nulla consequatur quae velit sint temporibus cumque sed nesciunt a doloremque autem alias ad, dolore expedita deleniti? Quidem optio dignissimos voluptate, placeat maxime est nisi nemo iure corporis nobis repellat, sit nihil dolores labore velit provident autem consectetur temporibus aperiam reprehenderit? Doloribus dolorem soluta voluptates?
+
+        </p>
+    </section>
+--------------------------------------------------------------------
+CSS Overflow
+-------------
+Ir is a property that controls whats happens 
+when the content inside an element is larger than 
+the element's width and height 
+
+1. OverFlow: visible/hidden 
+---------------------------
+scroll - it will show you the scroll bar 
+         even after the content is not overflowing 
+
+
+eg:
+
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            overflow: hidden;
+        }
+        .box:hover{
+            font-size: 20px;
+            width: 100%;
+            height: 100vh;
+            overflow: visible;
+        }
+    </style>
+   
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rem saepe doloribus consequuntur eius distinctio a deserunt illum quo vitae nobis neque modi, eveniet expedita atque ratione libero tempora accusantium quam nostrum sit aut. Esse obcaecati rem iure vitae minima veritatis quia non numquam cum odio ducimus fugiat, ad magnam dolorem reprehenderit quo! Quod debitis pariatur labore nostrum nam soluta. Ad laboriosam porro voluptas quo consequuntur quas, rerum, amet ullam voluptatum quia et eius dolor dicta praesentium beatae delectus aut! Nobis tempore ab id quae alias earum assumenda quod nihil vero dolore rerum obcaecati consequuntur possimus ullam, saepe libero, maxime ducimus? Consectetur culpa optio cum iste velit dolorum harum molestiae similique ad libero. Distinctio dignissimos alias quia est optio impedit unde dolores repellat tempore fugiat nisi sunt delectus facilis, officiis hic praesentium soluta similique et. A, veritatis vel. Odit debitis perferendis quaerat natus. Sed laboriosam eveniet inventore, possimus odit similique tempora exercitationem sunt ullam eaque est molestiae totam quibusdam. Aspernatur veniam est soluta consequatur nulla deleniti eligendi fuga enim, commodi architecto dolores vitae quod recusandae iusto alias nostrum porro ea dolor nisi cum cumque corrupti! Temporibus, quia ipsam nisi deserunt unde sequi nulla delectus obcaecati corporis recusandae labore assumenda id dicta illum quae porro, molestias soluta. Quae, ea ipsam? Doloremque libero natus cumque harum dolore, veniam provident fugit aperiam assumenda enim hic. Beatae fuga odio ab obcaecati sint nihil nulla nostrum incidunt, ut labore voluptatibus saepe iste explicabo ducimus cumque facilis quae atque dolores, quos deserunt voluptatem laborum vero eum excepturi! Quo sequi, dolores veritatis vel excepturi maiores ipsum accusantium magnam aut obcaecati amet necessitatibus, cumque nihil facilis sint corrupti ducimus tempore iste? Natus sapiente ab dolorum architecto, tempore veniam assumenda odit ipsam hic, quas suscipit adipisci similique, veritatis sequi quis accusantium minus eius repellendus? Error obcaecati ducimus dolores deserunt et rerum odit eos veritatis deleniti sed. Molestiae eligendi temporibus assumenda repellat, eius non voluptate veritatis. Eaque maxime possimus libero soluta vero dignissimos quidem ullam laborum cum fuga officiis laboriosam eveniet explicabo eligendi molestias sapiente, facere error vitae corporis molestiae dolores perferendis velit! Distinctio nulla animi qui. Nesciunt laudantium iste possimus nostrum optio minus similique error quis. Eum ratione provident sapiente neque velit corporis obcaecati doloremque non ab maxime magni illum blanditiis nam ad quam repellendus, ipsum consequuntur quos quis, rerum consectetur vel quaerat dolorum modi. Nostrum cupiditate cum voluptate suscipit illo eligendi atque nobis aliquam nam incidunt mollitia, iusto nihil, necessitatibus tenetur optio aut repudiandae dicta itaque! Deserunt rerum iste facilis. Cupiditate dolorem incidunt repellat hic, voluptatum blanditiis? Aliquam accusamus inventore eius doloribus harum adipisci magnam repellendus odio, dolore labore, quisquam numquam quo vitae quasi impedit ea omnis reprehenderit amet ab? Illum voluptatem dolorum suscipit voluptate harum corporis exercitationem minus architecto eaque saepe aliquid delectus dolore, quidem repellendus expedita natus culpa distinctio error totam sunt laborum quibusdam odit. Voluptas officiis totam reiciendis aliquid labore, sit itaque voluptatum porro nihil maiores laboriosam iste. Saepe commodi possimus excepturi dignissimos ipsum sequi corporis laborum odio quod dolore! Facilis accusamus dolor itaque repudiandae!
+            
+        </p>
+    </div>
+
+----------------------------------------------
+overflow-auto 
+-------------
+It will show the scroll accordingly 
+to the content if the content is small 
+then it will not show the scroll 
+and if the content is larger it will 
+show the scroll 
+
+eg:
+ .box{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            overflow: auto;
+        }
+
+------------------------------------
+overflow - x/y 
+---------------
+It will shift your content and make it 
+scroll either on vertical or horizontal direction
+
+eg:
+ .box{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+--------------------------------------------
+CSS FLEXBOX 
+-----------
+FlexBox is one of the important css layout system 
+it helps you to arrange items in rows or columns ,
+align items , distribute space and build responsive 
+layout easily
+
+What is flexBox?
+-> It is a one-dimensional layout model used to 
+   arrange align and distrubute space among the items inside a 
+   container eithier in rows or columns
+
+Why do we use flexBox? 
+- Easy horizontal and vertical alignments 
+- equal spacing b/w items 
+- responsive design becomes simple 
+- less CSS code 
+
+w/o flexbox 
+- difficult to align 
+- need to use float , margin and positioning properties 
+- responsive layout become complicated 
+
+eg:
+
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    </style>
+    
+<body>
+    <div class="container">
+        <div> Box 1</div>
+        <div> Box 2</div>
+        <div> Box 3</div>
+        <div> Box 4</div>
+        <div> Box 5</div>
+    </div>
+---------------------------------------------------
+Justify-content 
+----------------
+The jsutify -content property alings flex item along the main axis 
+, the main axis depends on the flex direction 
+
+eg:
+ <style>
+        .container{
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(136,122,122);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+    
+    <nav class="container">
+        <p>MyWebsite</p>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">ContactUs</a>
+        <a href="#">Portal</a>
+    </nav>
+
+---------------------------------------------
+Align item 
+-----------
+The align-items property align flex items 
+along the cross axis 
+
+eg;
+    <style>
+        .container{
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(136,122,122);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+    
+    <nav class="container">
+        <p>MyWebsite</p>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">ContactUs</a>
+        <a href="#">Portal</a>
+    </nav>
+---------------------------------------
+Login Page 
+-----------
+eg;
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: burlywood;
+        }
+        .login-container{
+            width: 350px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-container h1{
+            text-align: center;
+            color: blue;
+        }
+
+        .login-container input{
+            padding: 10px;
+            font-size: 16px;
+        }
+        .login-container button{
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .login-container button:hover{
+            background-color: blueviolet;
+            
+        }
+    </style>
+    
+    <div class="container">
+        <div class="login-container">
+            <h1>Login</h1>
+            <input type="email" placeholder="username">
+            <input type="password" placeholder="password">
+            <button>Login</button>
+        </div>
+    </div>
+-----------------------------------------------------------------------
+Flex-wrap 
+----------
+The flex-wrap property controls wheather flex items should 
+stay in one line or move to the next line when thier is not 
+enough space 
+
+eg:
+
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background-color: burlywood;
+            width: 200px;
+            border: 2px solid black;
+        }
+
+        .item{
+            background-color: blueviolet;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .warp{
+            flex-wrap: wrap;
+        }
+        .warp-reverse{
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+    
+<body>
+    <div class="container nowarp">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    
+    <div class="container warp">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    
+    <div class="container warp-reverse">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+-----------------------------------------------------------------
+flex-grow 
+---------
+The flex-grow property specifies how much a flex item 
+should grow as compared to other flex items when extra
+space is available
+
+eg:
+    <style>
+        .container{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background-color: antiquewhite;
+            border: 2px solid black;
+            margin-bottom: 30px;
+            width: 600px;
+
+        }
+
+        .item{
+            padding: 20px;
+            background-color: lightblue;
+            border-radius: 10px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .equal .item{
+            flex-grow: 1;
+        }
+
+        .different .item1{
+            flex-grow: 1;
+        }
+
+        .different .item2{
+            flex-grow: 2;
+        }
+
+        .different .item3{
+            flex-grow: 1;
+        }
+    </style>
+    
+<body>
+    <div class="container equal">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+
+    <div class="container different">
+        <div class="item item1">item 1</div>
+        <div class="item item2">item 2</div>
+        <div class="item item3">item 3</div>
+    </div>
+----------------------------------------------------------
+flex-shrink
+------------
+It tell you how much an item should shrink when 
+there isn't enough space 
+
+eg:
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background-color: antiquewhite;
+            margin-bottom: 20px;
+            width: 350px;
+            border: 2px solid black;
+        }
+
+        .item{
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            
+        }
+
+        .item1{
+            width: 200px;
+            flex-shrink: 1;
+        }
+        .item2{
+            width: 150px;
+            flex-shrink: 1;
+        }
+        .item3{
+            width: 150px;
+            flex-shrink: 1;
+        }
+        
+        .different-shrink .item{
+            width: 200px;
+            flex-shrink: 1;
+        }
+
+        .different-shrink .item1{
+            flex-shrink: 0;
+        }
+        .different-shrink .item2{
+            flex-shrink: 1;
+        }
+        .different-shrink .item3{
+            flex-shrink: 3;
+        }
+        
+    </style>
+   
+<body>
+    <div class="container equal-shrink">
+        <div class="item item1">item 1</div>
+        <div class="item item2">item 2</div>
+        <div class="item item3">item 3</div>
+        <div class="item item4">item 4</div>
+        <div class="item item5">item 5</div>
+    </div>
+
+      <div class="container different-shrink">
+         <div class="item item1">item 1</div>
+        <div class="item item2">item 2</div>
+        <div class="item item3">item 3</div>
+        <!-- <div class="item item4">item 4</div>
+        <div class="item item5">item 5</div> -->
+    </div>
+-----------------------------------------------------
+flex-basis 
+----------
+flex-basis decides the initial size of a flex item before 
+the remaining space is distribute 
+
+eg;
+    <style>
+        .container{
+            background-color: rgb(75, 70, 63);
+            width:300px; 
+            display: flex;
+            gap: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .item{
+            background-color: antiquewhite;
+            padding: 15px;
+            flex-basis: 200px;
+        }
+
+        .container2{
+            display: flex;
+            background-color: darkgreen;
+            padding: 10px;
+            width: 800px;
+            gap: 5px;
+        }
+
+        .item2{
+            background-color: antiquewhite;
+            padding: 15px;
+            /* flex-basis: 200px; */
+            width: 200px;
+        }
+
+    </style>
+   
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+
+     <div class="container2">
+        <div class="item2">item 1</div>
+        <div class="item2">item 2</div>
+        <div class="item2">item 3</div>
+    </div>
+---------------------------------------------------------------------
+Float property
+--------------
+The CSS float property is used to place an element on the 
+left or right side of its container, allowing other elements/content 
+such as text to wrap around it 
+
+float:left 
+-----------
+
+The element moves to the left side 
+and surrounding content wrap 
+around it right side 
+eg:
+    <style>
+        h1{
+            text-align: center;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        .conatiner-image{
+            float: left;
+            margin-right: 25px;
+            border: 5px solid black;
+        }
+
+        .container-list{
+            border: 3px soild black;
+            background-color: antiquewhite;
+            margin-left: 8px;
+        }
+    </style>
+   
+    
+    <h1>Demons Slayer</h1>
+    <hr>
+    <marquee behavior="scroll" direction="left"><a href="#">Watch on Netflix</a></marquee>
+    <hr>
+    <div class="conatiner-image">
+        <img src="./demon-slayer-2560x1440-9326.jpg" alt="image"
+        height="200"
+        width="200">
+
+    </div>
+    <div class="container-list">
+        <ol>
+            <li><a href="#">Season 1</a></li>
+             <li><a href="#">Season 2</a></li>
+              <li><a href="#">Season 3</a></li>
+               <li><a href="#">Season 4</a></li>
+        </ol>
+        <h3><u><b>UpComing Seasons</b></u></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus voluptatum repudiandae vitae ad sint, perferendis maiores quisquam iure culpa dolorem ratione. Dolor, tempore et. Eveniet explicabo sunt ea eligendi? Fugit incidunt reiciendis, accusamus vel aspernatur, molestias odio cum dolorem tempore voluptatem qui veniam dolor nostrum sint corrupti porro neque! Quas nemo et molestiae nulla quae ratione nam consequuntur quibusdam, ab, sint consequatur dicta sed inventore doloremque praesentium rerum? Repellat dolore nisi voluptas, id soluta molestiae obcaecati explicabo magni veritatis alias quas delectus ipsa! Rerum doloremque aliquid cum aperiam eos harum reprehenderit sint, dolorum expedita nulla consectetur nihil cupiditate dolorem.
+            
+        </p>
+    </div>
+
+Float:right 
+-----------
+The element moves to the right side 
+and surrounding content wrap 
+around it left side 
+eg;
+   .conatiner-image{
+            float: right;
+            margin-right: 25px;
+            border: 5px solid black;
+        }
+
+----------------------------------------------------
+Clear property
+---------------
+The CSS clear property prevents an element from 
+being positioned next to floated elements. 
+it moves the element below the floated element 
+
+clear:left 
+-----------
+it will act only for floated left elements 
+eg:
+ <style>
+        .box{
+            float: left;
+            width: 120px;
+            height: 120px;
+            background-color: antiquewhite;
+            margin-right: 10px;
+        }
+
+        .text{
+            clear: left;
+        }
+    </style>
+<body>
+    <div class="box"></div>
+    <h3>Learn CSS</h3>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque qui, explicabo voluptate dolor ducimus dolore dolorum ut totam sint modi? Fugit, repudiandae officia veniam veritatis ullam modi vitae placeat vel neque porro nam deleniti blanditiis quas, similique hic soluta impedit nesciunt natus beatae aut eos id ad accusamus! Animi eligendi cum expedita dolores quasi omnis, illo blanditiis architecto tempore. Minus dolor omnis quis similique ipsa nobis. Incidunt, consectetur atque. Impedit, ex architecto! Consequuntur corporis ullam aliquam ab voluptate cum ipsum quisquam temporibus harum odit ipsam ducimus architecto sunt doloremque dolorem dolorum amet soluta quam, consectetur fuga. Iusto enim atque deleniti.</p>
+    
+    <div class="box"></div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam atque dolore quidem dolorum asperiores? Sequi expedita eum incidunt minus rem non magni maxime, tenetur maiores sit? Ipsum impedit eveniet laudantium maxime saepe numquam quaerat nam vero inventore illo exercitationem, fugit tempora aliquid error eum maiores beatae id. In ipsam voluptates magni deleniti saepe iste amet dolores beatae qui ex maxime voluptas expedita quaerat ducimus quasi quo, quisquam odit minima similique eos vitae aspernatur? Quisquam earum illo ea dignissimos, esse officia assumenda iste exercitationem cumque cupiditate asperiores, dicta corporis consequatur adipisci dolores, nam facere impedit maiores eveniet! Nemo, vero nihil! Ducimus.</p>
+
+---------------------------
+clear:right 
+----------
+it will works only for floated right 
+elements
+
+eg;
+
+        .box{
+            float: right;
+            width: 120px;
+            height: 120px;
+            background-color: antiquewhite;
+            margin-right: 10px;
+        }
+
+        .text{
+            clear: right;
+        }
+--------------------------------
+clear:both 
+----------
+it will work for both the left and 
+right floated element
+
+eg:
+.box{
+            float: left;
+            width: 120px;
+            height: 120px;
+            background-color: antiquewhite;
+            margin-right: 10px;
+        }
+
+        .text{
+            clear: both;
+        }
+
+---------------------------------------------
+CSS Grid 
+---------
+CSS grid is a two-dimensional layout system that allows developers 
+to create complex web layouts using rows and columns 
+
+display:grid 
+-------------
+it is the property that turns an element into grid container 
+
+grid-template-columns 
+-----------------------
+defines the number and width of col's in the grid by using fr unit "fraction"
+
+eg:
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+            margin: 5px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+    </div>
+------------------------------------------------------------------
+Grid-template-row
+-----------------
+THe grid template rows is a property which defines the 
+number of rows and the height of each row in the grid container 
+
+eg:
+ <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+            margin: 5px;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 100px 200px 150px 100px;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+         <div class="box">box 6</div>
+          <div class="box">box 7</div>
+    </div>
+-------------------------------------------------------
+Gap 
+----
+The Gap property add spaces b/w rows and columns inside a 
+grid layout 
+----------------------------------------------------
+Child (grid items)
+------------------
+1. grid-columns 
+---------------
+the grid-column property specifies how many columns a grid item
+should occupy or where it should start and end with the grid 
+
+syntax: 
+grid-column: start/end 
+
+eg:
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .grid-item{
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .item1{
+            grid-column: 1/4;
+        }
+        .item2{
+            grid-column: 2/3;
+        }
+        .item3{
+            grid-column: 1/3;
+        }
+    </style>
+    
+    <div class="grid-container">
+        <div class="grid-item item1">Item 1 </div>
+        <div class="grid-item item2">Item 2 </div>
+        <div class="grid-item item3">Item 3 </div>
+        <div class="grid-item item4">Item 4 </div>
+        <div class="grid-item item5">Item 5 </div>
+    </div>
+ ----------------------------------------------
+ Grid - rows 
+ -------------
+ The grid row property specifies how many 
+ row a grid item should occupy or where 
+ it should start and end within the grid 
+
+ syntax: 
+ grid-row: start/end 
+
+ eg:
+  <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 80px 100px 80px;
+            gap: 10px;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .grid-item{
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .item1{
+            grid-row: 1/4;
+        }
+        .item2{
+            grid-row: 2/3;
+        }   
+------------------------------------------
+layout 
+-------
+eg:
+ <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 80px 100px 80px;
+            gap: 10px;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .grid-item{
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .item1{
+            grid-row: 1/2;
+        }
+        .item2{
+            grid-column: 3/4;
+        }
+        .item3{
+            grid-column: 2/3;
+        }
+        .item4{
+            grid-column: 1/2;
+        }
+        .item5{
+            grid-column: 3/4;
+        }
+    </style>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">Item 1 </div>
+        <div class="grid-item item2">Item 2 </div>
+        <div class="grid-item item3">Item 3 </div>
+        <div class="grid-item item4">Item 4 </div>
+        <div class="grid-item item5">Item 5 </div>
+    </div>
+--------------------------------------------------------------------
+CSS Transitions Property 
+------------------------
+CSS Transitions allow you to smoothly change the value of a css 
+property over a specified duration instead of changing it
+instantaly 
+ease: all movements are slow 
+ease-in: starting slow and ending is fast 
+ease-out: starting fast and end slow 
+ease-in-out: start slow mid fast end slow 
+
+
+eg: 
+ <style>
+        .btn{
+            padding: 10px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 10px;
+            transition: all 2s ease-in-out;
+        }
+
+        .btn:hover{
+            background-color: black;
+            color: white;
+            letter-spacing: 5px;
+            
+        }
+    </style>
+    <button class="btn">Click me</button>
+</body>
+</html>
+-------------------------------------
+Properties
+-----------
+transition-property
+- it specifies which css property should be animated 
+
+transition-duration 
+- specifies how long the transition animation should take to 
+  complete 
+
+transition-delay
+- specifies how long to wait before starting the transition
+
+transition-timing-function 
+- specifies the speed curve of the transition 
+
+eg:
+    <style>
+        .btn{
+            padding: 10px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 10px;
+            transition: all 2s ease-in-out;
+        }
+
+        .btn:hover{
+            background-color: black;
+            color: white;
+            letter-spacing: 5px;
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            background-color: rgb(155, 132, 102);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            transition: all 4s ease;
+        }
+        .card:hover{
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+    <button class="btn">Click me</button>
+
+---------------------------------------------------------
+Box-Shadow 
+----------
+box-shadow: h-offset v-offset blur spread color;
+h-offset: horizontal distribution 
+v-offset: vertical distribution 
+blur: opacity 
+spread: how much the shadow will spread in the 
+        screen 
+
+eg:
+.card:hover{
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            box-shadow: 5px 10px 10px 10px darkblue ,
+            -20px -10px 10px 10px darkgoldenrod;
+        }
+
+---------------------------------------------------
+CSS Gradient Properties 
+-----------------------
+1. Linear gradient 
+2. Radial gradient
+3. Conical gradient
+
+1. Linear gradient
+-------------------
+The colors will be distributed linearly 
+
+eg;
+  body{
+            height: 100vh;
+            background: linear-gradient(135deg,darkgray,gray,lightgray,black);
+        }
+
+2. Radial gradient
+------------------
+it will distribute the colors in circle 
+eg:
+            background: radial-gradient(circle,red,green,blue,yellow,white,black) ;
+
+3. Conical gradient
+---------------------
+it will distribute the colors in thye form of wheel 
+
+eg:
+        background: conic-gradient(green ,blue,yellow,white,
+        black,lightgreen,lightblue,darkblue,violet);
+
+flag
+----
+eg:
+  <style>
+        .flag{
+            width: 550px;
+            height: 300px;
+            background: linear-gradient(
+                to bottom,
+                #ff9633 0%,
+                #ff9633 33.33%,
+                white 33.33%,
+                white 66.66%,
+                #138808 66.66%
+                /* #138808 100%, */
+            );
+        }
+    </style>
+    
+<body>
+    <div class="flag"></div>
+------------------------------------------------------
+CSS Transform Property 
+---------------------
+The CSS Transform property is used to change the appeareance 
+or position of an HTML element w/o affecting the normal layout 
+of other elements 
+
+-> Transform allows you to move , rotate , resize or tilt 
+   an element 
+
+transform functions 
+-------------------
+1. translate()
+2. translateX()
+3. translateY()
+4. scale()
+5. scaleX()
+6. scaleY()
+7. rotate()
+8. rotateX()
+9. rotateY()
+10 skew()
+11 skewX()
+12 skewY()
+
+syntax: 
+slector{
+    transform: function(value);
+}
+
+1. translate()/translateY()/translateX()
+------------------------------------------
+It is used to move an element from its original position 
+eg:
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: all 2s ease-in-out;
+        }
+        .box:hover{
+            /* transform: translate(100px,100px); */
+            transform: translateY(50px);
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    
+<body>
+    <div class="box"></div>
+----------------------------------------------------
+Scale()
+--------
+it is a css transform function that changes the size of 
+an element 
+it can make it bigger (zoom in) or smaller (zoom out) 
+
+syntax: 
+transform: scale(x);
+transform: scale(x,y) 
+
+x-> controls width in horizontal 
+y -> controls width in vertical 
+
+value     effects 
+  1        original size 
+  2        2x bigger 
+  0.5      half the size 
+  0        becomes invisible 
+  -1       Mirror image + same size 
+
+eg:
+ <style>
+        img{
+            transition: transform 2s ease;
+        }
+        img:hover{
+            transform: scale(-2);  
+        }
+    </style>
+-------------------------------
+Transform-origin 
+----------------
+it will decide from where the 
+element should start the transform
+
+eg:
+        img:hover{
+            transform-origin: top left;
+            transform: scale(1.5);  
+        }
+------------------------------------
+3d Scaling 
+-----------
+It is a css 3d transformation function that scales 
+an element along three axes X , Y, Z
+eg: 
+ <style>
+        .parent{
+            width: 500px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s ease-in-out;
+            background-color: blue;
+        }
+        .child{
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            transition: all 2s ease-in-out;
+            text-align: center;
+            font-size: 40px;
+        }
+        .child:hover{
+            transform: scale3d(-1 , 0.5 , 0.3);
+        }
+    </style>
+    
+<body>
+    <div class="parent">
+       <div class="child">CSS</div>
+    </div>
+------------------------------------
+rotate()
+--------
+used to spin/rotate the element 
+
+syntax: 
+transfofrm: rotate(angle);
+
+0deg - no rotation 
+45deg - 45* clockwise 
+90deg - 90* clockwise 
+180deg - 180* half turn 
+360deg - full circle 
+-45deg - 45* anti-clockwise 
+
+positive - clockwise
+negative - anti-clockwise 
+eg;
+ <style>
+        img{
+            transition: transform 5s ease;
+        }
+        img:hover{
+           transform:  rotate(-45deg);
+        }
+    </style>
+    
+<body>
+    <img src="./demon-slayer-2560x1440-9326.jpg" alt="image"
+    width="300"
+    height="300">
+
+--------------------
+Moving from specific position 
+---------------------
+
+eg:
+ <style>
+        img{
+            transition: transform 5s ease;
+        }
+        img:hover{
+            transform-origin: bottom left;
+           transform:  rotate(360deg);
+        }
+   
+--------------------------------------
+with Scaling 
+--------------
+eg: 
+img{
+            transition: transform 5s ease;
+        }
+        img:hover{
+            transform-origin: bottom left;
+           transform:  rotate(45deg) scale(2);
+
+        }
+----------------------------------------
+- rotate() = by default moves in z direction 
+- rotateX()
+- rotateY()
+- rotateZ() 
+------------------------------------------
+skew()
+------
+Skew is the css transform property in which it 
+tilt the element like a parallelogram 
+
+syntax: 
+transform: skew(x-angle)
+transform: skew(x-angle , y-angle)
+
+x-angle = horizontal tilt 
+y-angle = vertical tilt 
+
+eg:
+ img{
+            transition: transform 2s ease;
+        }
+        img:hover{
+            transform: skew(20deg,20deg);
+        }
+
+--------------------------------------------------------------
+Create an UI with the help of css transform and transition-property 
+-------------------------------------------------------------------
+eg:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background-color: rgb(43,42,41);
+    }
+
+    .container{
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card{
+      display: flex;
+      perspective: 1200px;
+      cursor: pointer;
+      width: 250px;
+      height: 300px;
+    }
+
+    .folder{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition:transform 1s ease-in-out;
+    }
+
+    .image-font{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      transform-origin: bottom center;
+      transition: transform 3s cubic-bezier(.3,1.5,.5,1);
+      z-index: 2;
+    }
+
+    .image-font img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+      transition: transform 3s ease-in-out;
+    }
+
+    .image-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow-y: hidden;
+      backface-visibility: hidden;
+      background-color: antiquewhite;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      padding: 25px 20px;
+      color: black;
+      text-align: center;
+    }
+
+    .image-back h2{
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: 900;
+      color: black;
+    }
+
+    .image-back p{
+      font-size: 10px;
+      opacity: 0.85;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      overflow-y: auto;
+    }
+
+    .card-label{
+      position: absolute;
+      top: -50px;
+      left: 0%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 50, .8);
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      opacity: 0;
+      transition: all 2s ease-in-out;
+      z-index: 10;
+    } 
+
+    .card:hover .card-label{
+      opacity: 1;
+      top: -50px;
+      left: 50%;
+    }
+
+    .card-1 .image-font{
+      transform-origin: bottom center;
+    }
+
+    .card-1:hover .image-font{
+      transform: rotateX(-75deg) scale(1.2); 
+    }
+
+    .card-1:hover .image-font img{
+      transform: scale(1.05);
+    }
+
+    .card::before{
+      content: "";
+      position: absolute;
+      top: -50px;
+      width: 200%;
+      height: 200%;
+      left: -50px;
+      opacity: 0;
+      transition: opacity 0.6 ease;
+      pointer-events: none;
+      z-index: 10;
+      border-radius: 20px;
+    }
+
+    .card:hover::before{
+      opacity: 1;
+    }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card card-1">
+            <div class="card-label">Bottom Fold</div>
+            <div class="folder">
+              <div class="image-font">
+                <img src="./demon-slayer-2560x1440-9326.jpg" alt="image">
+              </div>    
+              <div class="image-back">
+                <h2>Demons Slayer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur, recusandae ea voluptas ratione, praesentium corporis at reiciendis neque, saepe officia atque excepturi dolorem perferendis doloremque commodi iste maxime eveniet laboriosam! Voluptates, obcaecati non. Inventore accusamus mollitia adipisci pariatur, vitae beatae porro cupiditate amet ex, neque quisquam deserunt nesciunt provident.
+                    
+                </p>
+              </div>
+
+            </div>
+        </div>
+
+         <div class="card card-1">
+            <div class="card-label">Bottom Fold</div>
+            <div class="folder">
+              <div class="image-font">
+                <img src="./demon-slayer-2560x1440-9326.jpg" alt="image">
+              </div>    
+              <div class="image-back">
+                <h2>Demons Slayer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur, recusandae ea voluptas ratione, praesentium corporis at reiciendis neque, saepe officia atque excepturi dolorem perferendis doloremque commodi iste maxime eveniet laboriosam! Voluptates, obcaecati non. Inventore accusamus mollitia adipisci pariatur, vitae beatae porro cupiditate amet ex, neque quisquam deserunt nesciunt provident.
+                    
+                </p>
+              </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

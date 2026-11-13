@@ -1,0 +1,5329 @@
+Java 
+-----
+What is Java ?
+-> Java is a pograming language 
+-> write once and run anywhere = platform independent 
+-> secure and robust pogramming language 
+-> interpreted language 
+
+-> Developed by James Gosling at sun microsystems 
+   (now owned by Oracle)
+
+Java application 
+-> Enterprise website 
+-> Android application 
+-> Game Development 2d , puzzle etc ... 
+-> API and microservices 
+-> Desktop application 
+
+---------------------------------------------------------------------------
+JDK -> java Development kit (include everything to compile and run java )
+JRE -> java runtime evniroment 
+JVM -> JAVA virtual machine 
+
+---------------------------------------------------------------------------
+//		public -> it is an access modifier (protected , private )
+//		       -> it means that this method is accessible from 
+//		           anywhere 
+//		       -> in java JVM need to access the main() 
+//		          method from outside of class 
+//		          so it must be piblic 
+//		static -> keyword 
+//		       -> it belong to a class not an object 
+//		       -> if a variable is declare as a static 
+//		          then it is shared by all the object's
+//		viod -> return type 
+//		String[] args -> this is the parameter of the main method 
+//		               ->  we pass the array of string's
+
+eg:
+	// printing statement 
+		System.out.print("Hello Guyzz");
+		System.out.print(" How are you?");
+
+
+-------------------------------------------------------
+Variables and DataType 
+----------------------
+Variables -> they are like the container 
+              used to store data or values 
+             each data and value will have 
+             DataType
+
+Primitive and Non-Primitive 
+----------------------------
+primitive 
+---------
+1. int - 4 bytes
+2. float - 4 bytes 
+3. double - 8 bytes 
+4. char - 2 bytes 
+5. boolean - 1 bit 
+6. long - 8 bytes
+
+non-primitive
+-------------
+1. Array 
+2. String 
+3. Classes 
+etc... 
+
+find all the keywords in java 
+abstract 
+break 
+catch 
+continue 
+default 
+final 
+extends 
+import 
+
+we cannot make the class with this keywords 
+
+x = 10 
+y = x + 7 
+y = 17
+
+int x = 10
+int y = x + 7 
+
+eg:
+package com.demo;
+
+public class Demo {
+
+	public static void main(String[] args) {  
+	    int x = 10;
+	    int y = x + 7;
+	    System.out.println("Result : " + y);
+	    String s = "Shreyansh ";
+	    System.out.println("Name: " + s);
+	    char c = 'A';
+	    System.out.println("Grade : " + c);
+	    long number = 74568123;
+	    System.out.println("Number: " + number);
+	    double salary = 21536.2556;
+	    System.out.println("Salary : " + salary);
+	    float height = 180.123456f;
+	    System.out.println("Height : " + height);
+	}
+	
+}
+--------------------------------------------------------
+Scanner 
+-------
+it is a class that helps you to take the inputs from a user in console 
+package -> java.util 
+
+3 Major uses 
+1. input from keyboard 
+2. input from file 
+3. input from string 
+
+eg:
+package com.demo;
+
+import java.util.Scanner;
+
+public class ScannerExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = sc.nextInt();
+		System.out.println("Enter second number: ");
+		int m = sc.nextInt();
+		int res = n + m;
+		System.out.println("Addition of two number: " + res);
+		sc.close();
+	}
+}
+
+String example 
+
+eg:
+package com.demo;
+
+import java.util.Scanner;
+
+public class ScannerExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your name: ");
+		String name = sc.next();
+		sc.nextLine(); // need to add so that it will not skip the buffer 
+		               // in buffer \n will be stored and it will read 
+		               // \n and skip the variable
+		System.out.println("Enter your Address: ");
+		String address = sc.nextLine();
+		System.out.println("Enter your number: ");
+		Long mobile = sc.nextLong();
+		System.out.println("Enter you Grade: ");
+		char c = sc.next().charAt(0);
+		
+		System.out.println("Name: " + name);
+		System.out.println("Address: " + address);
+		System.out.println("Phone: " + mobile);
+		System.out.println("Grade: " + c);
+	}
+}
+
+----------------------------------------------------------------
+
+Operators 
+----------
+1. Arithematic Operator 
+2. Logical Operator 
+3. Conditional Operator 
+4. Ternary Operator 
+5. Unary Operator 
+6. Bitwise Operator 
+7. Assignment Operator 
+
+1. Arithematic Operator 
+-----------------------
++ -> Addition 
+- -> subtraction 
+* -> Multiplication 
+/ -> division 
+% -> Modulus 
+
+eg:
+package com.operators;
+
+import java.util.Scanner;
+
+public class DemoOperator {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		System.out.println("Enter second number: ");
+		int m = sc.nextInt();
+		
+		int sum =  n+m;
+		int sub = n-m;
+		int mul = n*m;
+		int div = n/m;
+		int rem = n%m;
+		
+		System.out.println("Addition : " + sum);
+		System.out.println("Subtraction : " + sub);
+		System.out.println("Multiplication : " + mul);
+		System.out.println("Division: " + div);
+		System.out.println("Reminder: "+ rem);
+		sc.close();
+		
+		
+	}
+}
+
+o/p 
+Enter a number
+2
+Enter second number: 
+7
+Addition : 9
+Subtraction : -5
+Multiplication : 14
+Division: 0
+Reminder: 2
+
+Conditional/Relational Operator 
+---------------------
+1. == -> equal to 
+2. != -> not equal 
+3. > -> greater than 
+4. < -> less than 
+5. >= -> greater or equal 
+6. <= -> less or equal 
+
+eg:
+package com.operators;
+
+import java.util.Scanner;
+
+public class DemoOperator {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		System.out.println("Enter second number: ");
+		int m = sc.nextInt();
+		System.out.println(m>n);
+		System.out.println(m == 5);
+		System.out.println(m >= 5);
+		System.out.println(n <= m);
+	}
+}
+
+o/p 
+Enter a number
+5
+Enter second number: 
+5
+false
+true
+true
+true
+
+-------------------------------------
+3. Logical Operator 
+-------------------
+AND  -> &&
+OR -> || 
+NOT -> !
+
+AND 
+---
+true && true -> true 
+true && false -> false 
+false && true -> false
+false && false -> false 
+
+OR 
+--
+true || true -> true 
+true || false -> true 
+false || true -> true 
+false || false -> false 
+
+NOT 
+---
+true <-> false
+---------------------------------------------------
+Assignment Operator
+--------------------
+used assign the values 
+=        Assign 
++=       Add and assign 
+-=       Subtract and assign 
+*=       multiply and assign 
+/=       divide and assign 
+%=       modolus and assign 
+eg:
+package com.operators;
+
+public class AssignmentOperatorExample {
+
+	public static void main(String[] args) {
+		int a = 10 , b = 5;
+//		a += 5;
+		// a = a + 5
+//		a += 2 * 3;
+		// a = a + 2 * 3
+//		a *= a + 2;
+		// a = a*(a+2)
+//		a += a += 3;
+//		a *= a /= 2;
+//		a += b *= 2;
+//		a += (a *= 2);
+//		a += a++ + ++a;
+//		     10  + 12 = 22
+//		a = 10 + 22 = 32    		 
+		System.out.println(a);
+	}
+}
+
+--------------------------------------
+Unary Operator
+---------------
++      Positive 
+-      Negative 
+++     Increment 
+--     Decrement 
+!      Logical Not 
+
+eg;
+int a = 5;
+		System.out.println(a++);
+		System.out.println(++a);
+
+o/p
+5
+7
+
+eg:
+package com.operatorExample;
+
+public class UnaryOperatorExample {
+
+	public static void main(String[] args) {
+		int a = 10;
+        a += a++ + ++a; // 10 + 12 = 10 + 22 = 32 
+//		int c = a++;  // 10 
+//		int b = ++a;  // 12 
+//		int r = c + b;  // 22
+//		a += r; // 12 + 22 = 34 
+//		System.out.println(c);
+//		System.out.println(b);
+//		System.out.println(r);
+		System.out.println(a);
+	}
+}
+
+--------------------------------
+Ternary Operator
+----------------
+syntax:
+condition ? "True" : "False" 
+
+eg:
+package com.operators;
+
+import java.util.Scanner;
+
+public class TernaryExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your age : ");
+		int age = sc.nextInt();
+		
+		String res = (age > 18) ? "Eligible to vote" : "Not Eligible to vote ";
+		System.out.println(res);
+	}
+}
+-----------------------------------------------
+Bitwise Operator 
+----------------
+AND 
+OR 
+XOR
+NOT 
+LEFT SHIFT 
+RIGHT SHIFT 
+
+CONVERSION -> 5 
+5/2 = 2  = 1 
+2/2 = 1  = 0 
+1/2 = 0  = 1
+
+3 -> 011 
+3/2 = 1
+1/2 = 1
+AND 
+---
+101
+011 
+---
+001
+
+eg:
+package com.operators;
+
+public class BitwiseOperator {
+
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 7;
+		
+		int res = a & b;
+		System.out.println("The result is: " + res);
+	}
+}
+
+5 -> 101 
+     2^0 -> 1 
+	 2^2 -> 4
+	 ---------
+	        5
+001 -> 1*2^0 = 1
+       0*2^1 = 0
+	   0*2^2 = 0
+	   ----------
+	           1 
+
+OR 
+---
+
+eg:
+package com.operators;
+
+public class BitwiseOperator {
+
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 3;
+		
+		int res = a | b;
+		System.out.println("The result is: " + res);
+	}
+}
+o/p -> 7
+XOR 
+---
+same value 1 ^ 1 = 0
+           0 ^ 0 = 0
+eg:
+package com.operators;
+public class BitwiseOperator {
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 3;
+		int res = a ^ b;
+		System.out.println("The result is: " + res);
+	}
+}
+o/p -> 6
+
+-------------------------------------------------
+Conditional statement 
+---------------------
+1. If 
+it is used only for true condition 
+eg: 
+package com.conditional;
+import java.util.Scanner;
+public class IfConditionExamp {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your age: ");
+		int age = sc.nextInt();
+		
+		if(age > 18) {
+			System.out.println("Eligible to vote ");
+		}
+	}
+}
+
+2. if_else 
+it is used for both true as well as false condition 
+eg:
+package com.conditional;
+import java.util.Scanner;
+public class IfConditionExamp {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your age: ");
+		int age = sc.nextInt();
+		
+		if(age > 18) {
+			System.out.println("Eligible to vote ");
+		}else {
+			System.out.println("Not eligible to vote");
+		}
+	}
+}
+3. else if (conditon)
+-> when i have the multiple condition for 
+   a variable 
+eg:
+package com.conditional;
+import java.util.Scanner;
+public class IfConditionExamp {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your marks: ");
+		int marks = sc.nextInt();
+		
+		if(marks >= 90) {
+			System.out.println("Grade A ");
+		}else if (marks >= 80) {
+			System.out.println("Grade B");
+		} else if (marks >= 70) {
+			System.out.println("Grade C");
+		} else if (marks >= 60) {
+			System.out.println("Grade E");
+		}else {
+			System.out.println("FAIL");
+		}
+	}
+}
+======================================
+Take n number's 
+if the value is divisible by 3 the print "FISS"
+and if the value is divisible by 5 then print "BUZZ"
+AND if the value is divisible by 5 and 3 print "FISS BUZZ"
+
+eg:
+package com.conditional;
+import java.util.Scanner;
+public class FissBuzzProblem {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = sc.nextInt();
+		if (n%3 == 0 && n%5 == 0) {
+			System.out.println("FissBuzz");
+		}else if (n%3 == 0) {
+			System.out.println("Fiss");
+		}else if (n%5 == 0) {
+			System.out.println("Buzz");
+		}else {
+			System.out.println("Not divisible by both");
+		}
+	}
+}
+
+----------------------------------------------------
+Leap Year Check 
+----------------
+divisible by 4 and 400 
+not divisible by 100 
+eg:
+package com.conditional;
+import java.util.Scanner;
+public class LeapYearProblem {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the year");
+		int year = sc.nextInt();
+		if ((year%4 == 0 && year%100 != 0) || year%400 == 0) {
+			System.out.println("Leap year : " + year);
+		} else {
+			System.out.println("Not a Leap year: " + year);
+		}
+	}
+}
+------------------------------------------------
+50000 - 45k => 20%
+45 - 35k => 10% 
+35k - 15k => 5% 
+else no bonus 
+---------------------------------------------------
+Electricity bill generate 
+-------------------------
+0-100 => 5 /unit 
+101 - 200 => 7/unit 
+200+ => 10/unit 
+150 -> 100*5 + 50*7 = 850rs 
+
+eg:
+package com.conditional;
+import java.util.Scanner;
+public class ElectricityBillCalculating {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Units: ");
+        int unit = sc.nextInt();
+        double bill;
+        if(unit <= 100) {
+        	    bill = unit*5;
+        }else if (unit <= 200) {
+			bill = 100*5 + (unit - 100)*7;
+		}else {
+			bill = (100*5) + (100*7) + (unit - 200)*10;
+		}
+        System.out.println("Bill: " + bill);
+	}
+}
+
+--------------------------------------------------------
+Type Casting 
+------------
+When we convert one datatype into another datatype 
+is known as casting 
+
+Incresing order 
+byte-> short -> int -> long -> float -> double 
+
+1. Implicit Casting 
+Coverting small dataType into larger datatype 
+in this automatic conversion happens
+
+eg:
+package com.casting;
+
+public class ImplicitCasting {
+
+	public static void main(String[] args) {
+	     int a = 1501;
+	     double b = a;
+	     System.out.println("Integer: " + a );
+	     System.out.println("Double: " + b);
+	}
+}
+
+o/p 
+Integer: 1501
+Double: 1501.0
+
+2. Explicit Casting 
+Converting bigger dataType's into smaller dataType
+in this data loss happens 
+
+eg:
+package com.casting;
+
+public class ExplicitCasting {
+
+	public static void main(String[] args) {
+		double e = 1523.23;
+		float d = (float) e;
+		long c = (long) d;
+		int a = (int) c;
+		
+		System.out.println("Double: " + e);
+		System.out.println("Float: " + d);
+		System.out.println("Long: " + c);
+		System.out.println("Int: " + a);
+	}
+}
+
+o/p
+Double: 1523.23
+Float: 1523.23
+Long: 1523
+Int: 1523
+
+
+int a = 37;
+double d = 37/2;
+o/p
+---
+18.0 
+
+to take the entire value we have to cast it before 
+	public static void main(String[] args) {
+		int a = 37;
+		double b = (double) a/2;
+		System.out.println(b);
+	}
+
+-----------------------------------------------------------
+Nested if_else 
+---------------
+to satisfy more than one condition we have to use nested if_else condition 
+
+eg: 
+package com.conditional;
+import java.util.Scanner;
+public class NestedIfElse {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int num = sc.nextInt();
+		if (num % 2 == 0) {
+			System.out.println("Even");
+			if(num <= 50) {
+				System.out.println("The number is less than 50");
+			}else {
+				System.out.println("The number is greater than 50");
+			}
+		} else {
+             System.out.println("Odd");
+             if (num <= 50) {
+				System.out.println("The number is less than 50");
+			} else {
+ 
+				System.out.println("The number is greater than 50");
+			}
+		}
+	}
+}
+--------------------------------------------------------------
+CHeck weather the given values are triangle or not 
+and also check which traingle it belongs 
+Isoceles ,if not Isoceles then print Scalene ,and for right angle
+also check for equaliteral traiangle 
+
+----------------------------------------------------------------
+Switch Cases 
+-------------
+It is almost like if_else condition but their is a difference 
+it works for the fixed value and doesnot check the condition 
+readable where as if_else is little complex 
+and faster than if else condition
+they work both work for the single variable 
+
+dataType can be used for switch case :
+-> byte 
+-> short 
+-> int 
+-> char 
+-> String 
+-> enum 
+
+break ->  it used to completly out of the case 
+          and for the loop it completly move out of the loop 
+		  if the desired condition get's satisfied 
+
+eg:
+package com.switchCase;
+
+import java.util.Scanner;
+
+public class SwitchCaseExampleOne {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the day from 1-7");
+		int choice = sc.nextInt();
+		
+		switch (choice) {
+		case 1:
+			System.out.println("Monday");
+			break;
+		case 2:
+			System.out.println("Tueday");
+			break;
+		case 3:
+			System.out.println("Wednesday");
+			break;
+		case 4:
+			System.out.println("Thrusday");
+			break;
+		case 5:
+			System.out.println("Friday");
+			break;
+		case 6:
+			System.out.println("Saturday");
+			break;
+		case 7:
+			System.out.println("Sunday");
+			break;
+		default:
+		    System.out.println("Invalid Choice");
+		}
+	}
+}
+
+
+----------------------------------------
+with multiple condition same o/p 
+--------------------------------------
+eg:
+package com.switchCase;
+
+import java.util.Scanner;
+
+public class MultipleConditionSameOP {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Grade: ");
+		char grade = sc.next().charAt(0);
+		switch (grade) {
+		case 'A':
+		case 'B':
+			System.out.println("Excelent");
+			break;
+		case 'C':
+			System.out.println("Very Good");
+			break;
+		case 'D':
+			System.out.println("Good");
+			break;
+		case 'E':
+			System.out.println("Fail :(");
+			break;
+		default:
+			System.out.println("Invalid Option");
+		}
+	}
+}
+--------------------------------
+Vowel Check 
+-------------
+eg:
+package com.switchCase;
+
+import java.util.Scanner;
+
+public class VowelAndConsonant {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Character: ");
+		char c = sc.next().charAt(0);
+		
+		switch (c) {
+		case 'a':
+		case 'A':
+		case 'e':
+		case 'E':
+		case 'i':
+		case 'I':
+		case 'o':
+		case 'O':
+		case 'u':
+		case 'U':
+			System.out.println("Vowel");
+			break;
+		default:
+			System.out.println("Consonant");
+		}
+	}
+}
+-----------------------------------------------------------
+Calculator 
+---------------------------------------------------
+eg:
+package com.switchCase;
+
+import java.util.Scanner;
+
+public class CalculatorWithSwitchCase {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter First Value: ");
+		int a = sc.nextInt();
+//		System.out.println("+ , - , * , /");
+		char c = sc.next().charAt(0);
+//		System.out.println("Enter second number");
+		int b = sc.nextInt();
+		
+		switch (c) {
+		case '+':
+			System.out.println("Addition: " + (a+b));
+			break;
+		case '-':
+			if(b>a) {
+				System.out.println("Subtract: " + (b-a));	
+			}else {
+				System.out.println("Subtract: " + (a-b));
+			}
+			break;
+		case '*':
+			System.out.println("Multiplication: " + (a*b));
+			break;
+		case '/':
+			if(b == 0) {
+				System.out.println("Not Divisible by zero");
+			}else {
+				System.out.println("Division: " + (a/b));
+			}
+		    break;
+		default:
+			System.out.println("Invalid Choice");
+		}
+		
+	}
+}
+
+---------------------------------------------------
+Menu Driven 
+------------
+
+eg:
+package com.switchCase;
+
+import java.util.Scanner;
+
+public class NestedIfElse {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int bill = 0;
+		int category,item;
+		
+		System.out.println("==Menu==");
+		System.out.println("1. Veg");
+		System.out.println("2. Non-Veg");
+		
+		System.out.println("Enter your choice");
+		category = sc.nextInt();
+		switch (category) {
+		case 1:
+			System.out.println("1. Paneer Butter Masala 220rs");
+			System.out.println("2. Cheese Corn 230rs");
+			System.out.println("3. Bindi Fry 180rs");
+			System.out.println("Choose your item");
+			item = sc.nextInt();
+			
+			switch (item) {
+			case 1:
+				System.out.println("You Selected Panner Butter Masala" );
+				bill = 220;
+				break;
+			case 2:
+				System.out.println("You Selected Cheese Corn" );
+				bill = 230;
+				break;
+			case 3:
+				System.out.println("You Selected Bhindi Fry" );
+				bill = 180;
+				break;
+
+			default:
+				System.out.println("Invalid Choice");
+			}
+			break;
+
+		case 2: 
+			System.out.println("1. Biryani 220rs");
+			System.out.println("2. Butter Chicken 250rs");
+			System.out.println("3. Fish Fry 300rs");
+			System.out.println("Choose your item");
+			 item = sc.nextInt();
+			 
+			 switch (item) {
+			case 1:
+				System.out.println("You have selected Biryani");
+				bill = 220;
+				break;
+
+			case 2:
+				System.out.println("You have selected Butter Chicken");
+				bill = 250;
+				break;
+			
+			case 3:
+				System.out.println("You have selected Fish Fry");
+				bill = 220;
+				break;
+			default:
+				System.out.println("Invalid Choice");
+			}
+			break;
+		default:
+			System.out.println("We Donot Serve other items");
+		}
+		
+		System.out.println("Total bill: " + bill);
+	}
+}
+
+-----------------------------------------
+Enum 
+-----
+-> it is the special type in which we stores fixed constants 
+
+eg:
+order status 
+traffic signal 
+week days 
+user roles 
+
+package com.enumexamp;
+
+public enum Signal {
+
+	RED,
+	YELLOW,
+	GREEN
+}
+
+
+eg:
+package com.enumexamp;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the color of the signal");
+		String color = sc.next().toUpperCase();
+		
+		Signal s = Signal.valueOf(color);
+		
+		switch (s) {
+		case RED:	
+			System.out.println("Stop Your Vehicle");
+			break;
+		case YELLOW:
+			System.out.println("Start your engine");
+			break;
+		case GREEN:
+			System.out.println("Let's Go...");
+            break;
+		
+		}
+      sc.close();
+	}
+}
+
+----------------------------
+eg:
+package com.enumexamp;
+
+import java.util.Scanner;
+
+enum SignalOne {
+	RED,
+	YELLOW,
+	GREEN
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the color of the signal");
+		String color = sc.next().toUpperCase();
+		
+		SignalOne s = SignalOne.valueOf(color);
+		
+		switch (s) {
+		case RED:	
+			System.out.println("Stop Your Vehicle");
+			break;
+		case YELLOW:
+			System.out.println("Start your engine");
+			break;
+		case GREEN:
+			System.out.println("Let's Go...");
+            break;
+		
+		}
+      sc.close();
+	}
+}
+
+------------------------------------------
+reverse number 
+--------------------
+eg:
+package com.enumexamp;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a three digit number");
+		int n = sc.nextInt();
+		
+		int first = n / 100;
+		System.out.println("First number: " + first);
+		
+		int second = (n/10) % 10;
+		System.out.println("Second number: " + second);
+		
+		int third = n % 10;
+		System.out.println("Third number: " + third);
+		
+		int rev = (third*100) + (second*10) + first;
+		
+		System.out.println("Reverse number: " + rev);
+		if (rev == n) {
+			System.out.println("The Palindrome");
+		} else {
+            System.out.println("The number is not a Palindrome");
+		}
+	}
+}
+
+
+--------------------------------------
+3x/5x
+3x+24/5x+24 = 7/9
+
+27x + 216 = 35x + 168 
+
+48 = 8x 
+x = 6 
+
+3*6 = 18
+5*6 = 30
+
+--------------------------------------
+ 
+ A : B : C 
+ 4   7   7
+ 3   3   5
+-----------
+ 12  21  35
+
+ -------------------------------------
+ original number = 100
+ 100 + 20 = 120 
+ 120 * 20 / 100 = 24 
+ 120 - 24 = 96 
+
+ 100 - 96 = 4 
+
+ trick -> 20% increase and 20% decrease = 2^2 = 4% decrease 
+          30% increase and 30% decrease = 3^2 = 9% decrease 
+
+------------------------------------------------------
+72% -> 360 
+1%  -> 360/72 = 5
+100% -> 5 * 100 = 500
+
+------------------------------------------------------
+profit% =( sp - cp / cp )*100
+
+loss% = (cp - sp / cp )* 100 
+
+1380-1200 / 1200 = (180/1200) * 100 = 15%
+--------------------------------------------------------
+10% loss sell 
+selling price = 540 
+100% - 10% = 90%
+
+90% -> 540 
+1%  -> 540/90 = 6 
+100% -> 6*100 = 600
+--------------------------------------------------
+M:W = 5x:3x 
+5:7 = 5X : (3x + 16)
+5*(3x + 16) = 5x*7 
+15x + 80 = 35x
+      x = 4   
+M = 5 * 4 = 20
+----------------------------------------------------
+-> 2500 
+-> 2250  = selling price 
+->  x  = cp = 100% 
+-> 2250 = 100 + 12.5 = 112.5
+
+112.5 -> 2250
+1     -> 2250 / 112.5 -> 20
+100   ->  100*20 = 2000
+
+-----------------------------------------------------------
+A 25% more than B 
+B 20% more than C 
+c = 5000 
+
+B = 100%
+A = 125%
+A/B = 125 / 100 = 5 / 4
+
+C = 100% 
+B/C = 120 / 100 = 6 / 5 
+
+5*3 + 4*3 + 2*5
+A : B : C 
+5   4   2 
+3   3   5
+---------
+15  12  10 -> 5000
+10 -> 5000
+1  -> 5000 / 10 = 500
+15 * 500 = 7500
+
+-----------------------------------------------
+1p = 100
+2p = 100 
+
+total cp  = 200
+1p = 120
+2p = 90 
+total = 210
+
+profit = 210 - 200 = 10
+total profit % = 10/200 * 100 =5% profit 
+
+----------------------------------------------------
+
+4x/7x = 20 / 35 = 24 / 42
+
+4x+6/7x+6 = 5/8
+
+32x + 48 = 35x + 30
+     18 = 3x 
+	 x = 6 
+	A = 4*x =  4 * 6 = 24
+
+----------------------------------------------------
+ 8000 -> 9200 => 1200 
+ 1200/80 = 15%
+
+---------------------------------------------------
+35% -> 140 
+1%  -> 140/35 = 4
+100% -> 4*100 = 400 
+----------------------------------------------
+
+100% -> actual value 
+120%  -> 960
+1%    -> 960/120 = 8
+100% -> 8*100 = 800
+--------------------------------------
+100% -> 4500
+1%  -> 45
+100-8 = 92(100 - 8) * 45 (4500 - 360) = 4140
+---------------------------------------------
+120% -> 540 
+1% -> 540/120 = 4.5 
+135% -> 135*4.5 = 607.5 
+------------------------------------------
+60% -> boys 
+40% -> girls 
+
+40% -> 240 
+1% -> 240/40 = 6
+100% -> 100*6 = 600 
+
+---------------------------------------------
+Income - Expense = saving 
+
+i -> 5x/7x 
+e -> 3y/5y
+
+5x - 3y = 2000 * 7
+7x - 5y = 2000 * 5
+
+35x - 21y = 14000
+35x - 25y = 10000
+-   +       - 
+------------------
+    4y = 4000
+	y = 1000 
+
+	x = 1000 
+	A = 5 * 1000 = 5000
+------------------------------
+
+100 -> 40% 
+new price = 140 
+10% discount 140 * 10 / 100 = 14 
+140 - 14 = 126
+100 - 126 = 26%
+
+----------------------------------
+
+45% - 25% = 20 % 
+20% -> 36 
+1% -> 36/20 = 1.8 
+100 -> 100*1.8 = 180
+-----------------------------------
+x + y + z + a + b / 5 = 28
+x + y + z + a + b = 28*5 = 140
+x + y + z + a / 4 = 26
+x + y + z + a = 26*4 = 104
+140 - 104 = 36 
+
+------------------------------------
+
+    A           B   
+   5*2          8
+---------------------
+   10           8 
+   5            4
+
+-----------------------------------
+
+a -> 12 
+1 din = 1/12
+b -> 18
+1 din = 1/18
+
+a + b = 5/36
+
+total days = 36/5 = 7.2
+
+----------------------------------------
+a + b = 1/8
+a = 1/12
+
+1/12 + b = 1/8
+b = 1/8 - 1/12 
+b = 1/24
+b = 24
+
+--------------------------------
+son = x 
+father = 3x 
+
+3x + 10 = 2*(x + 10) 
+x = 10
+
+----------------------------------------
+Tokens -> Tokens are the smallest individual units 
+of a java pogram that are recognized by the compiler 
+
+eg: 
+int a = 20;
+int -> keyword/dataType
+a -> indentifier 
+= -> operator 
+10 -> literals 
+;  -> separator 
+
+--------------------------------------------------------
+Loops 
+-----
+1. for loop 
+it is used when we know the iteration time upto which 
+the loop will execute  
+
+for(initilaze ; condition ; update){
+	// code 
+}
+eg:
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class ForLoopExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n  = sc.nextInt();
+		//   i = 0 ; 5 < 5 ; i = 4 + 1=5
+		for (int i = 1; i <= n; i++) {
+			System.out.println("Hello Guyzz " + (i));
+		}
+	}
+}
+----------------------------------
+Table 
+eg:
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class ForLoopExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n  = sc.nextInt();
+		
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(n + " * " + i + " = " + (i*n));
+		}
+	}
+}
+
+----------------------------------------------
+Nested for loop
+----------------
+
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class ForLoopExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n  = sc.nextInt();
+		
+		for (int i = 2; i <= n; i++) {
+			     // i = 1
+			for(int j = 1 ; j <= 10 ; j++) {
+				
+				System.out.println(i + " * " + j + " = " + (i*j));
+			}
+			System.out.println();
+		}
+	}
+}
+
+*
+**
+***
+****
+*****
+
+for(int i = 0 ; i < n ; i++){
+	for(int j = 0 ; j <= i ; j++){
+		sys("*");
+	}
+}
+
+    *
+   **
+  ***
+ ****
+*****
+
+for(int i = 0 ; i < n ; i++){
+	for(int j = 0 ; j < n-i ; j++){
+		sys(" ");
+	}
+	for(int j = 0 ; j < i ; j++){
+		sys("*");
+	}
+	sys()
+}
+
+ IT Institute in Pune
+2] Software training institute in Pune
+1] Java Course in Pune
+1] Full stack development course in Pune
+1] Python course in Pune
+1] Software testing course in Pune
+1] Data Science course in Pune
+1] Web development course in Pune
+1] Angulaer Js course in pune
+1] React Js course in Pune
+
+*        *
+**      **
+***    ***
+****  ****
+**********
+
+for(int i = 1 ; i <= n ; i++){  i = 5
+	for(int j = 1 ; j <= i ; j++){
+		sys("*");
+	}
+
+	for(int j = 1 ; j <= 2*(n-i) ; j++){
+		sys(" ");
+	}
+	for(int j = 1 ; j <= i ; j++){
+		sys("*");
+	}
+}
+
+    *
+   ***
+  *****
+ *******
+*********
+
+even -> 2n -> 2 , 4 , 6 , 8
+odd -> 2n - 1 => 1 , 3 , 5 , 7
+
+for(int i = 1 ; i <= n ; i++){
+	for(int j = 1 ; j <= n-i ; j++){
+		sys(" ")
+	}
+	for(int j = 1 ; j <= 2*i - 1 ; j++ ){
+		sys("*")
+	}
+	sys()
+}
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+
+for(int i = 1 ; i <= n ; i++ ){
+	if(i == 1){
+		for(int j = 1 ; j <= n-i ; j++){
+			sys(" ");
+		}
+		sys("*");
+	}else{
+		for(int j = 1 ; j <= n-i ; j++){
+			sys(" ");
+		}
+		sys("*");
+		for(int j = 1 ; j <= 2*i - 1 ; j++){
+			(" ");
+		}
+		sys("*");
+	}
+	sysln();
+}
+
+**********
+*        *
+*        *
+*        *
+**********
+
+for(int i = 1 ; i<= n ; i++){
+	if(i == 1 || i == n){
+		for(int j = 1 ; j <= 2*n ; j++){
+			sys("*");
+		}
+	}else{
+		sys("*");
+		for(int j = 1 ; j <= 2*n-2 ; j++){
+			sys(" ");
+		}
+		sys("*");
+	}
+	sysln();
+}
+
+*****
+*   *
+*   *
+*   *
+*****
+for(int i = 1 ; i <=n ; i++){
+	if(i == 1 || i == n){
+		for(int j = 0 ; j <= n ; j++){
+			sys("*");
+		}
+	}else{
+		sys("*")
+		for(int j = 0 ; j <= n-2 ; j++){
+			sys(" ");
+		}
+		sys("*");
+	}
+	sysln();
+}
+
+*
+**
+* *
+*  *
+*****
+
+for(int i = 1 ; i <= n ; i++){
+	for(int j = 1 ; j <= i ; j++){
+		if(i == 1 || i == n || j == 1 || j == i ){
+          sys("*");
+		}else{
+			sys(" ");
+		}
+	}
+	sysln();
+}
+
+*        *            
+**      **     
+* *    * *
+*  *  *  *
+**********
+
+for(int i = 1 ; i<=n ; i++){
+	for(int j = 1 ; j <= n ; j++){
+		if(j == 1 || j == i || i == n){
+			sys("*")
+		}else{
+			sys(" ");
+		}
+	}
+	for(int j = 1 ; j<= (n-i) ; j++){
+		sys(" ");
+	}
+
+	for(int j = 1 ; j <= i ; j++){
+		if(j == 1 || j == i || i == n){
+			sys("*");
+		}else {
+			sys(" ");
+		}
+		sysln();
+	}
+}
+
+
+**********
+*        *
+*        *
+*        *
+**********
+* *
+*  *
+*   *
+*    *
+*     *
+*      *
+
+for(int i = 1 ; i <= n/2 ; i++){
+	if(i == 1 || i == n/2){
+		for(int j = 1 ; j <= n ; j++){
+			sys("*");
+		}
+	}else{
+		sys("*");
+		for(int j = 1 ; j <= n-2 ; j++){
+			sys(" ");
+		}
+		sys("*")
+	}
+	sysln()
+}
+for(int i = 1 ; i <= n/2 ; i++){
+	sys("*");
+	for(int j = 1 ; j <= i ; j++){
+		sys(" ")
+	}
+	sys("*");
+	sysln();
+}
+
+*    *
+ *  *
+   *
+ *   *
+*     *
+for(int i = 0 ; i < n ; i++){
+	for(int j = 0 ; j < n ; j++){
+		if(i == j || j + i == n -1 ){
+			sys("*")
+		}else{
+			sys(" ");
+		}
+	}
+	sysln();
+}
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+for(int i = 1 ; i <= n ; i++){
+	for(int j = 1 ; j <= n-i ; j++){
+		sys(" ");
+	}
+
+	for(int j = 1 ; j <= (2*i - 1) ; j++){
+		if(j == 1 || j == (2*i-1)){
+			sys("*");
+		}else{
+			sys(" ");
+		}
+	}
+	sysln()
+}
+for(int i = n-1 ; i >= 1 ; i--){
+	for(int j = 1 ; j <= n-i ; j++){
+		sys(" ");
+	}
+	for(int j = 1 ; j <= (2*i - 1) ; j++){
+		if(j == 1 || j == (2*i-1)){
+			sys("*");
+		}else{
+			sys(" ");
+		}
+	}
+	sysln()
+}
+
+*     *
+**   **
+*  *  *
+**   **
+*     *
+
+----------------------------------------------------------------
+While Loop 
+----------
+
+A while loop is ised to execute a block of code repeatedly until a condition
+becomes true 
+
+syntax: 
+
+while(condition){
+	// code 
+}
+eg:
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class WhileLoopExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		
+		while (n >= 1) {
+			System.out.println(n);
+			n = n/2;
+		}
+	}
+}
+
+-----------------------------------
+for false condition 
+-------------------
+eg:
+package com.forLoop;
+
+public class WhileLoopFalseCondition {
+
+	public static void main(String[] args) {
+		int n = 3;
+		
+		while (n <= 10) {
+			System.out.println(n);
+		}
+	}
+}
+
+-------------------------------------------
+print all the even numbers upto n 
+eg: 
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class PrintingAllEvenNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		int i = 2;
+		
+		while(i <= n) {
+			System.out.println(i);
+			i = i + 2;
+		}
+	}
+}
+
+
+print all the odd numbers upto n 
+eg: 
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class PrintingAllEvenNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		int i = 1;
+		
+		while(i <= n) {
+			System.out.println(i);
+			i = i + 2;
+		}
+	}
+}
+
+----------------------------------------
+Reverse the number starting from n 
+eg: 
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		
+		while (n>=1) {
+			System.out.println(n);
+			n--;
+		}
+	}
+}
+
+
+Sum of Numbers upto n 
+1+2+3+4+5 = 15
+eg: 
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class SumOfNNumbers {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = sc.nextInt();
+		int a = 1;
+		int sum = 0;
+		
+		while (a <= n) { // 6 <= 5
+			sum = sum + a; // sum = 10 + 5 = 15
+			a++; // a = 1 + 1 = 6 
+		}
+		System.out.println("The sum of number is: " + sum);
+	}
+}
+
+
+Check weather the number is palindrome or not 
+-> 121 , 111 , 131 , 545 , 4556
+eg: 
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class CheckPalindrome {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = sc.nextInt();
+		int rev = 0;
+		int og = n;
+		// n = 123
+		while (n > 0) { // 0 > 0
+			int ld = n%10; // ld = 1
+			rev = rev*10 + ld; // rev = 32*10 + 1 = 321
+			n = n/10;    // n = 0
+		}
+		System.out.println("Value of n: " + n);
+		if(og == rev) {
+			System.out.println("The number is palindrome");
+		}else {
+			System.out.println("The number is not palindrome");
+		}
+	}
+}
+
+
+REVERSE THE NUMBER :
+45623 -> 32654
+
+
+take upto 5-6 digit number 
+and bifercate it into even and odd number 
+and Calculate the sum of even number and sum of odd number 
+eg:
+12345678 -> i/p
+2 + 4 + 6 + 8 = 20 -> o/p 
+1 + 3 + 5 + 7 = 16 -> o/p 
+
+String s1 = "Hello" 
+String s2 = "Hello"
+
+String s3 = new String("Hello")
+
+s1 == s2 // true 
+s1 == s3 // false
+
+stack       heap 
+s1       string pool -> "Hello"
+s2 
+
+s3         new object ("Hello")
+
+
+5 -> 
+5/2 = 2
+5%2 = 1 
+
+2/2 = 1
+2%2 = 0 
+
+1/2 = 0
+1%2 = 1
+
+5 -> 101 = 1*2^2 + 0*2^1 + 1*2^0 = 5
+
+NOT 
+---
+
+~5 = -(5+1) = -6 
+
+00000101 
+
+11111010
+-      1
+=========
+11111001  -> negative number 
+
+00000110 -> 1*2^2 + 1*2^1 + 0*2^0 = 6
+
+XOR (^)
+
+5 -> 101
+3 -> 011
+--------
+     110 = 1*2^2 + 1*2^1 + 0*2^0 = 6
+
+Left shift 
+----------
+5<<1 
+00000101
+00001010 = 1*2^3 + 0 + 1*2^1 + 0 = 10
+
+Right Shift 
+-------------
+5>>1
+00000101
+00000010 -> 2
+
+---------------------------------------
+DO_WHILE Loop 
+--------------
+
+A do-while loop is an exit-controlled loop in java . 
+This means the condition is checked after the loop body 
+executes . therefore , the code inside the loop 
+will executes atleast one time , even if the 
+condition is false . 
+
+syntax: 
+do{
+	// code to execute 
+}while(condition)
+
+-> Execute the code inside the do block 
+-> checks the condition in the while statement
+-> if the condition is true , execute the block again 
+-> if the condition is false , terminate the loop 
+
+eg: 
+
+package com.doWhile;
+
+public class SimpleDoWhile {
+
+	public static void main(String[] args) {
+		int i = 1;
+		do {
+			System.out.println("Value " + i);
+			i++;
+		} while (i <= 5);
+	}
+}
+--------------------------
+Printing table 
+-----------------
+eg: 
+package com.doWhile;
+
+import java.util.Scanner;
+
+public class PrintingTable {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		
+		int i = 1;
+		
+		do {
+			System.out.println(n  + " * " + i + " = " + n*i );
+			i++;
+		} while (i <= 10);
+	}
+}
+
+------------------------------
+Sum of n numbers 
+-----------------------
+
+eg:
+package com.doWhile;
+
+import java.util.Scanner;
+
+public class SumOfNNumbers {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = sc.nextInt();
+		int i = 1;
+		int sum = 0;
+		
+		do {
+			sum = sum + i;
+			i++;
+		} while (i <= n);
+		
+		System.out.println("Sum of n number is : " + sum);
+	}
+}
+
+----------------------------------------------------------------
+Menu-Driven 
+------------
+
+two categories of food item veg and non-veg 
+if he/she selected veg 
+the items are 
+  -> Paneer Butter Masala - 150 
+  -> Chilly Manchurian - 120 
+  -> Daal Tadkka - 140 
+
+you also have to add the quantity 
+and add it to the totalBill 
+
+same for the non-veg 
+  -> HydBiryani -> 130 
+  -> Chiken Curry -> 150 
+  -> Chicken65 -> 160 
+
+  and at the end you have to give 
+  end / no more order option 
+  as end option is selected -> you have to show the total bill 
+  with the items and with their qty . 
+
+eg:
+package com.doWhile;
+
+import java.util.Scanner;
+
+//
+//-> Paneer Butter Masala - 150 
+//-> Chilly Manchurian - 120 
+//-> Daal Tadkka - 140
+//
+//-> HydBiryani -> 130 
+//-> Chiken Curry -> 150 
+//-> Chicken65 -> 160 
+
+public class MenuDrivenPogram {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int nvItem;
+		int items;
+		int qty;
+		
+		int totalBill = 0;
+		
+		int paneerBtrMasala = 0;
+		int chillyManchurian = 0;
+		int daalTadka = 0;
+		int hydBiryani = 0;
+		int chickenCurry = 0;
+		int chicken65 = 0;
+		
+		do {
+			System.out.println("======== GARAM MASALA =======");
+			System.out.println("1. VEG ");
+			System.out.println("2. NON-VEG");
+			System.out.println("3. Generate Bill");
+			System.out.println("4. Enter your choice");
+			System.out.println("===============================");
+			
+			nvItem = sc.nextInt();
+			
+			switch (nvItem) {
+			case 1:
+				System.out.println("========== VEG ITEMS ===========");
+				System.out.println("1. Paneer Butter Masala - 150");
+				System.out.println("2. Chilly Manchurian    - 120");
+				System.out.println("3. Daal Tadka           - 140");
+				System.out.println("==================================");
+				System.out.println();
+				System.out.println("Enter your choice");
+				System.out.println("4. Back");
+				
+				items = sc.nextInt();
+				switch (items) {
+				case 1:
+					System.out.println("Enter the Quantity ");
+					qty = sc.nextInt();
+					paneerBtrMasala = qty;
+					totalBill += qty*150;
+					System.out.println("Paneer Butter Masala added");
+					break;
+
+				case 2:
+					System.out.println("Enter the Quantity ");
+					qty = sc.nextInt();
+					chillyManchurian = qty;
+					totalBill += qty*120;
+					System.out.println("Chilly manchurian added");
+					break;
+					
+				case 3:
+					System.out.println("Enter the Quantity ");
+					qty = sc.nextInt();
+					daalTadka = qty;
+					totalBill += qty*140;
+					System.out.println("Daal Tadka added");
+					break;
+					
+				case 4:
+					break;
+				default:
+					System.out.println("Invalid Choice");
+				}
+				
+				break;
+            
+			case 2:
+				System.out.println("========== VEG ITEMS ===========");
+				System.out.println("1. Hyd Biryani - 130");
+				System.out.println("2. Chicken Curry - 150");
+				System.out.println("3. Chicken 65     - 160");
+				System.out.println("==================================");
+				System.out.println();
+				System.out.println("Enter your choice");
+				System.out.println("4. Back");
+				
+				items = sc.nextInt();
+				switch (items) {
+				case 1:
+					System.out.println("Enter the Quantity ");
+					qty = sc.nextInt();
+					hydBiryani = qty;
+					totalBill += qty*130;
+					System.out.println("Hyd Biryani added");
+					break;
+
+				case 2:
+					System.out.println("Enter the Quantity ");
+					qty = sc.nextInt();
+					chickenCurry = qty;
+					totalBill += qty*150;
+					System.out.println("Chicken Curry added");
+					break;
+					
+				case 3:
+					System.out.println("Enter the Quantity ");
+					qty = sc.nextInt();
+					chicken65 = qty;
+					totalBill += qty*160;
+					System.out.println("Chicken 65 added");
+					break;
+					
+				case 4:
+					break;
+				default:
+					System.out.println("Invalid Choice");
+				}
+				
+              break;
+              
+			case 3:
+				System.out.println("====== TOTAL BILL =======");
+				
+				if (paneerBtrMasala > 0) {
+					System.out.println("Paneer Butter Masala - " + paneerBtrMasala);
+				}
+				if (chillyManchurian > 0) {
+					System.out.println("Chilly Manchurian - " + chillyManchurian);
+				}
+				
+				if (daalTadka > 0) {
+					System.out.println("Daal Tadka - " + daalTadka);
+				}
+				if (hydBiryani > 0) {
+					System.out.println("Hyd Biryani - " + hydBiryani);
+				}
+				if (chickenCurry > 0) {
+					System.out.println("Chicken Curry - " + chickenCurry);
+				}
+				if (chicken65 > 0) {
+					System.out.println("Chicken 65 - " + chicken65);
+				}
+			
+			    break;	
+			}
+			
+			
+		} while (nvItem != 3);
+		
+		System.out.println("-------------------------------------");
+		System.out.println("Total Bill " + totalBill);
+	}
+}
+
+----------------------------------------------------------------------
+ATM Machine 
+-> enter the username and balance amount 
+   and make the deposite , withdraw and check balance option 
+   using switch case and also give option of exit 
+
+   a user will enter his name and balance at first
+   after that we have to give option for 
+   deposite , withdraw , and check balance 
+
+eg:
+package com.doWhile;
+
+import java.util.Scanner;
+
+public class ATMmachine {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your name");
+		String name = sc.next();
+		System.out.println("Enter the Amount");
+		int balance = sc.nextInt();
+		int choice;
+		do {
+			System.out.println("=== ATM ===");
+			System.out.println("1. Deposite");
+			System.out.println("2. Withdraw");
+			System.out.println("3. Check balance");
+			System.out.println("4. Exit");
+			System.out.println("=============");
+			System.out.println("ENTER YOUR CHOICE");
+			
+			
+			choice = sc.nextInt();
+			
+			switch (choice) {
+			case 1:
+				System.out.println("Enter the deposte amount");
+				int amount = sc.nextInt();
+				if (amount <= 0) {
+					System.out.println("Amount should be positve and non-zero");
+				}else {
+					balance += amount;
+					System.out.println("Current Balance: " + balance);
+				}
+				
+				break;
+				
+			case 2:
+				System.out.println("Enter the withdraw amount");
+				int amt = sc.nextInt();
+				if (amt > balance) {
+					System.out.println("Insufficient Balance");
+				}else {
+					balance -= amt;
+					System.out.println("Current Balance: " + balance);
+				}
+                 break;
+                 
+			case 3:
+				System.out.println("Name: " + name);
+				System.out.println("Balance: " + balance);
+				break;
+				
+			case 4:
+				System.out.println("ThankYou...!");
+				break;
+			default:
+			     System.out.println("Invalid option");
+			}
+		} while (choice != 4);
+	}
+}
+
+----------------------------------------------------------
+Java Random Class 
+-----------------
+The RANDOM class in java is used to 
+generate random values such as integers , doubles 
+booleans and more .
+
+it belongs to java.util package 
+
+use 
+-> random password generate 
+-> a dice game 
+-> a lottery system 
+-> a guessing game 
+-> OTP generation 
+
+------------------------------------------------------
+eg: 
+package com.RandomClass;
+
+import java.util.Random;
+
+public class RandomClassExamp {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		
+		int num = random.nextInt(10);
+//		0-9
+		System.out.println(num);
+	}
+}
+-------------------------------------------------------
+for dice 
+---------
+eg: 
+package com.RandomClass;
+
+import java.util.Random;
+
+public class RandomClassExamp {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		// for dice
+		int num = random.nextInt(6)+1;
+//		0-9
+		System.out.println(num);
+	}
+}
+------------------------------
+head and tail 
+--------------
+eg: 
+package com.RandomClass;
+
+import java.util.Random;
+
+public class TossGame {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		
+		if(random.nextBoolean()) {
+			System.out.println("Head");
+		}else {
+			System.out.println("Tail");
+		}
+	}
+}
+-------------------------
+password generation 
+----------------------
+eg:
+package com.RandomClass;
+
+import java.util.Random;
+
+public class PasswordGenerator {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		
+		for (int i = 0; i < 8; i++) {
+			char ch = (char)('A' + random.nextInt(26));
+			System.out.print(ch);
+		}
+	}
+}
+
+--------------------------------------------
+PasswordGeneratorTypetwo 
+---------------------------------
+eg: 
+package com.RandomClass;
+
+import java.util.Random;
+
+public class TypeTwoPasswordGeneration {
+
+	public static void main(String[] args) {
+		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+				      +"abcdefghijklmnopqrstuvwxyz"
+				      +"0123456789"
+				      +"!@#$%^&*(){}";
+		
+		String password = "";
+		Random random = new Random();
+		for (int i = 0; i < 8; i++) {
+			int index = random.nextInt(chars.length());
+			password += chars.charAt(index);
+		}
+		
+		System.out.println("Password : " + password);
+	}
+}
+----------------------------
+Hw -> Create a password generator by using switch case 
+     for 4 , 6 and 8 digit 
+	eg:
+	package com.RandomClass;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class PasswordGeneratorLengthWise {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random random = new Random();
+		
+		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+				     + "abcdefghijklmnopqrstuvwxyz"
+				     + "0123456789"
+				     +"!@#$%^&*";
+		
+		int choice;
+		int length = 0;
+		
+		do {
+			System.out.println("Password Generator");
+            System.out.println("1. Generate 4 digit password ");
+            System.out.println("2. Generate 6 digit password");
+            System.out.println("3. Generate 8 digit password");
+            System.out.println("4. Custom Length Password");
+            System.out.println("5 Exit");
+
+            	System.out.println("Enter your choice");
+            	choice = sc.nextInt();
+            	
+            	switch (choice) {
+				case 1:
+					length = 4;
+					break;
+				case 2:
+					length = 6;
+					break;
+				case 3:
+					length = 8;
+					break;
+				case 4:
+					System.out.println("Enter your length size");
+					length = sc.nextInt();
+					break;
+				case 5:
+					System.out.println("Thankyou...!");
+					break;
+
+				default:
+					System.out.println("Invalid Choice");
+				}
+            	
+            	 if(choice >= 1 && choice <= 4) {
+            		 String password = "";
+            		 
+            		 for(int i = 1 ; i <= length ; i++) {
+            			 int index = random.nextInt(chars.length());
+            			 
+            			 password += chars.charAt(index);
+            		 }
+            		 System.out.println("\n Generated Password: " + password);
+            	 }
+		} while (choice != 5);
+		
+		sc.close();
+	}
+}
+
+
+---------------------------------------------------
+Snakes and Ladder 
+------------------
+
+Ladder position -> 4 -> 25 , 13 -> 46 , 33 -> 49 , 42 -> 63 , 50 -> 69
+snakes position -> 40 -> 18 , 54 -> 31 , 66->45 , 89 -> 53 , 99-> 12
+
+eg:
+package com.RandomClass;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class SnakeAndLadder {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random random = new Random();
+		int postion = 0;
+		int dice;
+		
+		System.out.println("=== Snake And Ladder ===");
+		do {
+			System.out.println("\n Press ENTER to ROLL A DICE....");
+			sc.nextLine();
+			
+			dice = random.nextInt(6) + 1;
+			System.out.println("Dice Number: " + dice);
+			
+			postion = postion + dice;
+//			Ladder position -> 4 -> 25 , 13 -> 46 , 33 -> 49 , 42 -> 63 , 50 -> 69
+//			snakes position -> 40 -> 18 , 54 -> 31 , 66->45 , 89 -> 53 , 99-> 12
+			
+			if (postion > 100) {
+				postion -= dice;
+				System.out.println();
+				System.out.println("Need exact 100 to reach");
+			}
+			
+			System.out.println("Current " + postion);
+			switch (postion) {
+			case 4:
+				System.out.println();
+				System.out.println("Ladder 4->25" );
+			    System.out.println();
+			    postion = 25;  
+				break;
+				
+			case 13:
+				System.out.println();
+				System.out.println("Ladder 13->46" );
+			    System.out.println();
+			    postion = 46;  
+				break;
+				
+			case 33:
+				System.out.println();
+				System.out.println("Ladder 33->49" );
+			    System.out.println();
+			    postion = 49;  
+				break;
+			
+			case 42:
+				System.out.println();
+				System.out.println("Ladder 42->63" );
+			    System.out.println();
+			    postion = 63;  
+				break;
+				
+			case 50:
+				System.out.println();
+				System.out.println("Ladder 50->69" );
+			    System.out.println();
+			    postion = 69;  
+				break;
+//			Snake	
+			case 40:
+				System.out.println();
+				System.out.println("Cobra 40->18" );
+			    System.out.println();
+			    postion = 18;  
+				break;
+				
+			case 54:
+				System.out.println();
+				System.out.println("Cobra 54->31" );
+			    System.out.println();
+			    postion = 31;  
+				break;
+			
+			case 66:
+				System.out.println();
+				System.out.println("Cobra 66->45" );
+			    System.out.println();
+			    postion = 45;  
+				break;
+				
+			case 89:
+				System.out.println();
+				System.out.println("Cobra 89->53" );
+			    System.out.println();
+			    postion = 53;  
+				break;
+				
+			case 99:
+				System.out.println();
+				System.out.println("Cobra 99->12" );
+			    System.out.println();
+			    postion = 12;  
+				break;
+
+			}
+			System.out.println();
+			System.out.println("Updated Position: " + postion);
+			System.out.println();
+		} while (postion != 100);
+		
+		System.out.println("\n Congratulation! You WON the game");
+	}
+}
+
+--------------------------------------------------------------
+Jump Statements in Java 
+------------------------
+it will 
+-> stop 
+-> skip 
+-> exit 
+
+3 types of jump statements 
+-> break 
+-> continue 
+-> return 
+
+1. Break Statement
+------------------
+As the break execute the loop will immediately stops 
+and moves out of the control loop 
+
+eg: 
+package com.jumpStatement;
+
+public class BreakExample {
+
+	public static void main(String[] args) {
+		for(int i = 0 ; i <= 5 ; i++) {
+			if (i == 3) {
+				break;
+			}
+			System.out.println(i);
+		}
+	}
+}
+
+---------------------------------------------
+using while 
+------------
+eg: 
+package com.jumpStatement;
+
+public class BreakExample2 {
+
+	public static void main(String[] args) {
+		int i = 1;
+		
+		while (i <= 5) {
+			if (i == 4) {
+				break;
+			}
+			System.out.println(i);
+			i++;
+		}
+	}
+}
+------------------------------------
+What is the difference between break and System.exit(0)?
+-> break exit from loop where as System.exit(0) will stop you pogram completly 
+   it means JVM terminate 
+
+   Non-Zero 
+   --------
+   System.exit(1) -> error and abnormal termination 
+
+
+package com.jumpStatement;
+
+public class BreakExample {
+
+	public static void main(String[] args) {
+		for(int i = 0 ; i <= 5 ; i++) {
+			if (i == 3) {
+				System.exit(0);
+			}
+			System.out.println(i);
+		}
+	}
+}
+
+Continue 
+--------
+Continue will skip your current iteration 
+and here the loop will not stop completly
+and the next iteration will be continue 
+
+eg: 
+package com.jumpStatement;
+
+public class BreakExample {
+
+	public static void main(String[] args) {
+		for(int i = 0 ; i <= 5 ; i++) {
+			if (i == 3) {
+				continue;
+			}
+			System.out.println(i);
+		}
+		
+		System.out.println("Thankyou");
+	}
+}
+
+-> Skip all the even numbers and print all odd numbers 
+
+package com.jumpStatement;
+
+import java.util.Scanner;
+
+public class EvenNumberSkip {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number for iteration");
+		int n = sc.nextInt();
+		
+		for (int i = 1; i <= n; i++) {
+			if (i % 2 == 0) {
+				continue;
+			}
+			System.out.println(i);
+		}
+	}
+}
+
+
+-> Check weather the number is prime or not 
+eg: 
+package com.jumpStatement;
+
+import java.util.Scanner;
+
+public class PrimeNumberCheck {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = sc.nextInt();
+		
+		boolean isPrime = true;
+		
+		if(n <= 1) {
+			isPrime = false;
+			
+		}else {
+			for (int i = 2; i < n; i++) {
+				if (n % i == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+		}
+		
+		if (isPrime) {
+			System.out.println("The number is Prime");
+		}else {
+			System.out.println("The number is not prime ");
+		}
+	}
+}
+
+
+-> Skip all the vowels from a string 
+eg: 
+
+package com.jumpStatement;
+
+import java.util.Scanner;
+
+public class VowelRemove {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a word");
+		String s = sc.nextLine();
+		
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			
+			if(c == 'A' || c == 'a' || c == 'E' ||
+					c == 'e' || c == 'I' || c == 'i' ||
+					c == 'O' || c == 'o' || c == 'U' ||
+					c == 'u') {
+				continue;
+			}
+			System.out.print(c);	
+		}
+	}
+}
+
+----------------------------------------------
+Array 
+-----
+Array is a collection of similar types od DataType value 
+which stores in a contigonous Memory location 
+and it starts with zero index and it's values 
+store in its index and its size is fixed 
+
+syntax: 
+   int[] arr = new int[size] 
+   int arr[] = new int[size]
+
+contigonous memory -> memory allocated in a sequence form 
+eg: 
+   int arr[] = {1,2,3,4,5};
+value    [1    2    3    4    5]
+index    [0    1    2    3    4]
+memory   [100  104  108  112  116]
+
+why the array index is start's from zero ? 
+-> because memory address calculation is getting fast
+base = 100 
+index = 0 
+size = 4 bytes 
+
+memory = Base + (index*size)
+
+eg: 
+package com.arrayExample;
+
+public class ArrayExample {
+
+	public static void main(String[] args) {
+		int arr[] = {10,20,30,40,50};
+		
+		System.out.println("arr[0] = "+arr[0]);
+		System.out.println("arr[1] = " + arr[1]);
+		System.out.println("arr[4] = " + arr[4]);
+	}
+}
+
+-----------------------------------
+Traversing of an Array 
+-----------------------
+eg: 
+package com.arrayExample;
+
+public class ArrayExample {
+
+	public static void main(String[] args) {
+		int arr[] = {10,20,30,40,50};
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println(arr[i]);
+		}
+	}
+}
+--------------------------------------
+Sum of Array elements 
+----------------------
+eg: 
+package com.arrayExample;
+
+public class SumOfArrayElements {
+
+	public static void main(String[] args) {
+         int arr[] = {10,20,30,40,50};
+		  int sum = 0;
+		  
+		for (int i = 0; i < 5; i++) {
+			 sum += arr[i]; // sum = sum + arr[i]
+		}
+		
+		System.out.println("Sum is: " + sum);
+	}
+}
+
+
+Find the Max from an array elemnets 
+-----------------------------------
+eg: 
+package com.arrayExample;
+
+public class MaxArrayElement {
+
+	public static void main(String[] args) {
+		int a[] = {50, 40 , 65 , 70 ,25};
+		int max = a[0]; // max =50
+		
+		for (int i = 1; i < 5; i++) {
+			if (a[i] > max) { // 25 > 70
+				max = a[i];  // max = 70
+			}
+		}
+		
+		System.out.println("Max is: " + max);
+	}
+}
+
+
+Print the array elements in reverse order 
+------------------------------------------
+eg: 
+package com.arrayExample;
+
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		int arr[] = {10,20,30,40,50};
+		
+		System.out.print("[");
+		for(int i = 4 ; i>=0 ; i--) {
+			System.out.print(arr[i] + " , ");
+			
+		}
+		System.out.print("]");
+		
+	}
+}
+
+
+Store the reverse array in a new array 
+and check weather the arr elements are 
+palindrome or not 
+---------------------------------------
+eg: 
+package com.arrayExample;
+
+public class PalindromeCheck {
+
+	public static void main(String[] args) {
+		int a[] = {10 , 20 , 30 , 20 , 10};
+		int b[] = new int[5];
+		int j = 0;
+		for(int i = 4; i>=0 ; i--) {
+			b[j] = a[i];
+			j++;
+		}
+		
+		boolean isPalindrome = true;
+		
+		for (int i = 0; i < 5; i++) {
+			if (a[i] != b[i]) {
+				isPalindrome = false;
+				break;
+			}
+		}
+		
+		if (isPalindrome) {
+			System.out.println("They Are Palindrome");
+		} else {
+            System.out.println("They Are not Palindrome");
+		}
+	}
+}
+
+----------------------------------------------------
+Adding array element size and their values 
+----------------------------------------
+eg: 
+package com.arrayExample;
+
+import java.util.Scanner;
+
+public class PalindromeCheck {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Size of an array");
+		int size = sc.nextInt();
+		
+		int a[] = new int[size];
+		System.out.println("Enter the " + size + " array elements");
+		for (int i = 0; i < size; i++) {
+			a[i] = sc.nextInt();
+		}
+		
+		int b[] = new int[size];
+		
+		int j = 0;
+		for(int i = 4; i>=0 ; i--) {
+			b[j] = a[i];
+			j++;
+		}
+		
+		for(int i = 0 ; i < size ; i ++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.println();
+		for(int i = 0 ; i < size ; i ++) {
+			System.out.print(b[i] + " ");
+		}
+		System.out.println();
+		
+		boolean isPalindrome = true;
+		
+		for (int i = 0; i < 5; i++) {
+			if (a[i] != b[i]) {
+				isPalindrome = false;
+				break;
+			}
+		}
+		
+		if (isPalindrome) {
+			System.out.println("They Are Palindrome");
+		} else {
+            System.out.println("They Are not Palindrome");
+		}
+	}
+}
+
+---------------------------------------------------------------------------
+Two Dimensional Array (2D Array)
+-> its is distributed in rows and columns 
+-> follows table/matrix structure 
+
+syntax:
+int arr[][] = new int[row][col]
+
+int arr[][] = new int[2][3]
+
+row 0 = [1 , 2 , 3 ]
+row 1 = [4 , 5 , 6 ]
+
+(0,0) , (0,1) , (0,2)
+(1,0) , (1,1) , (1,2)
+
+eg: 
+package com.twodimensionalArray;
+
+public class TwoDimensionalArray {
+
+	public static void main(String[] args) {
+		int arr[][] = {
+				{1,2,3},
+				{4,5,6}
+		};
+		System.out.println(arr[0][0]);
+		System.out.println(arr[0][1]);
+		System.out.println(arr[0][2]);
+		
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 3; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+eg: 
+package com.twodimensionalArray;
+
+public class TwoDimensionalArray {
+
+	public static void main(String[] args) {
+		int arr[][] = {
+				{1,2,3},
+				{4,5,6}
+		};
+		System.out.println(arr[0][0]);
+		System.out.println(arr[0][1]);
+		System.out.println(arr[0][2]);
+		
+		int l1 = arr.length;
+		
+		System.out.println("Length 1" + l1);
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				int l2 = arr[i].length;
+						System.out.println("Length 2 "+l2);
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+---------------------------------
+Using Scanner Class 
+--------------------
+eg:
+package com.twodimensionalArray;
+
+import java.util.Scanner;
+
+public class UsingScannerClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows");
+		int r = sc.nextInt();
+		System.out.println("Enter the number of col");
+		int c = sc.nextInt();
+		
+		int arr[][] = new int[r][c];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+------------------------------------
+Transpose of Matrix 
+---------------------
+
+1  2  3
+4  5  6
+7  8  9
+
+(0,0) (0,1) (0,2)
+(1,0) (1,1) (1,2)
+(2,0) (2,1) (2,2)
+
+1  4  7 
+2  5  8
+3  6  9 
+
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)
+(0,2) (1,2) (2,2)
+
+eg: 
+package com.twodimensionalArray;
+
+import java.util.Scanner;
+
+public class UsingScannerClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows");
+		int r = sc.nextInt();
+		System.out.println("Enter the number of col");
+		int c = sc.nextInt();
+		
+		int arr[][] = new int[r][c];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+		System.out.println();
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[j][i] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+-----------------------------------------------
+Sum of all the elements 
+-------------------------
+eg:
+package com.twodimensionalArray;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class SumOfAllElements {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows ");
+		int r = sc.nextInt();
+		System.out.println("Enter the number of col's");
+		int c = sc.nextInt();
+		
+		int arr[][] = new int[r][c];
+		int sum = 0;
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				sum += arr[i][j];
+			}
+		}
+		System.out.println("Sum of all elements: " + sum);
+	}
+}
+
+
+Sum of all rows 
+---------------
+eg: 
+1 2 3 -> i = 0
+4 5 6 -> i = 1
+7 8 9 -> i = 2 
+
+for (int i = 0; i < arr.length; i++) {
+			int sumOfRows = 0;
+			for (int j = 0; j < arr[i].length; j++) {
+				sumOfRows += arr[i][j];
+			}
+			System.out.println("Sum of all elements: " + sumOfRows);
+		}
+
+Sum of all Col's 
+-----------------
+eg:
+for (int i = 0; i < arr.length; i++) {
+			int sumOfRows = 0;
+			for (int j = 0; j < arr[i].length; j++) {
+				sumOfRows += arr[j][i];
+			}
+			System.out.println("Sum of all elements: " + sumOfRows);
+		}
+
+
+Print the Diagnol
+------------------
+eg: 
+for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i][i] + " ");
+		}
+
+
+Print all the Diagnol's 
+-----------------------
+eg: 
+package com.twodimensionalArray;
+
+import java.util.Scanner;
+
+public class SumOfRows {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows ");
+		int r = sc.nextInt();
+		System.out.println("Enter the number of col's");
+		int c = sc.nextInt();
+		
+		int arr[][] = new int[r][c];
+		
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			
+			for (int j = 0; j < arr[i].length; j++) {
+			       if((i+j) == (r-1)) {
+			    	     System.out.println(arr[i][j]);
+			       }
+			}
+			
+		}
+		
+	}
+}
+
+Sum of all the Diagnol
+----------------------
+
+eg: 
+package com.twodimensionalArray;
+
+import java.util.Scanner;
+
+public class SumOfallDiagonals {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of row ");
+		int r = sc.nextInt();
+		System.out.println("Enter the size of col ");
+		int c = sc.nextInt();
+		
+		int arr[][] = new int[r][c];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		int sum = 0;
+		int n = arr.length;
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i][i];
+			sum += arr[i][n-1-i];
+		}
+		
+		if(n % 2 == 1) {
+			sum -= arr[n/2][n/2];
+		}
+		
+		System.out.println("The sum of diagnols is: " + sum);
+	}
+}
+
+---------------------------------------------
+Print the max from each row and col 
+and also print the overall max value 
+-------------------------------------
+eg: 
+package com.twodimensionalArray;
+
+import java.util.Scanner;
+
+public class MaxFromRow {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows");
+		int r = sc.nextInt();
+		System.out.println("Enter the number of col's");
+		int c = sc.nextInt();
+		
+		int arr[][] = new int[r][c];
+		System.out.println("Enter the elements ");
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		int max = arr[0][0];
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				if (arr[j][i] > max) {
+					max = arr[j][i];
+				}
+				
+			}
+			System.out.println("Max from matrix: " + max);
+		}
+		
+	}
+}
+
+------------------------------------
+take two matrix and add both the matrix and show 
+the result 
+but remeber both the matrix should have the same size 
+so for that write the condition to check weather the 
+matrix rows and col's are same or not 
+if not same tell the user it's not possible to add 
+if its same write the logic to add both the matrix 
+and store in the different matrix 
+
+---------------------------------------------------
+Check weather the matrix is symetric or not 
+
+1 2 3
+2 4 5
+3 5 6
+
+this is symetric 
+eg: 
+
+-------------------------------------------------
+Jagged Array in Java 
+---------------------
+
+Jagged array is a special type of an array 
+where each row will have different numbers of 
+col's 
+
+syntax: 
+int arr[][] = new int[rows][]
+
+int[0] = new int[2]
+int[1] = new int[3]
+int[2] = new int[5]
+
+eg:
+package com.twodimensionalArray;
+
+public class JaggedArrayExample {
+
+	public static void main(String[] args) {
+		int arr[][] = new int[3][];
+		
+		arr[0] = new int[2];
+		arr[1] = new int[4];
+		arr[2] = new int[3];
+		
+		arr[0][0] = 1;
+		arr[0][1] = 2;
+		
+		arr[1][0] = 3;
+		arr[1][1] = 4;
+		arr[1][2] = 5;
+		arr[1][3] = 6;
+		
+		arr[2][0] = 7;
+		arr[2][1] = 8;
+		arr[2][2] = 9;
+		
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+				
+	}
+}
+
+Why we use Jagged Array ?
+-> using Jagged array because it is memory efficient 
+
+eg:
+package com.twodimensionalArray;
+
+import java.util.Scanner;
+
+public class UsingScannerForJaggedArray {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows: ");
+		int r = sc.nextInt();
+		
+		int arr[][] = new int[r][];
+		
+		for (int i = 0; i < r; i++) {
+			System.out.println("Enter the size of " + (i+1) + " row" );
+			int size = sc.nextInt();
+			arr[i] = new int[size];
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println("Enter the element for " + (i+1) + " row");
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		int max = arr[0][0];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				if (max < arr[i][j]) {
+					max = arr[i][j];
+				}
+			}
+			
+		}
+		
+		System.out.println("Max from an array: " + max);
+	}
+}
+
+---------------------
+break -> 
+for(int i = 0 ; i <= 5 ; i++){
+	if(i == 3 ) continue;
+	sys(i)
+}
+0
+1
+2
+4 
+5
+
+----------------------------------------------
+Bubble Sort 
+------------
+Time Complexity -> O(n^2)
+5 2 9 1 
+
+compares 5 2
+2 5 9 1 
+2 5 9 1 
+2 5 1 9
+
+2 5 1 
+2 5 1
+2 1 5 
+
+2 1 5 
+1 2 5 
+
+eg:
+package com.sort;
+
+import java.util.Scanner;
+
+public class BubbleSortExample {
+
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array ");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		
+		int temp;
+		int n = arr.length;
+		for (int i = 0; i < n -1; i++) {
+			for (int j = 0; j < n - 1 - i; j++) {
+				if (arr[j] > arr[j+1]) {
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		
+		System.out.println("Sorted Array");
+		
+		for (int i : arr) {
+			System.out.print(i + " ");
+		}
+	}
+}
+
+----------------------------------
+Number of Swap count and secondLargest and secondSmallest 
+---------------------------------------------------------
+eg: 
+package com.sort;
+
+import java.util.Scanner;
+
+public class BubbleSortExample {
+
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array ");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		// 5 2 9 1
+		// 0 1 2 3
+		int swap = 0;
+		int temp;
+		int n = arr.length;
+		for (int i = 0; i < n -1; i++) {
+			for (int j = 0; j < n - 1 - i; j++) {
+				if (arr[j] > arr[j+1]) { // (2 > 1)
+					temp = arr[j];  // temp = arr[0] (2)
+					arr[j] = arr[j+1]; // arr[0] = arr[1] (1)
+					arr[j+1] = temp; // arr[1] = temp (2)
+					swap++;
+				}
+			}
+			// 1 2 5 9
+		}
+		System.out.println();
+		System.out.println("Total number of swap: " + swap);
+		System.out.println("Sorted Array");
+		
+		int secondLargest = n - 2;
+		int secondSmallest = 1;
+		System.out.println("Second Largest: " + arr[secondLargest]);
+		System.out.println("Second Smallest: " + arr[secondSmallest]);
+		
+		for (int i : arr) {
+			System.out.print(i + " ");
+		}
+	}
+}
+
+---------------------------------------------------
+finding secondLargest w/o sorting 
+-------------------------------------
+
+eg: 
+package com.sort;
+
+import java.util.Scanner;
+
+public class FindingSecondLargest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size ");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		
+		int largest = 0;
+		int secondLargest = 0;
+		
+		System.out.println("Insert the elements");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		
+		for (int i : arr) {
+			System.out.print(i + " ");
+		}
+		// 2 5 8 3 6
+		System.out.println();
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > largest) {
+				secondLargest = largest;
+				largest = arr[i];
+			//  i -> 0
+	        //  sl = 0
+	        //  l = 1
+	        
+	        // i -> 1
+	        // sl = 2
+	        // l = 5
+	        
+	        // i -> 2 
+	        // sl -> 5
+	        // l -> 8
+			}else if (arr[i] > secondLargest && arr[i] != largest){
+			secondLargest = arr[i];
+				
+			}
+		}
+		
+		System.out.println("Second Largest: " + secondLargest);
+	}
+}
+
+-----------------------------------------------
+Duplicate's from an array 
+-------------------------
+eg: 
+package com.forLoop;
+
+import java.util.Scanner;
+
+public class DuplicateArray {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an Array");
+		int size = sc.nextInt();
+		int[] arr = new int[size];
+		boolean isDuplicate[] = new boolean[size];
+		
+		System.out.println("Enter the elements: ");
+		for (int i = 0; i < isDuplicate.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		
+		for (int i = 0; i < isDuplicate.length; i++) {
+			
+			if (isDuplicate[i] == true) {
+				continue;
+			}
+			
+			int count = 1;
+			
+			for (int j = i + 1; j < isDuplicate.length; j++) {
+				if (arr[i] == arr[j]) {
+					count++;
+					isDuplicate[j] = true;
+				}
+			}
+			System.out.println(arr[i] + " count's = " + count);
+		}
+	}
+}
+
+-----------------------------------------------------------------------
+Insertion Sort 
+---------------
+Insertion sort is a simple sorting algorithm that builds the final sorted 
+array one element at a time by inserting each elemnet into its correct position
+within the already sorted part of the array 
+
+it time Complexity is o(n^2)
+eg:
+package com.sort;
+
+import java.util.Scanner;
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array: ");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		System.out.println("Enter the array elements: ");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		// 3   2    4   1
+		for (int i = 1; i < arr.length; i++) {
+			int c = arr[i]; // 1
+			int j = i - 1;  // j = 2
+			
+			while (j >= 0 && c < arr[j]) { // -1 >= 0  && 1 < 2
+				arr[j+1] = arr[j]; 
+				// 1  2  3  4
+				j--; // j = -1
+			}
+			
+			arr[j+1] = c; // aar[0] = 1
+		}
+	}
+}
+
+----------------------------------------------------------------------------
+2  3   1   5   4 
+
+1  2   3   5    4
+
+Selection Sort 
+--------------
+Selection sort is a comparision-based sorting algorithm that repeatedly 
+selects the smallest element from the unsorted position of the array 
+and placess it at its correct position 
+
+-> it has O(n^2) time complexity 
+-> space completly is O(1)
+
+eg: 
+package com.sort;
+
+import java.util.Scanner;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array: ");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		
+		System.out.println("Enter the elements: ");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		// 4  2  3   5  1    
+		// 0  1  2   3  4 
+		// 1  2  3   5  4
+		for (int i = 0; i < arr.length; i++) { // i = 3
+			int minIndex = i;  // minIndex = 3
+			
+			for (int j = i + 1; j < arr.length; j++) { // j = 4
+				if (arr[j] < arr[minIndex]) { // 4 < 5
+					minIndex = j;  // minIndex = 4
+				}
+			}
+			
+			int temp = arr[i]; // temp = 5
+			arr[i] = arr[minIndex]; // arr[3] = 4
+			arr[minIndex] = temp; // arr[4] = 5
+		}
+		
+		for (int i : arr) {
+			System.out.print(i + " ");
+		}
+	}
+}
+
+-----------------------------------------------------
+Linear Search 
+-------------
+Linear Search is the simplest searching algorithum 
+in which each element of an array is checked one by one from the 
+beginning until the target element 
+is found or the array ends . 
+Time Complexity
+best case - O(1)
+worst case - O(n)
+average case - O(n)
+
+eg: 
+package com.searchingAlog;
+
+import java.util.Scanner;
+
+public class LinearSearch {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		
+		System.out.println("Enter the array elements ");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Enter the Element to search ");
+		int target = sc.nextInt();
+		
+		System.out.println("Array Elements: ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		
+		boolean isPresent = false;
+		System.out.println();
+		for (int i = 0; i < arr.length; i++) {
+			
+			if (arr[i] == target) {
+				System.out.println("Element is present at index " + i);
+				isPresent = true;
+				break;
+			}
+		}
+	   if (isPresent == false) {
+		System.out.println("Element not found ");
+	}
+	}
+}
+
+disadvantage - not efficient for larger data 
+Binary Search 
+--------------
+Binary Search is a highly efficient searching algorithm used to find an 
+element in a sorted array by repeatedly dividing the search space 
+into two halves 
+instead of checking every element , binary search checks the middle element 
+and eliminates half of the remeaning element in each step 
+
+time completly
+--------------
+best - O(1)
+worst - O(log n)
+
+advantage -> very efficient for larger data 
+
+7
+
+start < end
+
+mid = start + end / 2
+
+1 2 3 4 5 6 7 8 9 10
+
+6 7 8 9 10
+
+arr [mid] == target 
+
+7 > 5
+
+start = mid + 1
+
+7 < 8 
+end = mid - 1
+
+eg:
+package com.searchingAlog;
+
+import java.util.Scanner;
+
+public class BinarySearchAlgo {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		
+		System.out.println("Enter the array elements ");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Enter the Element to search ");
+		int target = sc.nextInt();
+		System.out.println("Array Elements: ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		boolean isPresent = false;
+		System.out.println();
+		int start = 0;
+		int end = arr.length - 1;
+		
+		while (start < end) {
+			int mid = (start + end) / 2;
+			
+			if (arr[mid] == target) {
+				System.out.println("Element found at index " + mid);
+				isPresent = true;
+				break;
+			}else if (arr[mid] < target) {
+				start = mid + 1;
+			}else {
+				end = mid -1;
+			}
+		}
+		
+		if (isPresent == false) {
+			System.out.println("Element Not found");
+		}
+	}
+}
+
+----------------------------------------------------------
+OOP's 
+-----
+Object Oriented Pograming 
+
+Class 
+-----
+A Class is a blueprint / template used to create objects . It defines 
+the properties(Variables) and behaviour (methods) of an object . 
+
+
+
+eg:
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+}
+
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		// Student s -> declares reference variable 
+		// new Student -> Creates a new student object in memory 
+		s.name = "Shreyansh"; // stores the data 
+		s.rollNo = 1021310729;
+		
+		System.out.println(s.name); // accessing variable 
+		System.out.println(s.rollNo);
+	}
+}
+
+============
+Method/Function 
+================
+
+A Method is a block of code that performs 
+a specific task . it represents the behaviour 
+or action of an object . 
+
+eg: 
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+	
+	void study() {
+		System.out.println("Started Studying...!");
+	}
+}
+
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.name = "Shreyansh";
+		s.rollNo = 1021310729;
+		
+		System.out.println(s.name);
+		System.out.println(s.rollNo);
+		s.study();
+	}
+}
+
+----------------------------------------
+Constructor 
+-----------
+A constructor is a special method that is automatically called when 
+an object is created .
+it is used to initialize objects . 
+
+Important rule 
+--------------
+-> Constructor name must be the same as the class name 
+-> constructor doesnot have any return type 
+-> it is called automatically when an object is created . 
+
+eg: 
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+	
+	Student(){ // default constructor or No argument Constructor (In this we donot send any parameter
+	                                                               or arguments)
+		System.out.println("Default Constructor");
+	}
+	
+	void study() {
+		System.out.println("Started Studying...!");
+	}
+}
+
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.name = "Shreyansh";
+		s.rollNo = 1021310729;
+		
+		System.out.println(s.name);
+		System.out.println(s.rollNo);
+		s.study();
+	}
+}
+-----------------------------------
+HomeWork  
+-> Create a class house 
+   and make default constructor and
+   create the object in it 
+   and in house class 
+   have variable like 
+   1bhk 
+   2bhk 
+   3bhk 
+-----------------------------------------
+Parameterized Constructor
+--------------------------
+A Constructor that accepts parameters is called as Parameterized constructor
+used to initilize objects with different values 
+
+eg: 
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+	
+	Student(){
+		System.out.println("Default Constructor");
+	}
+	
+	Student(String n , int r){
+		name = n;
+		rollNo = r;
+	}
+	
+	void study() {
+		System.out.println("Started Studying...!");
+	}
+	
+	void display() {
+		System.out.println("Hello " + name + " your roll no is :  " + rollNo);
+	}
+}
+
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		Student s1 = new Student("Paras", 10002345);
+		s.name = "Shreyansh";
+		s.rollNo = 1021310729;
+		
+		System.out.println(s.name);
+		System.out.println(s.rollNo);
+		s.study();
+		s1.display();
+	}
+}
+
+----------------------------------------------------------
+Constructor Overloading 
+----------------------
+In a class if you have multiple constructor with different
+parameter's then it is known as constructor overloading 
+
+eg: 
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+	
+	Student(){
+		System.out.println("No Argument Constructor");
+	}
+	
+	Student(String n , int r){
+		name = n;
+		rollNo = r;
+	}
+	
+	Student(String n){
+		name = n;
+	}
+	
+	void study() {
+		System.out.println("Started Studying...!");
+	}
+	
+	void display() {
+		System.out.println("Hello " + name + " your roll no is :  " + rollNo);
+	}
+}
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		Student s1 = new Student("Paras", 10002345);
+		Student s2 = new Student("Ishan");
+		s.name = "Shreyansh";
+		s.rollNo = 1021310729;
+		
+		System.out.println(s.name);
+		System.out.println(s.rollNo);
+		s.study();
+		s1.display();
+		s2.display();
+	}
+}
+-------------------------------------------------
+this Keyword 
+-------------
+The this keyword refers to the current object variables of the class
+if this keyword is not set then their will not be any error 
+but it will show null or 0 values .  
+
+eg: 
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+	
+	public Student(String name, int rollNo) {
+		this.name = name;
+		this.rollNo = rollNo;
+	}
+
+	void study() {
+		System.out.println("Started Studying...!");
+	}
+	
+	void display() {
+		System.out.println("Hello " + name + " your roll no is :  " + rollNo);
+	}
+}
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Student s1 = new Student("Paras", 10002345);
+		s1.display();
+		
+	}
+}
+--------------------------------------------------------------
+Copy Constructor
+-----------------
+A Copy constructor is a constructor that creates a new 
+object by copying the data from an existing object 
+
+eg: 
+package com.classExample;
+
+public class Student {
+	String name;
+	int rollNo;
+	
+	public Student(String name, int rollNo) {
+		this.name = name;
+		this.rollNo = rollNo;
+	}
+
+	// copy constructor 
+	public Student(Student s) {
+	     this.name = s.name;
+	     this.rollNo = s.rollNo;
+		// TODO Auto-generated constructor stub
+	}
+	void study() {
+		System.out.println("Started Studying...!");
+	}
+	
+	void display() {
+		System.out.println("Hello " + name + " your roll no is :  " + rollNo);
+	}
+}
+package com.classExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Student s1 = new Student("Paras", 10002345);
+		Student s2 = new Student(s1);
+		s2.display();
+		
+	}
+}
+
+-------------------------------------------------------------------
+Create a class calculator which have methods 
+like add , subtract , division and multiplication 
+and create another class with name Main Class
+and their create the object of the calculator 
+class and use the loop and create the cases for 
+claculation . take input's from the user 
+and Calculate the answer accordingly from the menu 
+and show the result
+If subtraction then the number should not be negative 
+if dinomenator is zero the then return 0 for it 
+
+------------------------------------------------------
+FOUR PILLARS OF OOP's 
+----------------------
+1. Abstraction 
+2. Polymorphism 
+3. Encapsulation 
+4. Inheritance 
+
+------------------------------------------------
+Encapsulation (data hide + controlled methods)
+----------------------------------------------
+It is a oop's pillar in which we bind/wrap the data in one class 
+by using private keyword and with the help of 
+accessor and mutator we get and set the data 
+but to achieve Encapsulation we have write the 
+controlled methods in it . 
+
+Accessor(Getter)
+used to get/read data 
+
+Muatator(Setter)
+used to modify/set data 
+
+eg: 
+package com.encapsulationExamples;
+
+public class Employee {
+
+	private int salary;
+	
+	//setter/mutator
+	public void setSalary(int salary) {
+		if(salary > 0) {
+			this.salary = salary;
+		}else {
+			System.out.println("Invalid Salary");
+		}
+	}
+	//accessor/getter
+	public int getSalary() {
+		return salary;
+		
+	}
+}
+
+package com.encapsulationExamples;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your salary");
+		int sal = sc.nextInt();
+		
+		e.setSalary(sal);
+		System.out.println("Your current Salary is: " + e.getSalary());
+		
+	}
+}
+
+---------------------------------
+Create a BankAccount 
+encapculate the balance and the account holder name 
+and set the name and amount initially 
+and create the deposite and withdraw method 
+in it but remeber negative amount should not be taken out 
+and also deposite it 
+and create the main class in that create the object 
+and make the bank option like 
+create your account by putting your name and amount 
+and give option to user to deposite and withdraw 
+util you press exit .
+
+---------------------------------------------------
+Data Hiding 
+------------
+We are not giving the direct acces to modify data 
+is known as data hiding 
+we can use private keyword to hide the data 
+
+eg: 
+package com.encapsulationExamples;
+
+public class Locker {
+
+//	public int money = 10000; here we are giving direct access 
+	private int money = 10000;
+
+	void dispaly() {
+		System.out.println("Available Balance: " + money);
+	}
+}
+
+package com.encapsulationExamples;
+
+public class MainLocker {
+
+	public static void main(String[] args) {
+		Locker lock = new Locker();
+//		System.out.println("Initial Amount: " + lock.money);
+//		lock.money = 0; // data modification is taken 
+//		System.out.println("After firend took it all :" + lock.money);
+		lock.dispaly();
+	}
+}
+
+-------------------------------------------------------------------
+Create a shopping system by using Encapsulation
+the system should allow users to:
+1. view all Available products 
+2. add products to shoping cart with quantity
+3. view cart with total amount 
+4. Generate bill/Invoice 
+
+REQURIMENTDS
+-------------
+create product class 
+private fields 
+- productId String 
+- productName String 
+- price double 
+
+public methods 
+- constructor to set set all the fields 
+- getProduct() - return product id 
+- getProductName() - return product name 
+- getPrice() - return price 
+- showProduct() - show all the product details 
+
+Class 2 - ShoppingCart 
+private Arrays 
+- itemsNames (String[] store product name)
+  if item already exists , update quantity 
+- itemQuantities (int[] stores quantity)
+- itemPrice (double[] stores price)
+- itemCount (int)
+
+public methods 
+- additem(name , price , qty ) - add items to the cart 
+- getItemCount() - returns number of items 
+- getItemName(int index) - return name at index 
+- getItemQuantity() - return qty at index 
+- getItemPrice() - return price at index 
+- calculateToatl() - return total amount 
+- showCart() - display all cart items 
+
+Class 3 BillGenerator 
+private field 
+- billcounter (int) start with 1001 
+Public methods 
+- constructor to set initial bill counter 
+-generateBill(ShoppingCart cart, String CustomerName) - creates and show bill 
+
+Class 4 ShoppingApp
+private fields 
+- productList (product[]) - set upto 20~50
+- productCount (int) track number of products 
+- cart(ShoppingCart) - object of shopping cart 
+- biilGen(BillGenerator) - object of BillGenerator
+- scanner 
+- customerName (String) 
+
+Public methods 
+- start()
+- showMenu()
+- addProduct()
+- viewProduct()
+- addtoCart()
+- viewCart()
+- generateBill() 
+
+Menu 
+----
+1. View Products 
+2. Add to Cart 
+3. View Cart 
+4. Generate Bill 
+5. Exit 
+
+------------------------------------------------------
+eg:
+package com.application.shopping;
+
+public class Product {
+
+	private String productId;
+	private String productName;
+	private double price;
+	
+	public Product(String productId, String productName, double price) {	
+		this.productId = productId;
+		this.productName = productName;
+		this.price = price;
+	}
+
+	public String getProductId() {
+		return productId;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+
+	public void showProduct() {
+		System.out.println(productId + " | " + productName + " | " + price);
+	}
+	
+	
+	
+}
+
+package com.application.shopping;
+
+public class ShopingCart {
+
+	private String[] itemName;
+	private int[] itemQuantity;
+	private double[] itemPrice;
+	private int itemCount;
+	
+	public ShopingCart() {
+		itemName = new String[50];
+		itemQuantity = new int[50];
+		itemPrice = new double[50];
+		itemCount = 0;
+	}
+	
+	public void addItem(String name, double price , int quantity) {
+		int position = -1;
+		for (int i = 0; i < itemCount; i++) {
+			if (itemName[i] == name) {
+				position = i;
+				break;
+			}
+		}
+		if (position != -1) {
+			itemQuantity[position] = itemQuantity[position] + quantity;
+			System.out.println("Item Quantity is updated");
+		}else {
+			itemName[itemCount] = name;
+			itemPrice[itemCount] = price;
+			itemQuantity[itemCount] = quantity;
+			itemCount = itemCount + 1;
+			System.out.println("Item Added to cart");
+		}
+	}
+
+	public String getItemName(int index) {
+		return itemName[index];
+	}
+
+	public int getItemQuantity(int index) {
+		return itemQuantity[index];
+	}
+
+	public double getItemPrice(int index) {
+		return itemPrice[index];
+	}
+
+
+	public int getItemCount() {
+		return itemCount;
+	}
+
+	public double calculateTotal() {
+		double total = 0;
+		for (int i = 0; i < itemCount; i++) {
+			total = total + (itemPrice[i] * itemQuantity[i]);
+			
+		}
+		return total;
+		}
+	
+	public void showCart() {
+		System.out.println("=============================");
+		System.out.println("=========== CART ============");
+	    System.out.println();
+	    
+	    for (int i = 0; i < itemCount; i++) {
+			double total = itemPrice[i] * itemQuantity[i];
+			System.out.println((i+1) + "  " + itemName[i] + " | " + itemQuantity[i]
+					+ " | " + itemPrice[i] + " Rs");
+		}
+	
+	}
+	
+}
+
+package com.application.shopping;
+
+public class BillGenerator {
+
+	private int billCounter;
+	
+	public BillGenerator() {
+		billCounter = 1001;
+	}
+	
+	public void generateBill(ShopingCart cart , String customerName) {
+		if (cart.getItemCount() == 0) {
+			System.out.println("Your cart is Empty");
+			return;
+		}
+		
+		System.out.println("=================================");
+		System.out.println("============== BILL =============");
+		
+		System.out.println("Bill No. " + billCounter);
+		billCounter = billCounter + 1;
+		System.out.println("-----------------------");
+		System.out.println("Name: " + customerName);
+		System.out.println("------------------------");
+		
+		double OverAlltotal = 0; 
+		for (int i = 0; i < cart.getItemCount(); i++) {
+			String name = cart.getItemName(i);
+			int qty = cart.getItemQuantity(i);
+			double price = cart.getItemPrice(i);
+			double total = price * qty;
+			OverAlltotal = OverAlltotal + total;
+			
+			System.out.print(" " + name);
+			System.out.print(" " + qty);
+			System.out.print(" " + price);
+			System.out.print(" " + total);
+			System.out.println();
+		}
+		System.out.println("----------------------------------------");
+		System.out.println("Total                   " + OverAlltotal);
+	}
+}
+
+
+package com.application.shopping;
+
+import java.util.Scanner;
+
+public class ShopingApp {
+
+	private Product[] productList;
+	private int productCount;
+	private ShopingCart cart;
+	private BillGenerator billGen;
+	private Scanner sc;
+	private String customerName;
+	
+	public ShopingApp() {
+		productList = new Product[50];
+		productCount = 0;
+		cart = new ShopingCart();
+		billGen = new BillGenerator();
+		sc = new Scanner(System.in);
+		customerName = "";
+	}
+	
+	public void start() {
+		addProduct("A101", "Mobile", 25000);
+		addProduct("A102", "Laptop", 150000);
+		addProduct("A103", "A/c", 70000);
+		addProduct("A104", "Fridge", 50000);
+		addProduct("A105", "HeadPhones", 3000);
+		addProduct("A106", "Moniter", 10000);
+		addProduct("A107", "TV", 85000);
+		addProduct("A108", "Smart Watch", 5000);
+		addProduct("A109", "Washing Machine", 60000);
+		addProduct("A110", "Speakers", 52000);
+		
+		System.out.println("======= Shopping Mall =========");
+		System.out.println("Enter your name: ");
+		customerName = sc.nextLine();
+		
+		int choice;
+		
+		do {
+			showMenu();
+			System.out.println("Enter your choice");
+			choice = sc.nextInt();
+			sc.nextLine();
+			
+			if (choice == 1) {
+				viewProduct();
+			}else if (choice == 2) {
+				addToCart();
+			}else if (choice == 3) {
+				viewCart();
+			}else if (choice == 4) {
+				generateBill();
+			}else if (choice == 5) {
+				System.out.println("Thank You....!");
+				break;
+			}
+			
+		} while (choice != 5);
+		
+	}
+	
+	public void showMenu() {
+		System.out.println("===== Menu ======");
+		System.out.println("1. View Products");
+		System.out.println("2. Add to Cart");
+		System.out.println("3. View Cart ");
+		System.out.println("4. Generate Bill");
+		System.out.println("5. Exit");
+		System.out.println("--------------------");
+	}
+	
+	public void addProduct(String id , String name , double price) {
+		Product p = new Product(id, name, price); 
+		productList[productCount] = p;
+		productCount = productCount + 1;
+	}
+	
+	public void viewProduct() {
+		for (int i = 0; i < productCount	; i++) {
+			System.out.print((i+1) + "   ");
+			productList[i].showProduct();
+		}
+	}
+	
+	public void addToCart() {
+		viewProduct();
+		System.out.println("Enter product number to add ");
+		int index = sc.nextInt();
+		sc.nextLine();
+		
+		if (index < 1 || index > productCount) {
+			System.out.println("Invalid Selection ");
+			return;
+		}
+		
+		Product selected = productList[index - 1];
+		System.out.println("Selected : " + selected.getProductName());
+		System.out.println("Enter Quantity :");
+		int quantity = sc.nextInt();
+		sc.nextLine();
+		
+		if (quantity <= 0) {
+			System.out.println("Quantity must be greater than zero ");
+			return;
+		}
+		
+		cart.addItem(selected.getProductName(), selected.getPrice(),
+				quantity);
+	}
+	
+	public void viewCart() {
+		cart.showCart();
+	}
+	
+	public void generateBill() {
+		if (cart.getItemCount() == 0) {
+			System.out.println("Cart is Empty");
+			return;
+		}
+		
+		cart.showCart();
+		System.out.println("Confirm order? Y/N");
+		
+		char confirm = sc.next().charAt(0);
+	
+		if (confirm == 'Y' || confirm == 'y') {
+			billGen.generateBill(cart, customerName);
+			System.out.println("Order Placed Successfully");
+		}else {
+			System.out.println("Order Canclled");
+		}
+	}
+
+	public static void main(String[] args) {
+		ShopingApp app = new ShopingApp();
+		app.start();
+	}
+}
+
+
+------------------------------------------------------------------------
+Static Keyword 
+---------------
+Static Variable 
+----------------
+-> A static variable is a class-level variable 
+that belongs to the class itself rather than to 
+any specific instance (object) . It is initialized only 
+once at the start of pogram execution and 
+shared by all objects of that class . 
+
+-> it members and methods are stored in the 
+main frame area  
+
+eg: 
+package com.staticExample;
+
+public class Employee {
+
+	String name;
+	static String company = "Google";
+	
+	public Employee(String name) {
+		this.name = name;
+	}
+}
+
+package com.staticExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Employee e1 = new Employee("Ishan");
+		Employee e2 = new Employee("Paras");
+		
+		System.out.println(e1.name + "  Working in " + e1.company);
+		System.out.println(e2.name + " working in " + e2.company);
+		
+//		e1.company = "MicroSoft";
+//		System.out.println(e2.company);
+		// wrong to modify becoz it belongs to the class 
+		
+		Employee.company = "Microsoft";
+		System.out.println(e1.name + " working in " + e1.company);
+		System.out.println(e2.name + " Working in " + e2.company);
+		
+	}
+}
+---------------------------------------------------
+Static Method 
+--------------
+A static method is a method that belongs to 
+the class rather than any object. it can be called 
+w/o creating instance of the class. However a static method 
+can only directly access static data memebers and static 
+methods . it cannot directly access non-static memebers 
+
+eg: 
+package com.staticExample;
+
+public class MathUtils {
+
+	static int numS = 100;
+	static int square(int a) {
+		return a*a;
+	}
+	
+	static void staticMethod() {
+		System.out.println("Static method");
+	}
+	
+	int numNS = 200;
+	void nonStaticMethod() {
+		System.out.println("Non-Static Method " );
+	}
+	
+	static void display() {
+		System.out.println("Number of static variable: " + numS);
+		staticMethod();
+		
+//		System.out.println("Number of nonStatic variable: " + numNS);
+//		nonStaticMethod();
+//		Error can access the non-static variable in the static method
+	}
+}
+
+
+package com.staticExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+//		--------------------------------------------------
+//		Method call  
+		
+		int res = MathUtils.square(7);
+		System.out.println("Square is: " + res);
+		MathUtils.display();
+		
+	}
+}
+
+---------------------------------------------------------
+Static Block 
+-------------
+A static block is a block of code that is executed 
+automatically when the class is first 
+loaded into the memory (before the main method is called) . 
+It is primarily used to 
+initialize static variables or perform one-time setup . 
+
+eg:
+package com.staticExample;
+
+public class User {
+
+	static String userName;
+	
+	static {
+		userName = "Shreyansh";
+		System.out.println("Data Fetched ....!");
+	}
+}
+
+package com.staticExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Pogram Started Successfully ");
+		
+		System.out.println("Welcome: " + User.userName);
+
+		System.out.println("Pogram Started Successfully ");
+	}
+}
+
+-------------------------------------------------------------
+How to acces the non-static variable in static method
+
+eg: 
+package com.staticExample;
+
+public class Student {
+
+	String name;
+	int age;
+	static String college = "SRM University";
+	
+	public Student(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	static void display(Student s) {
+		System.out.println("College " + college);
+		System.out.println("Name " + s.name);
+		System.out.println("Age " + s.age);
+		
+	}
+	
+}
+
+package com.staticExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Student s1 = new Student("Shreyansh", 30);
+		Student s2 = new Student("Parth", 21);
+		
+		s1.display(s1);
+		s2.display(s2);
+	}
+}
+-----------------------------------------------------
+Static Class (static nested class)
+----------------------------------
+Only nested classes (inner classes) can be declared as static 
+A static nested class is a class defined inside another class 
+but doesnot required an instance(object) of the outer class to be 
+created . 
+However it can only access the static memebers of the 
+outer class , not the non-static ones . 
+
+eg: 
+package com.staticExample;
+
+public class Outer {
+
+	static String mesg = " Outer Class String";
+	
+	static class Inner{
+		void display() {
+			System.out.println(mesg);
+		}
+	}
+}
+
+-------------------------------------------------
+Create a student class with fields 
+name , rollNumber 
+make constructor 
+and also the display method 
+and also show the count of total student 
+and make atleast 5 object of that class 
+and show the total number of count 
+
+-------------------------------------------------
+You need to create a Library Managment system 
+that manages books , tracks inventory , handles book issuing/ returing 
+operations using static variables , static methods and 
+static block 
+
+create class book 
+static variables -> totalBooks ,  AvailableBooks , issuedBook 
+                    LibraryName 
+
+static to initialize values of 
+tootalBooks = 100 
+AvailableBooks = 100 
+issuedBook = 0 
+
+dispaly the initiallization message with all counts 
+Intance Variables 
+title 
+author
+isIssued 
+
+constructor 
+Accept title and author as parameters 
+initialize instance variables 
+Increment tootalBooks and Available 
+
+display a message -> New Book Added 
+
+eg:
+package com.libraryMangment;
+
+public class Book {
+
+	static int totalBooks = 0;
+	static int availabeBooks = 0;
+	static int issuedBook = 0;
+	static String libraryName = "Mind Library";
+	
+	static {
+		System.out.println("======" + libraryName + "========");
+		System.out.println("========== Loading.... ===========" );
+		
+		totalBooks = 100;
+		availabeBooks = 100;
+		issuedBook = 0;
+		
+		System.out.println("====== Inventory =======");
+		System.out.println("Total Books   = " + totalBooks);
+		System.out.println("Availabe Book = " + availabeBooks);
+		System.out.println("Issued Books  = " + issuedBook);
+		System.out.println("=========================");
+	}
+	
+	String title;
+	String author;
+	boolean isIssued;
+	public Book(String title, String author) {
+		
+		this.title = title;
+		this.author = author;
+		this.isIssued = false;
+        totalBooks++;
+        availabeBooks++;
+        System.out.println("Book added " + title + " by " + author);
+	}
+	
+
+}
+
+package com.libraryMangment;
+
+import java.util.Scanner;
+
+public class LibraryMangment {
+
+	static Scanner sc = new Scanner(System.in);
+	static Book[] books = new Book[50];
+	static int bookCount = 0;
+	
+	public static void main(String[] args) {
+	   	
+		System.out.println("Welcome to Mind Library");
+		System.out.println("======================");
+		
+		addInitialBook();
+		
+		while (true) {
+			System.out.println("Chose an Option");
+			System.out.println("1. Display all the books");
+			System.out.println("2. Issue a book");
+			System.out.println("3. Return a book");
+			System.out.println("4. Add a new Book ");
+			System.out.println("5. Check Availibility");
+			System.out.println("6. Change Library Name ");
+			System.out.println("7. Exit");
+			System.out.println("--------------------");
+			System.out.println("Enter your choice");
+			System.out.println();
+			
+			int choice = sc.nextInt();
+			sc.nextLine();
+			
+			switch (choice) {
+			case 1:
+				displayAllBooks();
+				break;
+
+			case 2:
+				issueBook();
+				break;
+				
+			case 3:
+				returnBook();
+				break;
+
+			case 4:
+				addNewBook();
+				break;
+				
+			case 5:
+				checkAvalibility();
+				break;
+			case 6:
+				changeLibraryName();
+				break;
+			case 7:
+				System.out.println("ThankYou Vist Again... :)");
+				System.exit(0);
+			default:
+				System.out.println("Invalid choice");
+			}
+		}
+	}
+	
+	 public static void addInitialBook() {
+		books[bookCount++] = new Book("Reach Dad and Poor Dad", "Snehal");
+		books[bookCount++] = new Book("Five Point SomeOne", "Chetan Bhagat");
+		books[bookCount++] = new Book("Harry Potter", "JK Rowling");
+		books[bookCount++] = new Book("To Kill a Mocking Bird", "Haper Lee");
+		books[bookCount++] = new Book("400 Days", "Chetan Bhagat");
+	}
+	
+	public static void displayAllBooks() {
+		
+		if (bookCount == 0) {
+			System.out.println("No Books in the library");
+			return;
+		}
+		
+		System.out.println("\n Book in Library");
+		for (int i = 0; i < bookCount; i++) {
+			System.out.print(" [ " + (i+1) + " ] " + books[i].title 
+					+ " | " + books[i].author + " | " );
+			System.out.print(" " + (books[i].isIssued ? " Issused " : " Available"));
+			System.out.println();
+		}
+		System.out.println("------------------------------------------------------");
+	}
+	
+	public static void issueBook() {
+		System.out.println("Available books");
+		System.out.println("----------------------------");
+		int availableB = 0;
+		for (int i = 0; i < bookCount; i++) {
+			if (!books[i].isIssued) {
+				System.out.print(" [ " + (i+1) + " ] " + books[i].title 
+						+ " | " + books[i].author + " | " );
+				System.out.print(" " + (books[i].isIssued ? " Issused " : " Available"));
+				System.out.println();
+			}
+			availableB++;
+		}
+		
+		System.out.println("Total Book Count " + bookCount);
+		if (availableB == 0) {
+			System.out.println("No Books in the Library");
+			return;
+		}
+		
+		System.out.println("Enter book number to issue from 1 to " + (bookCount+1));
+		
+		int index = sc.nextInt();
+		sc.nextLine();
+		
+		int bookNumber = index - 1;
+		
+		if (books[bookNumber].isIssued) {
+			System.out.println("Book Already Issued");
+			return;
+		}
+		
+		if (Book.availabeBooks > 0) {
+			Book.availabeBooks--;
+			Book.issuedBook++;
+			books[bookNumber].isIssued = true;
+			System.out.println("Book Issued Successfully");
+			
+			System.out.println("Title: " + books[bookNumber].title);
+			System.out.println("Author: " + books[bookNumber].author);
+			System.out.println("Issued: " + books[bookNumber].isIssued);
+			System.out.println("Available Book " + Book.availabeBooks);
+			System.out.println("Issued Books " + Book.issuedBook);
+		}else {
+			System.out.println("No Books Available");
+		}
+	}
+	
+	public static void returnBook() {
+		System.out.println("Issued Books");
+		System.out.println("----------------------------------");
+		int issueBookCount = 0;
+		for (int i = 0; i < bookCount; i++) {
+			if (books[i].isIssued) {
+				System.out.print(" [ " + (i+1) + " ] " + books[i].title 
+						+ " | " + books[i].author + " | " );
+				System.out.print(" " + (books[i].isIssued ? " Issused " : " Available"));
+				System.out.println();
+			}
+			issueBookCount++;
+		}
+		
+		if (issueBookCount == 0) {
+			System.out.println("No books have been issued");
+			return;
+		}
+		
+        System.out.println("Enter book number to return from 1 to " + (issueBookCount+1));
+		
+		int index = sc.nextInt();
+		sc.nextLine();
+		
+		int bookNumber = index - 1;
+		
+		if (!books[bookNumber].isIssued) {
+			System.out.println("Book Already Issued");
+			return;
+		}
+		
+		if (Book.issuedBook > 0) {
+			Book.issuedBook--;
+			Book.availabeBooks++;
+			books[bookNumber].isIssued = false;
+			System.out.println("Book returned Successfully");
+			
+			System.out.println("Title: " + books[bookNumber].title);
+			System.out.println("Author: " + books[bookNumber].author);
+			System.out.println("Issued: " + books[bookNumber].isIssued);
+			System.out.println("Available Book " + Book.availabeBooks);
+			System.out.println("Issued Books " + Book.issuedBook);
+		}else {
+			System.out.println("No Books Available");
+		}
+	}
+	
+	
+	public static void addNewBook() {
+		if (bookCount >= books.length) {
+			System.out.println("No Place to add");
+			return;
+		}
+		
+		System.out.println("Enter Book Title: ");
+		String title = sc.nextLine();
+		System.out.println("Enter Author Name: ");
+		String name = sc.nextLine();
+		
+		books[bookCount++] = new Book(title, name);
+		System.out.println("Book Added Successfully");
+	}
+	
+	public static void checkAvalibility() {
+		System.out.println("Avalibility Status ");
+		System.out.println("---------------------");
+		displayAllBooks();
+		System.out.println("Enter the Book number to check its avaliability");
+		int index = sc.nextInt();
+		sc.nextLine();
+		
+		int bookNumberAvailable = index - 1;
+		if(books[bookNumberAvailable].isIssued || !books[bookNumberAvailable].isIssued) {
+			System.out.print(" [ " + index + " ] " + books[bookNumberAvailable].title);
+			System.out.print(" | " + books[bookNumberAvailable].author + " | " );
+			System.out.print(" " + (books[bookNumberAvailable].isIssued ? " Issused " : " Available"));
+
+		}
+		System.out.println();
+	}
+	
+	public static void changeLibraryName() {
+		System.out.println("Enter new Library Name");
+		String nName = sc.nextLine();
+		Book.libraryName = nName;
+		System.out.println("Library Name has change: " + Book.libraryName);
+	}
+	
+}
+-------------------------------------------------------------
+INHERITANCE 
+------------
+Inheritance is one of the four pillars of an Object-Oriented-pogramming (oop's)
+
+defination 
+----------
+Inheritance is the process by which one class acquires the 
+properties(variables) and behaviour(methods) of another class 
+
+- Existing Class - Parent class / Super Class / Base Class 
+- New Class - Child Class / Sub Class / Derived Class  
+
+Using inheritance , we can :
+- Reuse code 
+- Reduse duplication 
+- Improve maintainability 
+- Creates an IS-A relationship (containtment)
+
+Types of inheritance 
+---------------------
+- Single Inheritance 
+- Multilevel Inheritance
+- Hierarchical Inheritance
+
+NOTE - JAVA DOENOT SUPPORT MULTIPLE INHERITANCE 
+
+-----------------------------------------------
+1. Single Inheritance 
+---------------------
+When One child class inherists from only one parent class it is called 
+as Single inheritance 
+
+eg:
+person(Parent Class ) -> employee(Child Class)
+
+person: 
+name 
+age 
+
+employee: 
+salary 
+company 
+
+eg:
+package com.inheritanceExample;
+
+public class Employee extends Person {
+
+	int salary;
+	String company;
+	
+	public void setEmployee(int salary, String company) {
+		this.salary = salary;
+		this.company = company;
+	}
+	
+	void displayEmployee() {
+		System.out.println("Comapny: " + company);
+		System.out.println("Salary: " + salary);
+	}
+
+    
+}
+
+package com.inheritanceExample;
+
+public class Person {
+    
+	String name;
+	int age;
+	
+	public void setPerson(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	void display() {
+		System.out.println("Name: " +name);
+		System.out.println("Age: " + age);
+	}
+	
+	
+}
+
+package com.inheritanceExample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		e.setPerson("Shreyansh", 30);
+		e.setEmployee(25000, "TCS");
+		
+		e.display();
+		System.out.println("-------------");
+		e.displayEmployee();
+	}
+}
